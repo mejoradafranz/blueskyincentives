@@ -1,0 +1,118 @@
+.portal {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--color-bg-subtle);
+}
+
+.portal__sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.portal__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0 8px 20px;
+}
+
+.portal__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+  padding: 0 8px 10px;
+}
+
+.portal__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portal__nav-link {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.portal__nav-link:hover {
+  background: var(--color-bg-subtle);
+  color: var(--color-text);
+}
+
+.portal__nav-link--active {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.portal__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.portal__topbar {
+  height: 64px;
+  flex-shrink: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.portal__user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.portal__logout {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.portal__logout:hover {
+  background: var(--color-bg-subtle);
+}
+
+.portal__content {
+  flex: 1;
+  padding: 32px;
+  overflow-x: auto;
+}
+
+@media (max-width: 780px) {
+  .portal {
+    flex-direction: column;
+  }
+
+  .portal__sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+}

@@ -1,0 +1,39 @@
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.step-list__item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-list__number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-list__title {
+  margin: 4px 0 6px;
+  font-size: 1.05rem;
+}
+
+.step-list__description {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
