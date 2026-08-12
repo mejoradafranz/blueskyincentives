@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: blueskyincentives
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm run db:migrate && node server/dist/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: blueskyincentives-db
+          property: connectionString
+
+databases:
+  - name: blueskyincentives-db
+    plan: free
+    postgresMajorVersion: 16
