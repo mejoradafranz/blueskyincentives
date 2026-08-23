@@ -4,6 +4,7 @@ import { Modal } from "../ui/Modal";
 import growLeadsImage from "../../assets/incentives/grow-leads.png";
 import growSalesImage from "../../assets/incentives/grow-sales.png";
 import growRetentionImage from "../../assets/incentives/grow-retention.png";
+import growReferralsImage from "../../assets/incentives/grow-referrals.png";
 import "./GrowthWays.css";
 
 interface GrowthFeature {
@@ -68,6 +69,22 @@ const FEATURES: GrowthFeature[] = [
     imageAlt: "Turn one-time buyers into loyal customers — customer-retention strategy infographic",
     ctaLabel: "See the Customer-Retention Strategy",
     modalTitle: "Customer-Retention Strategy",
+  },
+  {
+    key: "referrals",
+    title: "More Referrals",
+    tagline: "Turn satisfied customers into a source of new business.",
+    useCaseIntro:
+      "Give happy customers a valuable reason to introduce your company to their friends, family or colleagues.",
+    quote: "Refer a friend who becomes a customer and receive a $300 Dining Certificate.",
+    useCaseResult:
+      "The customer earns a desirable reward, and your business receives a new prospect through a trusted personal recommendation.",
+    tryThis:
+      "Present the referral offer after a successful purchase, positive review or strong customer experience. Give customers a simple referral link or message they can easily share, then reward them when the referred person becomes a customer.",
+    image: growReferralsImage,
+    imageAlt: "Turn happy customers into brand advocates — referral strategy infographic",
+    ctaLabel: "See the Referral Strategy",
+    modalTitle: "Referral Strategy",
   },
 ];
 
