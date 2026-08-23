@@ -11,6 +11,22 @@
   padding: 28px 24px;
 }
 
+.feature-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  border-radius: var(--radius-lg);
+}
+
+.feature-card-link:hover {
+  transform: translateY(-2px);
+}
+
+.feature-card-link:hover .feature-card {
+  border-color: var(--color-primary);
+}
+
 .feature-card__mark {
   width: 40px;
   height: 40px;

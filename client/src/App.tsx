@@ -8,6 +8,7 @@ import { Home } from "./pages/marketing/Home";
 import { About } from "./pages/marketing/About";
 import { Programs } from "./pages/marketing/Programs";
 import { Industries } from "./pages/marketing/Industries";
+import { IndustryDetail } from "./pages/marketing/IndustryDetail";
 import { Integrations } from "./pages/marketing/Integrations";
 import { Demo } from "./pages/marketing/Demo";
 import { HowItWorks } from "./pages/marketing/HowItWorks";
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/industries" element={<Industries />} />
+        <Route path="/industries/:slug" element={<IndustryDetail />} />
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
