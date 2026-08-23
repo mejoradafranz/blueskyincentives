@@ -3,6 +3,7 @@ import { Section } from "./Section";
 import { Modal } from "../ui/Modal";
 import growLeadsImage from "../../assets/incentives/grow-leads.png";
 import growSalesImage from "../../assets/incentives/grow-sales.png";
+import growRetentionImage from "../../assets/incentives/grow-retention.png";
 import "./GrowthWays.css";
 
 interface GrowthFeature {
@@ -52,6 +53,22 @@ const FEATURES: GrowthFeature[] = [
     ctaLabel: "See how Blue Sky Incentives",
     modalTitle: "Sales Strategy",
   },
+  {
+    key: "retention",
+    title: "More Repeat Business",
+    tagline: "Give previous customers a new reason to return and purchase again.",
+    useCaseIntro:
+      "After the first sale, follow up when the timing makes sense for your business—such as 30 days later, when another service is due or when you want to reactivate past customers.",
+    quote: "Come back this month and receive a $100 Dining Certificate with your next purchase.",
+    useCaseResult:
+      "This is a new incentive attached to a new transaction, giving the customer a fresh reason to come back.",
+    tryThis:
+      "Send the offer by email or SMS to customers who have already purchased. Use a different incentive from the original promotion so the follow-up feels new, relevant and worth acting on.",
+    image: growRetentionImage,
+    imageAlt: "Turn one-time buyers into loyal customers — customer-retention strategy infographic",
+    ctaLabel: "See the Customer-Retention Strategy",
+    modalTitle: "Customer-Retention Strategy",
+  },
 ];
 
 export function GrowthWays() {
@@ -65,41 +82,37 @@ export function GrowthWays() {
       subtitle="Use high-value incentives throughout the customer journey to attract more leads, convert more prospects, bring previous customers back and generate referrals."
     >
       {FEATURES.map((f) => (
-        <div key={f.key} className="growth-ways__feature">
-          <div className="growth-ways__feature-text">
-            <h3 className="growth-ways__feature-title">{f.title}</h3>
-            <p className="growth-ways__feature-tagline">{f.tagline}</p>
+        <div key={f.key} className="growth-ways__feature-block">
+          <div className="growth-ways__feature">
+            <div className="growth-ways__feature-text">
+              <h3 className="growth-ways__feature-title">{f.title}</h3>
+              <p className="growth-ways__feature-tagline">{f.tagline}</p>
 
-            <div className="growth-ways__block">
-              <div className="growth-ways__label">Use Case</div>
-              <p>{f.useCaseIntro}</p>
-              <blockquote className="growth-ways__quote">&ldquo;{f.quote}&rdquo;</blockquote>
-              <p>{f.useCaseResult}</p>
+              <div className="growth-ways__block">
+                <div className="growth-ways__label">Use Case</div>
+                <p>{f.useCaseIntro}</p>
+                <blockquote className="growth-ways__quote">&ldquo;{f.quote}&rdquo;</blockquote>
+                <p>{f.useCaseResult}</p>
+              </div>
+
+              <div className="growth-ways__block">
+                <div className="growth-ways__label">Try This</div>
+                <p>{f.tryThis}</p>
+              </div>
             </div>
 
-            <div className="growth-ways__block">
-              <div className="growth-ways__label">Try This</div>
-              <p>{f.tryThis}</p>
+            <div className="growth-ways__feature-media">
+              <img src={f.image} alt={f.imageAlt} className="growth-ways__feature-image" />
             </div>
           </div>
 
-          <div className="growth-ways__feature-media">
-            <img src={f.image} alt={f.imageAlt} className="growth-ways__feature-image" />
+          <div className="growth-ways__cta">
+            <button className="growth-ways__link" onClick={() => setOpenModal(f.key)}>
+              {f.ctaLabel}
+            </button>
           </div>
         </div>
       ))}
-
-      <div className="growth-ways__cta">
-        {FEATURES.map((f) => (
-          <button
-            key={f.key}
-            className="growth-ways__link"
-            onClick={() => setOpenModal(f.key)}
-          >
-            {f.ctaLabel}
-          </button>
-        ))}
-      </div>
 
       {activeFeature && (
         <Modal
