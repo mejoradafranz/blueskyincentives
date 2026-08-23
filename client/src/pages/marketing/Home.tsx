@@ -7,6 +7,7 @@ import { GrowthWays } from "../../components/marketing/GrowthWays";
 import { GetStarted } from "../../components/marketing/GetStarted";
 import { IndustryPlaybooks } from "../../components/marketing/IndustryPlaybooks";
 import { WhyHotelsParticipate } from "../../components/marketing/WhyHotelsParticipate";
+import { TrustedRelationships } from "../../components/marketing/TrustedRelationships";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -44,6 +45,8 @@ export function Home() {
       <IndustryPlaybooks />
 
       <WhyHotelsParticipate />
+
+      <TrustedRelationships />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
