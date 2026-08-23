@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Section } from "./Section";
 import { FeatureCard } from "./FeatureCard";
+import { Button } from "../ui/Button";
 import { INDUSTRIES } from "../../data/industries";
 import "./IndustryPlaybooks.css";
 
@@ -43,6 +44,23 @@ export function IndustryPlaybooks() {
         <div className="industry-playbooks__panel-cta">
           <Link to={`/industries/${active.slug}`} className="industry-playbooks__link">
             View the full {active.navLabel} playbook →
+          </Link>
+        </div>
+      </div>
+
+      <div className="industry-playbooks__fallback">
+        <h3 className="industry-playbooks__fallback-title">Don't See Your Exact Industry?</h3>
+        <p className="industry-playbooks__fallback-text">
+          Blue Sky Incentives can be adapted to almost any business that wants more leads,
+          sales, repeat customers or referrals. Speak with an Incentive Strategist about how
+          incentives could fit your current marketing.
+        </p>
+        <div className="industry-playbooks__fallback-actions">
+          <a href="tel:+15551234567">
+            <Button>Call an Incentive Strategist</Button>
+          </a>
+          <Link to="/contact">
+            <Button variant="secondary">Book a One-on-One Call</Button>
           </Link>
         </div>
       </div>
