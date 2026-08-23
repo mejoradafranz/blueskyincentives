@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Hero } from "../../components/marketing/Hero";
+import { HomeHero } from "../../components/marketing/HomeHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { StepList } from "../../components/marketing/StepList";
@@ -51,7 +51,7 @@ const STEPS = [
 export function Home() {
   return (
     <>
-      <Hero
+      <HomeHero
         image={heroHomeImage}
         imageAlt="A hotel front desk associate helping guests check in"
       />
