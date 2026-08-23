@@ -7,6 +7,9 @@ import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { Home } from "./pages/marketing/Home";
 import { About } from "./pages/marketing/About";
 import { Programs } from "./pages/marketing/Programs";
+import { Industries } from "./pages/marketing/Industries";
+import { Integrations } from "./pages/marketing/Integrations";
+import { Demo } from "./pages/marketing/Demo";
 import { HowItWorks } from "./pages/marketing/HowItWorks";
 import { Pricing } from "./pages/marketing/Pricing";
 import { Contact } from "./pages/marketing/Contact";
@@ -30,6 +33,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/integrations" element={<Integrations />} />
+        <Route path="/demo" element={<Demo />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />

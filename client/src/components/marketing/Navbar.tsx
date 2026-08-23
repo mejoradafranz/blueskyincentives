@@ -4,12 +4,14 @@ import "./Navbar.css";
 
 const LINKS = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/programs", label: "Programs" },
-  { to: "/how-it-works", label: "How It Works" },
-  { to: "/pricing", label: "Pricing" },
-  { to: "/contact", label: "Contact" },
+  { to: "/programs", label: "The Incentives" },
+  { to: "/industries", label: "Industries" },
+  { to: "/integrations", label: "Integrations" },
+  { to: "/demo", label: "Watch Demo" },
 ];
+
+const CALL_NUMBER = "+15551234567";
+const CALL_NUMBER_DISPLAY = "(555) 123-4567";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,9 +49,22 @@ export function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <NavLink to="/login" className="navbar__cta" onClick={() => setMenuOpen(false)}>
-            Client / Employee Login
-          </NavLink>
+          <div className="navbar__actions">
+            <a
+              href={`tel:${CALL_NUMBER}`}
+              className="navbar__call"
+              onClick={() => setMenuOpen(false)}
+            >
+              <span className="navbar__call-icon" aria-hidden="true" />
+              {CALL_NUMBER_DISPLAY}
+            </a>
+            <NavLink to="/contact" className="navbar__cta" onClick={() => setMenuOpen(false)}>
+              Start Risk-Free
+            </NavLink>
+            <NavLink to="/login" className="navbar__login" onClick={() => setMenuOpen(false)}>
+              Log in
+            </NavLink>
+          </div>
         </nav>
       </div>
     </header>
