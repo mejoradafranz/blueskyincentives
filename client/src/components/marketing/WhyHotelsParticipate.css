@@ -1,0 +1,108 @@
+.why-hotels__feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.why-hotels__heading {
+  font-size: 1.7rem;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.why-hotels__paragraph {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.why-hotels__media {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.why-hotels__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.why-hotels__benefits {
+  margin-bottom: 56px;
+}
+
+.why-hotels__flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+.why-hotels__flow-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.why-hotels__flow-box {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.why-hotels__flow-arrow {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  padding: 0 6px;
+}
+
+.why-hotels__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.why-hotels__link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.why-hotels__link:hover {
+  color: var(--color-primary-hover);
+  border-bottom-color: var(--color-primary-hover);
+}
+
+@media (max-width: 900px) {
+  .why-hotels__feature {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .why-hotels__flow {
+    flex-direction: column;
+  }
+
+  .why-hotels__flow-item {
+    flex-direction: column;
+  }
+
+  .why-hotels__flow-arrow {
+    transform: rotate(90deg);
+    padding: 4px 0;
+  }
+}
