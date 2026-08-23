@@ -52,21 +52,8 @@ export function Home() {
   return (
     <>
       <Hero
-        eyebrow="Employee Incentive Programs"
-        title="Recognition your employees actually redeem."
-        subtitle="Blue Sky Incentives gives you a budget-controlled, points-based rewards platform for your company — plus a self-serve portal your employees will actually use."
         image={heroHomeImage}
         imageAlt="A hotel front desk associate helping guests check in"
-        actions={
-          <>
-            <Link to="/contact">
-              <Button>Talk to us</Button>
-            </Link>
-            <Link to="/how-it-works">
-              <Button variant="secondary">See how it works</Button>
-            </Link>
-          </>
-        }
       />
 
       <Section

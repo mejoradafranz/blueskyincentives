@@ -10,20 +10,24 @@ export function Hero({
   imageAlt,
 }: {
   eyebrow?: string;
-  title: ReactNode;
+  title?: ReactNode;
   subtitle?: ReactNode;
   actions?: ReactNode;
   image?: string;
   imageAlt?: string;
 }) {
+  const hasText = eyebrow || title || subtitle || actions;
+
   return (
     <section className="hero">
-      <div className="container hero__inner">
-        {eyebrow && <div className="hero__eyebrow">{eyebrow}</div>}
-        <h1 className="hero__title">{title}</h1>
-        {subtitle && <p className="hero__subtitle">{subtitle}</p>}
-        {actions && <div className="hero__actions">{actions}</div>}
-      </div>
+      {hasText && (
+        <div className="container hero__inner">
+          {eyebrow && <div className="hero__eyebrow">{eyebrow}</div>}
+          {title && <h1 className="hero__title">{title}</h1>}
+          {subtitle && <p className="hero__subtitle">{subtitle}</p>}
+          {actions && <div className="hero__actions">{actions}</div>}
+        </div>
+      )}
 
       {image && (
         <div className="hero__image-container">
