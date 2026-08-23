@@ -3,6 +3,15 @@
   grid-template-columns: 1fr 1fr;
   gap: 56px;
   align-items: center;
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.growth-ways__feature:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
 .growth-ways__feature-title {
@@ -85,7 +94,9 @@
 .growth-ways__cta {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin-top: 8px;
 }
 
 .growth-ways__link {
