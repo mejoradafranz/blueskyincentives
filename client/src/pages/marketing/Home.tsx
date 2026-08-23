@@ -7,24 +7,8 @@ import { GrowthWays } from "../../components/marketing/GrowthWays";
 import { GetStarted } from "../../components/marketing/GetStarted";
 import { IndustryPlaybooks } from "../../components/marketing/IndustryPlaybooks";
 import { WhyHotelsParticipate } from "../../components/marketing/WhyHotelsParticipate";
-import { StepList } from "../../components/marketing/StepList";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
-
-const STEPS = [
-  {
-    title: "Set up your program",
-    description: "Define a budget, a points-per-dollar rate, and enroll your employees.",
-  },
-  {
-    title: "Award points",
-    description: "Recognize employees for milestones, performance, or peer nominations.",
-  },
-  {
-    title: "Employees redeem rewards",
-    description: "Employees browse the catalog and redeem points for rewards they actually want.",
-  },
-];
 
 export function Home() {
   return (
@@ -60,10 +44,6 @@ export function Home() {
       <IndustryPlaybooks />
 
       <WhyHotelsParticipate />
-
-      <Section tone="subtle" eyebrow="How it works" title="Up and running in three steps">
-        <StepList steps={STEPS} />
-      </Section>
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
