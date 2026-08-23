@@ -4,6 +4,7 @@ import { StatsBar } from "../../components/marketing/StatsBar";
 import { Section } from "../../components/marketing/Section";
 import { IncentiveLibrary } from "../../components/marketing/IncentiveLibrary";
 import { GrowthWays } from "../../components/marketing/GrowthWays";
+import { GetStarted } from "../../components/marketing/GetStarted";
 import { StepList } from "../../components/marketing/StepList";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
@@ -51,6 +52,8 @@ export function Home() {
       <IncentiveLibrary />
 
       <GrowthWays />
+
+      <GetStarted />
 
       <Section tone="subtle" eyebrow="How it works" title="Up and running in three steps">
         <StepList steps={STEPS} />
