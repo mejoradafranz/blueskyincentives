@@ -8,6 +8,7 @@ import { GetStarted } from "../../components/marketing/GetStarted";
 import { IndustryPlaybooks } from "../../components/marketing/IndustryPlaybooks";
 import { WhyHotelsParticipate } from "../../components/marketing/WhyHotelsParticipate";
 import { TrustedRelationships } from "../../components/marketing/TrustedRelationships";
+import { DistributionTools } from "../../components/marketing/DistributionTools";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -48,11 +49,7 @@ export function Home() {
 
       <TrustedRelationships />
 
-      <Section
-        tone="dark"
-        title="Distribute Value-Packed Incentives Branded With Your Logo"
-        subtitle="All distribution tools are included with your Blue Sky Incentives membership."
-      />
+      <DistributionTools />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
