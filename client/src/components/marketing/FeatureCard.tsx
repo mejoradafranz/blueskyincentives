@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import "./FeatureCard.css";
 
 export function FeatureCard({
@@ -7,7 +8,7 @@ export function FeatureCard({
 }: {
   title: string;
   description: string;
-  mark?: string;
+  mark?: ReactNode;
 }) {
   return (
     <div className="feature-card">

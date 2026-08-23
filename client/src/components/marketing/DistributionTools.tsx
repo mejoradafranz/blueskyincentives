@@ -1,27 +1,40 @@
 import { Section } from "./Section";
 import { FeatureCard } from "./FeatureCard";
+import {
+  MailIcon,
+  DocumentIcon,
+  ChatIcon,
+  QrCodeIcon,
+  LinkIcon,
+  PopUpIcon,
+  BannerIcon,
+  StickyBarIcon,
+  AppGridIcon,
+  ZapIcon,
+  CodeIcon,
+} from "./DistributionIcons";
 import "./DistributionTools.css";
 
 const DIRECT_DELIVERY = [
   {
-    mark: "1",
+    mark: <MailIcon />,
     title: "Send by Email",
     description:
       "Send branded digital certificates through your own business email and integrate them into existing campaigns.",
   },
   {
-    mark: "2",
+    mark: <DocumentIcon />,
     title: "Printable PDF Certificates",
     description: "Create branded certificates for printing, direct mail and offline promotions.",
   },
   {
-    mark: "3",
+    mark: <ChatIcon />,
     title: "Send by SMS",
     description:
       "Send personalized incentives by text message for immediate, time-sensitive delivery.",
   },
   {
-    mark: "4",
+    mark: <QrCodeIcon />,
     title: "QR Code Certificates",
     description:
       "Create QR codes customers can scan from flyers, posters, displays, mail pieces or digital promotions.",
@@ -30,24 +43,24 @@ const DIRECT_DELIVERY = [
 
 const WEBSITE_LEAD_CAPTURE = [
   {
-    mark: "1",
+    mark: <LinkIcon />,
     title: "Landing Page Links",
     description:
       "Capture the lead and automatically deliver the selected incentive through one branded link.",
   },
   {
-    mark: "2",
+    mark: <PopUpIcon />,
     title: "Website Pop-Ups",
     description: "Capture attention and deliver incentives through targeted website pop-ups.",
   },
   {
-    mark: "3",
+    mark: <BannerIcon />,
     title: "Web Banners",
     description:
       "Add incentive-driven banners to websites, thank-you pages and campaign landing pages.",
   },
   {
-    mark: "4",
+    mark: <StickyBarIcon />,
     title: "Website Sticky Bars",
     description: "Place a persistent incentive offer across the top or bottom of a website.",
   },
@@ -55,20 +68,20 @@ const WEBSITE_LEAD_CAPTURE = [
 
 const AUTOMATION = [
   {
-    mark: "1",
+    mark: <AppGridIcon />,
     title: "Native GoHighLevel App",
     description:
       "Automatically generate personalized Blue Sky Incentives claim links directly from GoHighLevel workflows. The public Marketplace app includes nine ready-to-use workflows for agencies and individual sub-accounts.",
     note: "Standard Blue Sky Incentives only. Premium Certificates are not included in Native GoHighLevel workflow automation.",
   },
   {
-    mark: "2",
+    mark: <ZapIcon />,
     title: "Zapier Integration",
     description:
       "Connect Blue Sky Incentives distribution actions to supported applications and automated workflows through Zapier.",
   },
   {
-    mark: "3",
+    mark: <CodeIcon />,
     title: "API Integration",
     description: "Connect Blue Sky Incentives certificate delivery to your own systems and applications.",
   },
