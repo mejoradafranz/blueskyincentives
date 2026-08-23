@@ -12,7 +12,7 @@ export function Section({
   title?: ReactNode;
   subtitle?: ReactNode;
   children?: ReactNode;
-  tone?: "default" | "subtle";
+  tone?: "default" | "subtle" | "dark";
 }) {
   return (
     <section className={`section section--${tone}`}>

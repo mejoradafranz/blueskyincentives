@@ -11,6 +11,7 @@ export function IndustryPlaybooks() {
 
   return (
     <Section
+      tone="dark"
       eyebrow="Industry Playbooks"
       title="See How Blue Sky Incentives Can Work in Your Industry"
       subtitle="Watch short, industry-specific examples showing how businesses use high-value incentives to generate leads, close more sales, bring customers back and earn referrals."

@@ -6,6 +6,22 @@
   background: var(--color-bg-subtle);
 }
 
+.section--dark {
+  background: #0c1a3a;
+}
+
+.section--dark .section__eyebrow {
+  color: #7db4ff;
+}
+
+.section--dark .section__title {
+  color: #ffffff;
+}
+
+.section--dark .section__subtitle {
+  color: #c3d0ef;
+}
+
 .section__header {
   max-width: 640px;
   margin: 0 auto 48px;
