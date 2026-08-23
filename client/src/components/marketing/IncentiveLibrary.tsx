@@ -1,4 +1,10 @@
 import { Section } from "./Section";
+import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
+import diningImage from "../../assets/incentives/dining-certificates.jpg";
+import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
+import resortImage from "../../assets/incentives/resort-stays.jpg";
+import hotelSavingsImage from "../../assets/incentives/hotel-savings.jpg";
+import cruiseImage from "../../assets/incentives/cruise-certificates.jpg";
 import "./IncentiveLibrary.css";
 
 export interface IncentiveCategory {
@@ -7,12 +13,12 @@ export interface IncentiveCategory {
 }
 
 const CATEGORIES: IncentiveCategory[] = [
-  { title: "Smart-Device Vouchers" },
-  { title: "Dining Certificates" },
-  { title: "Airfare + Hotel Stays" },
-  { title: "Resort Stays" },
-  { title: "Hotel Savings" },
-  { title: "Cruise Certificates" },
+  { title: "Smart-Device Vouchers", image: smartDeviceImage },
+  { title: "Dining Certificates", image: diningImage },
+  { title: "Airfare + Hotel Stays", image: airfareHotelImage },
+  { title: "Resort Stays", image: resortImage },
+  { title: "Hotel Savings", image: hotelSavingsImage },
+  { title: "Cruise Certificates", image: cruiseImage },
 ];
 
 export function IncentiveLibrary() {
