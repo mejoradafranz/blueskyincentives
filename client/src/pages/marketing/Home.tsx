@@ -2,37 +2,9 @@ import { Link } from "react-router-dom";
 import { HomeHero } from "../../components/marketing/HomeHero";
 import { StatsBar } from "../../components/marketing/StatsBar";
 import { Section } from "../../components/marketing/Section";
-import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { StepList } from "../../components/marketing/StepList";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
-
-const FEATURES = [
-  {
-    mark: "$",
-    title: "Points-based rewards",
-    description:
-      "Set your own points-to-dollar conversion and let employees earn toward a catalog of gift cards, merchandise, and experiences.",
-  },
-  {
-    mark: "B",
-    title: "Budget controls",
-    description:
-      "Set a program budget up front and track spend against it in real time — no surprises at the end of the quarter.",
-  },
-  {
-    mark: "R",
-    title: "Reward catalog",
-    description:
-      "Employees browse and redeem rewards themselves, with balances and redemption history always visible to them.",
-  },
-  {
-    mark: "A",
-    title: "Reporting & analytics",
-    description:
-      "See participation, points awarded, and redemptions at a glance so you can prove the program is working.",
-  },
-];
 
 const STEPS = [
   {
@@ -60,14 +32,17 @@ export function Home() {
       <StatsBar />
 
       <Section
-        eyebrow="Platform"
-        title="Everything you need to run an incentive program"
-        subtitle="One platform for your admin team to configure and manage, and one portal your employees log into to redeem rewards."
+        eyebrow="On-Demand Demo"
+        title="See Exactly How Blue Sky Incentives Works"
+        subtitle="Watch the complete on-demand demonstration and see how businesses use high-value incentives to generate more leads, close more sales, increase repeat business and attract referrals."
       >
-        <div className="feature-grid">
-          {FEATURES.map((f) => (
-            <FeatureCard key={f.title} {...f} />
-          ))}
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+          <Link to="/demo">
+            <Button>Watch the Instant Demo</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="secondary">Speak with an Incentive Agent</Button>
+          </Link>
         </div>
       </Section>
 
