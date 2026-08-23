@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Section } from "./Section";
+import { Modal } from "../ui/Modal";
 import growLeadsImage from "../../assets/incentives/grow-leads.png";
 import "./GrowthWays.css";
 
@@ -15,6 +17,8 @@ const WAYS: GrowthWay[] = [
 ];
 
 export function GrowthWays() {
+  const [showStrategy, setShowStrategy] = useState(false);
+
   return (
     <Section
       eyebrow="Grow Your Business"
@@ -35,6 +39,26 @@ export function GrowthWays() {
           </div>
         ))}
       </div>
+
+      <div className="growth-ways__cta">
+        <button className="growth-ways__link" onClick={() => setShowStrategy(true)}>
+          See the Lead-Generation Strategy
+        </button>
+      </div>
+
+      {showStrategy && (
+        <Modal
+          title="Lead-Generation Strategy"
+          onClose={() => setShowStrategy(false)}
+          maxWidth={900}
+        >
+          <img
+            src={growLeadsImage}
+            alt="Add one incentive, attract more leads — lead-generation strategy infographic"
+            style={{ width: "100%", height: "auto", display: "block", borderRadius: "var(--radius-md)" }}
+          />
+        </Modal>
+      )}
     </Section>
   );
 }
