@@ -4,6 +4,7 @@ import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { StepList } from "../../components/marketing/StepList";
 import { Button } from "../../components/ui/Button";
+import heroHomeImage from "../../assets/hero-home.jpg";
 
 const FEATURES = [
   {
@@ -54,6 +55,8 @@ export function Home() {
         eyebrow="Employee Incentive Programs"
         title="Recognition your employees actually redeem."
         subtitle="Blue Sky Incentives gives you a budget-controlled, points-based rewards platform for your company — plus a self-serve portal your employees will actually use."
+        image={heroHomeImage}
+        imageAlt="A hotel front desk associate helping guests check in"
         actions={
           <>
             <Link to="/contact">
