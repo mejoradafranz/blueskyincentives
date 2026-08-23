@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HomeHero } from "../../components/marketing/HomeHero";
+import { StatsBar } from "../../components/marketing/StatsBar";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { StepList } from "../../components/marketing/StepList";
@@ -55,6 +56,8 @@ export function Home() {
         image={heroHomeImage}
         imageAlt="A hotel front desk associate helping guests check in"
       />
+
+      <StatsBar />
 
       <Section
         eyebrow="Platform"
