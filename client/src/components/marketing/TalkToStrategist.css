@@ -1,0 +1,110 @@
+.talk-strategist__feature {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.talk-strategist__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.talk-strategist__title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.talk-strategist__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+.talk-strategist__checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.talk-strategist__check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.talk-strategist__check-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talk-strategist__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 40px 36px;
+  text-align: center;
+}
+
+.talk-strategist__card-title {
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+}
+
+.talk-strategist__phone {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.talk-strategist__phone:hover {
+  color: var(--color-primary-hover);
+}
+
+.talk-strategist__hours {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 28px;
+}
+
+.talk-strategist__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 860px) {
+  .talk-strategist__feature {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .talk-strategist__check-item {
+    justify-content: center;
+  }
+}
