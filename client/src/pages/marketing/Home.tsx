@@ -10,6 +10,7 @@ import { WhyHotelsParticipate } from "../../components/marketing/WhyHotelsPartic
 import { TrustedRelationships } from "../../components/marketing/TrustedRelationships";
 import { DistributionTools } from "../../components/marketing/DistributionTools";
 import { AICampaignTools } from "../../components/marketing/AICampaignTools";
+import { CustomerStories } from "../../components/marketing/CustomerStories";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -53,6 +54,8 @@ export function Home() {
       <DistributionTools />
 
       <AICampaignTools />
+
+      <CustomerStories />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
