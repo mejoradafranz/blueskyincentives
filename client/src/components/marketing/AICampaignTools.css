@@ -1,0 +1,49 @@
+.ai-tools__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.ai-tools__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.ai-tools__title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.ai-tools__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ai-tools__header-media {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.ai-tools__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .ai-tools__header {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
