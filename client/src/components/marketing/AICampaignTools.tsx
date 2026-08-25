@@ -75,7 +75,7 @@ export function AICampaignTools() {
         </div>
       </div>
 
-      <div className="feature-grid">
+      <div className="feature-grid ai-tools__grid">
         {TOOLS.map((tool) => (
           <FeatureCard key={tool.title} {...tool} />
         ))}
