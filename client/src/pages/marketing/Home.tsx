@@ -11,6 +11,7 @@ import { TrustedRelationships } from "../../components/marketing/TrustedRelation
 import { DistributionTools } from "../../components/marketing/DistributionTools";
 import { AICampaignTools } from "../../components/marketing/AICampaignTools";
 import { CustomerStories } from "../../components/marketing/CustomerStories";
+import { MobileApp } from "../../components/marketing/MobileApp";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -56,6 +57,8 @@ export function Home() {
       <AICampaignTools />
 
       <CustomerStories />
+
+      <MobileApp />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
