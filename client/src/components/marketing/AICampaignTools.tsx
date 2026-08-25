@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Section } from "./Section";
 import { FeatureCard } from "./FeatureCard";
+import { Button } from "../ui/Button";
 import {
   SparkleIcon,
   SearchIcon,
@@ -77,6 +79,18 @@ export function AICampaignTools() {
         {TOOLS.map((tool) => (
           <FeatureCard key={tool.title} {...tool} />
         ))}
+      </div>
+
+      <div className="ai-tools__cta">
+        <p className="ai-tools__cta-text">Need help choosing the right setup?</p>
+        <div className="ai-tools__cta-actions">
+          <Link to="/demo">
+            <Button>Watch Demo</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
+        </div>
       </div>
     </Section>
   );
