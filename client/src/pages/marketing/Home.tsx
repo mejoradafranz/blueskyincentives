@@ -16,6 +16,7 @@ import { TalkToStrategist } from "../../components/marketing/TalkToStrategist";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { AgencyProgram } from "../../components/marketing/AgencyProgram";
+import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -71,6 +72,8 @@ export function Home() {
       <PlanInclusions />
 
       <AgencyProgram />
+
+      <MoneyBackGuarantee />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>

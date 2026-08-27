@@ -1,0 +1,40 @@
+.money-back__intro {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.money-back__intro p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+.money-back__intro p:last-child {
+  margin-bottom: 0;
+}
+
+.money-back__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.money-back__terms-link {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.money-back__terms-link:hover {
+  color: var(--color-primary-hover);
+  border-bottom-color: var(--color-primary-hover);
+}
