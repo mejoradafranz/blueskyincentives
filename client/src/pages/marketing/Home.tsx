@@ -14,6 +14,8 @@ import { CustomerStories } from "../../components/marketing/CustomerStories";
 import { MobileApp } from "../../components/marketing/MobileApp";
 import { TalkToStrategist } from "../../components/marketing/TalkToStrategist";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
+import { PlanInclusions } from "../../components/marketing/PlanInclusions";
+import { AgencyProgram } from "../../components/marketing/AgencyProgram";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -65,6 +67,10 @@ export function Home() {
       <TalkToStrategist />
 
       <PricingPlans />
+
+      <PlanInclusions />
+
+      <AgencyProgram />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
