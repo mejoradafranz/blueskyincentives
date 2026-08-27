@@ -13,6 +13,7 @@ import { AICampaignTools } from "../../components/marketing/AICampaignTools";
 import { CustomerStories } from "../../components/marketing/CustomerStories";
 import { MobileApp } from "../../components/marketing/MobileApp";
 import { TalkToStrategist } from "../../components/marketing/TalkToStrategist";
+import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -62,6 +63,8 @@ export function Home() {
       <MobileApp />
 
       <TalkToStrategist />
+
+      <PricingPlans />
 
       <Section title="Ready to build a program your team will actually use?">
         <div style={{ display: "flex", justifyContent: "center" }}>
