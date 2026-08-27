@@ -17,6 +17,7 @@ import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { AgencyProgram } from "../../components/marketing/AgencyProgram";
 import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
+import { HelpOptions } from "../../components/marketing/HelpOptions";
 import { Button } from "../../components/ui/Button";
 import heroHomeImage from "../../assets/hero-home.jpg";
 
@@ -75,13 +76,21 @@ export function Home() {
 
       <MoneyBackGuarantee />
 
-      <Section title="Ready to build a program your team will actually use?">
-        <div style={{ display: "flex", justifyContent: "center" }}>
+      <Section
+        title="Ready to Put Blue Sky Incentives to Work?"
+        subtitle="Watch the instant demo or start your Blue Sky Incentives membership today."
+      >
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+          <Link to="/demo">
+            <Button>Watch the Instant Demo</Button>
+          </Link>
           <Link to="/contact">
-            <Button>Get in touch</Button>
+            <Button variant="secondary">Start Risk-Free</Button>
           </Link>
         </div>
       </Section>
+
+      <HelpOptions />
     </>
   );
 }
