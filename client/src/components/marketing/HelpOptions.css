@@ -83,6 +83,13 @@
   margin-top: 16px;
 }
 
+.help-options__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 @media (max-width: 860px) {
   .help-options__grid {
     grid-template-columns: 1fr;

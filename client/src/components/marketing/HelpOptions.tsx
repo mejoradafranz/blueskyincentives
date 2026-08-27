@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { Section } from "./Section";
+import { Button } from "../ui/Button";
 import "./HelpOptions.css";
 
 const STRATEGIST_PHONE = "+16198154181";
@@ -22,6 +24,17 @@ export function HelpOptions() {
             {STRATEGIST_PHONE_DISPLAY}
           </a>
           <p className="help-options__hours">Monday&ndash;Friday, 8am&ndash;5pm PST</p>
+
+          <div className="help-options__actions">
+            <a href={`tel:${STRATEGIST_PHONE}`}>
+              <Button style={{ width: "100%" }}>Call Now</Button>
+            </a>
+            <Link to="/contact">
+              <Button variant="secondary" style={{ width: "100%" }}>
+                Book One-on-One Call
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <div className="help-options__card">
@@ -36,6 +49,17 @@ export function HelpOptions() {
           <a href={`mailto:${SUPPORT_EMAIL}`} className="help-options__email">
             {SUPPORT_EMAIL}
           </a>
+
+          <div className="help-options__actions">
+            <a href={`tel:${SUPPORT_PHONE}`}>
+              <Button style={{ width: "100%" }}>Call Client Support</Button>
+            </a>
+            <Link to="/contact">
+              <Button variant="secondary" style={{ width: "100%" }}>
+                Book Support Call
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <div className="help-options__card">
