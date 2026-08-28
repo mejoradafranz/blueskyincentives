@@ -138,6 +138,27 @@ export function InsuranceAgents() {
           ))}
         </div>
       </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Insurance Agent Video"
+        title="See How Insurance Agents Can Use Blue Sky Incentives"
+        subtitle="See how insurance agencies can use incentives around quote generation, coverage reviews, client appreciation, retention, cross-sell and referrals."
+      >
+        <div className="insurance-video">
+          <div className="insurance-video__play" aria-hidden="true" />
+          <span className="insurance-video__caption">Video coming soon</span>
+        </div>
+
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
+        </div>
+      </Section>
     </>
   );
 }
