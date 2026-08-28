@@ -3,6 +3,8 @@ import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { CheckIcon } from "../../components/marketing/CheckIcon";
+import { PricingPlans } from "../../components/marketing/PricingPlans";
+import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { Button } from "../../components/ui/Button";
 import heroInsuranceImage from "../../assets/hero-insurance.jpg";
 import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
@@ -366,6 +368,48 @@ export function InsuranceAgents() {
           </Link>
           <Link to="/contact">
             <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
+        </div>
+      </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Social Proof"
+        title="Hear It From Blue Sky Incentives Members"
+        subtitle="Real Blue Sky Incentives clients describing how incentives changed their marketing results."
+      >
+        <div className="insurance-video">
+          <div className="insurance-video__play" aria-hidden="true" />
+          <span className="insurance-video__caption">Video coming soon</span>
+        </div>
+      </Section>
+
+      <PricingPlans />
+
+      <Section>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free — $799 Today</Button>
+          </Link>
+        </div>
+        <p className="insurance-pricing__guarantee">Protected by our 14-day money-back guarantee.</p>
+
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 20 }}>
+          <Link to="/demo">
+            <Button variant="secondary">Watch the Instant Demo</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
+        </div>
+      </Section>
+
+      <PlanInclusions />
+
+      <Section tone="subtle">
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Link to="/pricing">
+            <Button variant="secondary">See Everything Included</Button>
           </Link>
         </div>
       </Section>
