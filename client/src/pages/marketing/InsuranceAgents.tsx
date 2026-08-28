@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
@@ -131,7 +132,54 @@ const CAMPAIGN_SUPPORT_ITEMS = [
   },
 ];
 
+const FAQS: { question: string; answer: string | null }[] = [
+  {
+    question: "Can I use an incentive with a free insurance quote?",
+    answer:
+      "Many agencies attach a high-value incentive such as a $100 Dining Certificate to completing a quote request, with no purchase necessary. Insurance marketing, inducement and rebating rules vary by state and carrier, so review your exact campaign with your compliance, legal and carrier requirements before launch.",
+  },
+  {
+    question: "Can I use Blue Sky Incentives with purchased or shared insurance leads?",
+    answer: null,
+  },
+  {
+    question: "Can I use incentives for annual coverage reviews?",
+    answer: null,
+  },
+  {
+    question: "Can I use Blue Sky Incentives for renewal and client-appreciation campaigns?",
+    answer: null,
+  },
+  {
+    question: "Can I use incentives for cross-sell campaigns?",
+    answer: null,
+  },
+  {
+    question: "Can I use incentives for referrals?",
+    answer: null,
+  },
+  {
+    question: "Do I pay for every incentive I distribute?",
+    answer: null,
+  },
+  {
+    question: "Who handles incentive redemption and fulfillment?",
+    answer: null,
+  },
+  {
+    question: "Can I automate quote or follow-up campaigns?",
+    answer: null,
+  },
+  {
+    question: "Are insurance incentive rules different by state?",
+    answer:
+      "Insurance incentive, inducement, rebating and referral rules can vary by state and carrier. Review your campaign with your compliance, legal and carrier requirements before launch.",
+  },
+];
+
 export function InsuranceAgents() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
   return (
     <>
       <ImageHero
@@ -416,6 +464,45 @@ export function InsuranceAgents() {
       </Section>
 
       <MoneyBackGuarantee />
+
+      <Section
+        tone="subtle"
+        eyebrow="Common Questions"
+        title="Questions Insurance Agents Ask"
+        subtitle="Still have a question about how incentives fit your quote and retention marketing?"
+      >
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 40 }}>
+          <Link to="/contact">
+            <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
+        </div>
+
+        <div className="insurance-faq__list">
+          {FAQS.map((faq, i) => {
+            const isOpen = openFaq === i;
+            return (
+              <div key={faq.question} className="insurance-faq__item">
+                <button
+                  className="insurance-faq__question"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpenFaq(isOpen ? null : i)}
+                >
+                  <span>{faq.question}</span>
+                  <span
+                    className={`insurance-faq__chevron ${isOpen ? "insurance-faq__chevron--open" : ""}`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {isOpen && (
+                  <div className="insurance-faq__answer">
+                    <p>{faq.answer ?? "Answer coming soon."}</p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </Section>
     </>
   );
 }
