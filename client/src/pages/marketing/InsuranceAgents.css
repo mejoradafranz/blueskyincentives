@@ -1,0 +1,43 @@
+.insurance-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.insurance-stats__value {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.insurance-stats__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.insurance-stats__note {
+  max-width: 640px;
+  margin: 40px auto 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .insurance-stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .insurance-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

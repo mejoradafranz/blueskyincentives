@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HomeHero } from "../../components/marketing/HomeHero";
+import { ImageHero } from "../../components/marketing/ImageHero";
 import { StatsBar } from "../../components/marketing/StatsBar";
 import { Section } from "../../components/marketing/Section";
 import { IncentiveLibrary } from "../../components/marketing/IncentiveLibrary";
@@ -24,9 +24,20 @@ import heroHomeImage from "../../assets/hero-home.jpg";
 export function Home() {
   return (
     <>
-      <HomeHero
+      <ImageHero
         image={heroHomeImage}
         imageAlt="A hotel front desk associate helping guests check in"
+        eyebrow="The Future of Incentive Marketing Is Here"
+        title={
+          <>
+            Generate More Leads,
+            <br />
+            Close More Sales &amp;
+            <br />
+            Bring Customers Back
+          </>
+        }
+        subtitle="Add high-perceived-value incentives to your existing marketing and offers—without discounting your product or personally fulfilling the rewards yourself."
       />
 
       <StatsBar />
