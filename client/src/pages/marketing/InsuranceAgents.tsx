@@ -5,6 +5,7 @@ import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { CheckIcon } from "../../components/marketing/CheckIcon";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
+import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
 import { Button } from "../../components/ui/Button";
 import heroInsuranceImage from "../../assets/hero-insurance.jpg";
 import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
@@ -413,6 +414,8 @@ export function InsuranceAgents() {
           </Link>
         </div>
       </Section>
+
+      <MoneyBackGuarantee />
     </>
   );
 }
