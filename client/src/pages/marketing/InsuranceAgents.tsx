@@ -5,6 +5,7 @@ import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { Button } from "../../components/ui/Button";
 import heroInsuranceImage from "../../assets/hero-insurance.jpg";
 import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
+import fourWaysImage from "../../assets/4-ways-to-use.jpg";
 import "./InsuranceAgents.css";
 
 const STATS = [
@@ -219,6 +220,20 @@ export function InsuranceAgents() {
           <a href="#insurance-agent-video">
             <Button variant="secondary">Watch the Insurance Agent Video</Button>
           </a>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="4 Ways to Use Blue Sky Incentives"
+        title="Use Incentives Across Every Stage of the Client Relationship."
+        subtitle="Blue Sky Incentives isn't only a quote-generation tool. Insurance agencies can use incentives to generate quote leads, create stronger new-client experiences, improve retention and create more referral opportunities."
+      >
+        <div className="insurance-media">
+          <img
+            src={fourWaysImage}
+            alt="Four ways insurance agencies can use Blue Sky Incentives: quote leads, new clients, retention and referrals"
+            className="insurance-media__image"
+          />
         </div>
       </Section>
     </>
