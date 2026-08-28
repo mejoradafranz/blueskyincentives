@@ -2,12 +2,14 @@ import type { ReactNode } from "react";
 import "./Section.css";
 
 export function Section({
+  id,
   eyebrow,
   title,
   subtitle,
   children,
   tone = "default",
 }: {
+  id?: string;
   eyebrow?: string;
   title?: ReactNode;
   subtitle?: ReactNode;
@@ -15,7 +17,7 @@ export function Section({
   tone?: "default" | "subtle" | "dark";
 }) {
   return (
-    <section className={`section section--${tone}`}>
+    <section id={id} className={`section section--${tone}`}>
       <div className="container">
         {(eyebrow || title || subtitle) && (
           <div className="section__header">

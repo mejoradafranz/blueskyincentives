@@ -120,3 +120,35 @@
   width: 100%;
   height: auto;
 }
+
+.insurance-incentives__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.insurance-incentives__item {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border);
+  background: linear-gradient(135deg, var(--color-surface), var(--color-primary-subtle));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-faint);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 12px;
+}
+
+@media (max-width: 760px) {
+  .insurance-incentives__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .insurance-incentives__gallery {
+    grid-template-columns: 1fr;
+  }
+}

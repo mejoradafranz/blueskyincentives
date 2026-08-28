@@ -141,6 +141,7 @@ export function InsuranceAgents() {
       </Section>
 
       <Section
+        id="insurance-agent-video"
         tone="subtle"
         eyebrow="Insurance Agent Video"
         title="See How Insurance Agents Can Use Blue Sky Incentives"
@@ -194,6 +195,30 @@ export function InsuranceAgents() {
             alt="One insurance quote request reaching multiple competing agents, and how a Blue Sky Incentives offer helps an agency stand out"
             className="insurance-media__image"
           />
+        </div>
+      </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Incentives"
+        title="Use the Right Incentive for the Right Insurance Conversation"
+        subtitle="Different quote, review, appreciation, renewal and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+      >
+        <div className="insurance-incentives__gallery">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="insurance-incentives__item">
+              Image coming soon
+            </div>
+          ))}
+        </div>
+
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free</Button>
+          </Link>
+          <a href="#insurance-agent-video">
+            <Button variant="secondary">Watch the Insurance Agent Video</Button>
+          </a>
         </div>
       </Section>
     </>
