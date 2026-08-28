@@ -4,6 +4,7 @@ import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { Button } from "../../components/ui/Button";
 import heroInsuranceImage from "../../assets/hero-insurance.jpg";
+import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
 import "./InsuranceAgents.css";
 
 const STATS = [
@@ -157,6 +158,42 @@ export function InsuranceAgents() {
           <Link to="/contact">
             <Button variant="secondary">Speak With an Incentive Strategist</Button>
           </Link>
+        </div>
+      </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Why the Quote Offer Matters"
+        title="Same Insurance Quote. A Stronger Reason to Request It."
+        subtitle={
+          <>
+            Every agency can say &ldquo;Get a Free Quote.&rdquo; Blue Sky Incentives gives you
+            another way to make that quote offer more noticeable and more compelling.
+          </>
+        }
+      >
+        <div className="insurance-image-placeholder">
+          <span>Image coming soon</span>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free</Button>
+          </Link>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="The Shared-Lead Problem"
+        title="When Multiple Agents Are Calling the Same Prospect, Your Offer Matters."
+        subtitle="One quote request can put the same insurance shopper in front of multiple agencies. If everybody is calling with the same message, the agency needs another reason to stand out."
+      >
+        <div className="insurance-media">
+          <img
+            src={sharedLeadImage}
+            alt="One insurance quote request reaching multiple competing agents, and how a Blue Sky Incentives offer helps an agency stand out"
+            className="insurance-media__image"
+          />
         </div>
       </Section>
     </>
