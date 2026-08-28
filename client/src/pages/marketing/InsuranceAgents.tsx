@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
+import { CheckIcon } from "../../components/marketing/CheckIcon";
 import { Button } from "../../components/ui/Button";
 import heroInsuranceImage from "../../assets/hero-insurance.jpg";
 import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
@@ -99,6 +100,31 @@ const RETENTION_WAYS = [
     mark: "5",
     title: "Reactivation",
     description: "Reconnect with former or inactive clients when appropriate.",
+  },
+];
+
+const DISTRIBUTION_ITEMS = [
+  "Email incentives to quote leads and follow-up sequences from your own business address",
+  "SMS/text delivery for fast follow-up after a quote request",
+  "Branded landing page links for quote forms and coverage-review sign-ups",
+  "QR codes for mailers, community events, office signage and renewal packets",
+  "Printable PDF certificates to hand out in the office or include with policy documents",
+  "Website banners, sticky bars and pop-ups on your quote pages",
+  "Zapier and API connections to your agency CRM and lead sources",
+];
+
+const CAMPAIGN_SUPPORT_ITEMS = [
+  {
+    label: "AI Marketing Consultant",
+    description: "quote campaigns, annual-review outreach, renewal and reactivation ideas",
+  },
+  {
+    label: "AI Social Content Creator",
+    description: "local agency content with your incentive offers already integrated",
+  },
+  {
+    label: "Ask AI",
+    description: "built-in guidance and recommendations inside your dashboard",
   },
 ];
 
@@ -289,6 +315,58 @@ export function InsuranceAgents() {
           {RETENTION_WAYS.map((r) => (
             <FeatureCard key={r.title} {...r} />
           ))}
+        </div>
+      </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Blue Sky Incentives Tools for Your Agency"
+        title="Promote and Deliver Incentives Through the Marketing Your Agency Already Uses"
+        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — quote generation, lead follow-up, annual reviews, renewal, client appreciation, reactivation and referral campaigns."
+      >
+        <div className="insurance-tools__grid">
+          <div className="insurance-tools__column">
+            <h3 className="insurance-tools__heading">Distribution Built In</h3>
+            <ul className="insurance-tools__list">
+              {DISTRIBUTION_ITEMS.map((item) => (
+                <li key={item} className="insurance-tools__list-item">
+                  <span className="insurance-tools__check">
+                    <CheckIcon />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="insurance-tools__column">
+            <h3 className="insurance-tools__heading">Campaign Support</h3>
+            <ul className="insurance-tools__list">
+              {CAMPAIGN_SUPPORT_ITEMS.map((item) => (
+                <li key={item.label} className="insurance-tools__list-item">
+                  <span className="insurance-tools__check">
+                    <CheckIcon />
+                  </span>
+                  <span>
+                    <strong>{item.label}</strong> — {item.description}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="insurance-tools__note">
+              You decide the messaging and the campaign. The tools simply make it faster to
+              produce and distribute.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 40 }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
         </div>
       </Section>
     </>
