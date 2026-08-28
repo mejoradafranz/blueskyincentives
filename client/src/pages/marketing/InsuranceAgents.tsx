@@ -6,6 +6,7 @@ import { Button } from "../../components/ui/Button";
 import heroInsuranceImage from "../../assets/hero-insurance.jpg";
 import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
 import fourWaysImage from "../../assets/4-ways-to-use.jpg";
+import clientLifetimeValueImage from "../../assets/client-lifetime-value.jpg";
 import "./InsuranceAgents.css";
 
 const STATS = [
@@ -70,6 +71,34 @@ const HOW_IT_WORKS = [
     title: "Give the shopper another reason to respond",
     description:
       "Coverage expertise, service and trust remain the core value. The incentive strengthens the offer around the next action.",
+  },
+];
+
+const RETENTION_WAYS = [
+  {
+    mark: "1",
+    title: "Annual Coverage Reviews",
+    description: "Create another reason to proactively review coverage and client needs.",
+  },
+  {
+    mark: "2",
+    title: "Renewal Appreciation",
+    description: "Use client appreciation to reinforce the agency relationship.",
+  },
+  {
+    mark: "3",
+    title: "Cross-Sell / Household Reviews",
+    description: "Identify appropriate additional coverage opportunities without forcing unnecessary products.",
+  },
+  {
+    mark: "4",
+    title: "Client Anniversaries",
+    description: "Stay in front of clients between policy transactions.",
+  },
+  {
+    mark: "5",
+    title: "Reactivation",
+    description: "Reconnect with former or inactive clients when appropriate.",
   },
 ];
 
@@ -234,6 +263,32 @@ export function InsuranceAgents() {
             alt="Four ways insurance agencies can use Blue Sky Incentives: quote leads, new clients, retention and referrals"
             className="insurance-media__image"
           />
+        </div>
+      </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Client Lifetime Value"
+        title="Don't Stop at One Policy. Grow the Relationship."
+        subtitle="The first policy can be the beginning of a broader household relationship built around appropriate coverage, proactive reviews and long-term service."
+      >
+        <div className="insurance-media">
+          <img
+            src={clientLifetimeValueImage}
+            alt="Growing a client relationship from a single auto policy into a broader household relationship with annual reviews and renewals"
+            className="insurance-media__image"
+          />
+        </div>
+      </Section>
+
+      <Section
+        title="Winning the Client Once Doesn't Mean You Keep Them."
+        subtitle="Rate increases, changing needs and competing quotes can put every renewal back in play. Give clients more reasons to stay connected with your agency before renewal becomes the only conversation."
+      >
+        <div className="feature-grid">
+          {RETENTION_WAYS.map((r) => (
+            <FeatureCard key={r.title} {...r} />
+          ))}
         </div>
       </Section>
     </>
