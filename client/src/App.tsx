@@ -10,6 +10,7 @@ import { Programs } from "./pages/marketing/Programs";
 import { Industries } from "./pages/marketing/Industries";
 import { IndustryDetail } from "./pages/marketing/IndustryDetail";
 import { InsuranceAgents } from "./pages/marketing/InsuranceAgents";
+import { RealEstate } from "./pages/marketing/RealEstate";
 import { Integrations } from "./pages/marketing/Integrations";
 import { Demo } from "./pages/marketing/Demo";
 import { HowItWorks } from "./pages/marketing/HowItWorks";
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/industries/insurance-agents" element={<InsuranceAgents />} />
+        <Route path="/industries/real-estate" element={<RealEstate />} />
         <Route path="/industries/:slug" element={<IndustryDetail />} />
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/demo" element={<Demo />} />
