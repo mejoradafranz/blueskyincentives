@@ -15,6 +15,7 @@ import { TravelAgencies } from "./pages/marketing/TravelAgencies";
 import { Automotive } from "./pages/marketing/Automotive";
 import { MarketingAgencies } from "./pages/marketing/MarketingAgencies";
 import { TaxAccountants } from "./pages/marketing/TaxAccountants";
+import { Dentistry } from "./pages/marketing/Dentistry";
 import { Integrations } from "./pages/marketing/Integrations";
 import { Demo } from "./pages/marketing/Demo";
 import { HowItWorks } from "./pages/marketing/HowItWorks";
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/industries/automotive" element={<Automotive />} />
         <Route path="/industries/marketing-agencies" element={<MarketingAgencies />} />
         <Route path="/industries/tax-accountants" element={<TaxAccountants />} />
+        <Route path="/industries/dentistry" element={<Dentistry />} />
         <Route path="/industries/:slug" element={<IndustryDetail />} />
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/demo" element={<Demo />} />
