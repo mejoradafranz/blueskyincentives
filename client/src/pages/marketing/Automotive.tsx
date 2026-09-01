@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
@@ -15,6 +16,7 @@ import {
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
+import heroAutomotiveImage from "../../assets/hero-automotive.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -131,21 +133,23 @@ const FAQS: { question: string; answer: string | null }[] = [
 export function Automotive() {
   return (
     <>
-      <Section
+      <ImageHero
+        image={heroAutomotiveImage}
+        imageAlt="Blue Sky Incentives team greeting customers at a dealership lot"
         eyebrow="For Automotive Dealers & Service Teams"
         title="Give Car Shoppers Another Reason to Buy From You."
         subtitle="Use high-value incentives to strengthen your sales and service marketing, stand out from other dealers, and create more opportunities for repeat service visits and referrals."
-      >
-        <ImagePlaceholder landscape />
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
-          <Link to="/contact">
-            <Button>Start Risk-Free</Button>
-          </Link>
-          <Link to="/demo">
-            <Button variant="secondary">Watch Instant Demo</Button>
-          </Link>
-        </div>
-      </Section>
+        actions={
+          <>
+            <Link to="/contact">
+              <Button>Start Risk-Free</Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="secondary">Watch Instant Demo</Button>
+            </Link>
+          </>
+        }
+      />
 
       <Section
         tone="subtle"
