@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
@@ -15,6 +16,7 @@ import {
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
+import heroTravelImage from "../../assets/hero-travel-agencies.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -130,21 +132,23 @@ const FAQS: { question: string; answer: string | null }[] = [
 export function TravelAgencies() {
   return (
     <>
-      <Section
+      <ImageHero
+        image={heroTravelImage}
+        imageAlt="Blue Sky Incentives team helping travelers with hotel booking confirmations at the front desk"
         eyebrow="For Travel Agencies & Advisors"
         title="Give Travelers Another Reason to Book With You."
         subtitle="Use high-value incentives to strengthen your booking campaigns, stand out from online travel sites, and create more opportunities for repeat bookings and referrals."
-      >
-        <ImagePlaceholder landscape />
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
-          <Link to="/contact">
-            <Button>Start Risk-Free</Button>
-          </Link>
-          <Link to="/demo">
-            <Button variant="secondary">Watch Instant Demo</Button>
-          </Link>
-        </div>
-      </Section>
+        actions={
+          <>
+            <Link to="/contact">
+              <Button>Start Risk-Free</Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="secondary">Watch Instant Demo</Button>
+            </Link>
+          </>
+        }
+      />
 
       <Section
         tone="subtle"
