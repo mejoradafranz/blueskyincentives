@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
@@ -15,6 +16,7 @@ import {
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
+import heroRealEstateImage from "../../assets/hero-real-estate.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -132,21 +134,23 @@ const FAQS: { question: string; answer: string | null }[] = [
 export function RealEstate() {
   return (
     <>
-      <Section
+      <ImageHero
+        image={heroRealEstateImage}
+        imageAlt="Blue Sky Incentives team welcoming clients at the front desk"
         eyebrow="For Real Estate Agents & Teams"
         title="Give Home Buyers and Sellers Another Reason to Choose You."
         subtitle="Use high-value incentives to strengthen your listing and buyer campaigns, stand out at the open house, and create more opportunities for referrals and repeat business."
-      >
-        <ImagePlaceholder landscape />
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
-          <Link to="/contact">
-            <Button>Start Risk-Free</Button>
-          </Link>
-          <Link to="/demo">
-            <Button variant="secondary">Watch Instant Demo</Button>
-          </Link>
-        </div>
-      </Section>
+        actions={
+          <>
+            <Link to="/contact">
+              <Button>Start Risk-Free</Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="secondary">Watch Instant Demo</Button>
+            </Link>
+          </>
+        }
+      />
 
       <Section
         tone="subtle"
