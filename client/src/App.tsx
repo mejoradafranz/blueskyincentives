@@ -12,6 +12,7 @@ import { IndustryDetail } from "./pages/marketing/IndustryDetail";
 import { InsuranceAgents } from "./pages/marketing/InsuranceAgents";
 import { RealEstate } from "./pages/marketing/RealEstate";
 import { TravelAgencies } from "./pages/marketing/TravelAgencies";
+import { Automotive } from "./pages/marketing/Automotive";
 import { Integrations } from "./pages/marketing/Integrations";
 import { Demo } from "./pages/marketing/Demo";
 import { HowItWorks } from "./pages/marketing/HowItWorks";
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/industries/insurance-agents" element={<InsuranceAgents />} />
         <Route path="/industries/real-estate" element={<RealEstate />} />
         <Route path="/industries/travel-agencies" element={<TravelAgencies />} />
+        <Route path="/industries/automotive" element={<Automotive />} />
         <Route path="/industries/:slug" element={<IndustryDetail />} />
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/demo" element={<Demo />} />
