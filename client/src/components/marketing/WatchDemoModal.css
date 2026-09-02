@@ -1,0 +1,32 @@
+.watch-demo-modal__subtitle {
+  margin: -8px 0 20px;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.watch-demo-modal__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.watch-demo-modal__code {
+  align-self: flex-start;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--color-bg-subtle), var(--color-primary-subtle));
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: var(--color-text);
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .watch-demo-modal__row {
+    grid-template-columns: 1fr;
+  }
+}
