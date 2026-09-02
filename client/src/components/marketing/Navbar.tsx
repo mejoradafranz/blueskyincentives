@@ -136,12 +136,13 @@ export function Navbar() {
 
             <button
               type="button"
-              className="navbar__link"
+              className="navbar__link navbar__watch-demo"
               onClick={() => {
                 closeAll();
                 setWatchDemoOpen(true);
               }}
             >
+              <span className="navbar__watch-demo-dot" aria-hidden="true" />
               Watch Demo
             </button>
 

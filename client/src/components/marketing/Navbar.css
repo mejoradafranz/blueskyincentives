@@ -72,6 +72,38 @@
   border-bottom-color: var(--color-primary);
 }
 
+.navbar__watch-demo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.navbar__watch-demo-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+  animation: navbar-watch-demo-pulse 1.8s ease-out infinite;
+}
+
+@keyframes navbar-watch-demo-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 78, 216, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(29, 78, 216, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 78, 216, 0);
+  }
+}
+
 .navbar__dropdown {
   position: relative;
 }
