@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { MarketingLayout } from "./layouts/MarketingLayout";
 import { AdminPortalLayout } from "./layouts/AdminPortalLayout";
 import { EmployeePortalLayout } from "./layouts/EmployeePortalLayout";
+import { MemberPortalLayout } from "./layouts/MemberPortalLayout";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 
 import { Home } from "./pages/marketing/Home";
@@ -34,6 +35,11 @@ import { EmployeeDashboard } from "./pages/employee/Dashboard";
 import { RewardsCatalog } from "./pages/employee/RewardsCatalog";
 import { TransactionHistory } from "./pages/employee/TransactionHistory";
 import { RedemptionHistory } from "./pages/employee/RedemptionHistory";
+
+import { MemberOverview } from "./pages/member/Overview";
+import { MemberIncentives } from "./pages/member/Incentives";
+import { MemberRedemptions } from "./pages/member/Redemptions";
+import { MemberAiTools } from "./pages/member/AiTools";
 
 export default function App() {
   return (
@@ -79,6 +85,18 @@ export default function App() {
           <Route path="rewards" element={<RewardsCatalog />} />
           <Route path="history" element={<TransactionHistory />} />
           <Route path="redemptions" element={<RedemptionHistory />} />
+        </Route>
+      </Route>
+
+      <Route
+        path="/dashboard"
+        element={<ProtectedRoute allowedRoles={["client_admin", "employee", "superadmin"]} />}
+      >
+        <Route element={<MemberPortalLayout />}>
+          <Route index element={<MemberOverview />} />
+          <Route path="incentives" element={<MemberIncentives />} />
+          <Route path="redemptions" element={<MemberRedemptions />} />
+          <Route path="ai-tools" element={<MemberAiTools />} />
         </Route>
       </Route>
     </Routes>

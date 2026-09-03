@@ -5,12 +5,6 @@ import { ApiError } from "../../api/client";
 import { Button } from "../../components/ui/Button";
 import "./Login.css";
 
-const HOME_BY_ROLE: Record<string, string> = {
-  client_admin: "/admin/dashboard",
-  employee: "/portal/dashboard",
-  superadmin: "/admin/dashboard",
-};
-
 export function Login() {
   const { user, login } = useAuth();
   const navigate = useNavigate();
@@ -21,7 +15,7 @@ export function Login() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (user) {
-    return <Navigate to={HOME_BY_ROLE[user.role]} replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   async function handleSubmit(e: FormEvent) {
@@ -29,10 +23,8 @@ export function Login() {
     setError(null);
     setIsSubmitting(true);
     try {
-      const loggedInUser = await login(email, password);
-      const redirectTo =
-        (location.state as { from?: string } | null)?.from ??
-        HOME_BY_ROLE[loggedInUser.role];
+      await login(email, password);
+      const redirectTo = (location.state as { from?: string } | null)?.from ?? "/dashboard";
       navigate(redirectTo, { replace: true });
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Something went wrong. Please try again.");
@@ -46,9 +38,7 @@ export function Login() {
       <form className="login__card" onSubmit={handleSubmit}>
         <div className="login__brand-mark" aria-hidden="true" />
         <h1 className="login__title">Sign in</h1>
-        <p className="login__subtitle">
-          Client admins and employees both sign in here.
-        </p>
+        <p className="login__subtitle">Sign in to your Blue Sky Incentives member dashboard.</p>
 
         <label className="login__label" htmlFor="email">
           Email

@@ -5,6 +5,7 @@ import "./PortalShell.css";
 interface PortalNavItem {
   to: string;
   label: string;
+  end?: boolean;
 }
 
 export function PortalShell({
@@ -29,6 +30,7 @@ export function PortalShell({
             <NavLink
               key={item.to}
               to={item.to}
+              end={item.end}
               className={({ isActive }) =>
                 `portal__nav-link ${isActive ? "portal__nav-link--active" : ""}`
               }
