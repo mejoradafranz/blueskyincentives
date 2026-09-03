@@ -205,6 +205,7 @@ export function InsuranceAgents() {
         title="Two Decades of Incentive Fulfillment Behind Every Offer Your Agency Presents"
         subtitle="Your agency presents the offer while Blue Sky Incentives supplies and fulfills the incentive."
       >
+        <div className="insurance-stats__panel">
         <div className="insurance-stats__grid">
           {STATS.map((s) => (
             <div key={s.label} className="insurance-stats__item">
@@ -212,6 +213,7 @@ export function InsuranceAgents() {
               <div className="insurance-stats__label">{s.label}</div>
             </div>
           ))}
+        </div>
         </div>
         <p className="insurance-stats__note">
           An established incentive provider with more than two decades supplying and fulfilling

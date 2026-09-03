@@ -1,4 +1,23 @@
+.insurance-stats__panel {
+  position: relative;
+  background: linear-gradient(155deg, var(--color-navy-deep) 0%, var(--color-navy) 55%, var(--color-navy-soft) 100%);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  overflow: hidden;
+}
+
+.insurance-stats__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(420px 200px at 6% 0%, rgba(212, 175, 55, 0.14), transparent 60%),
+    radial-gradient(420px 220px at 94% 100%, rgba(14, 165, 233, 0.16), transparent 60%);
+  pointer-events: none;
+}
+
 .insurance-stats__grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 24px;
@@ -9,14 +28,17 @@
   font-size: clamp(1.6rem, 2.6vw, 2.2rem);
   font-weight: 800;
   letter-spacing: -0.01em;
-  color: var(--color-primary);
+  background: linear-gradient(90deg, #ffffff, var(--color-gold-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 6px;
 }
 
 .insurance-stats__label {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: #a9b6d9;
   line-height: 1.35;
 }
 

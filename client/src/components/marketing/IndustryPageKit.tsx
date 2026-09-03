@@ -5,13 +5,15 @@ import "./IndustryPageKit.css";
 
 export function StatsGrid({ stats }: { stats: { value: string; label: string }[] }) {
   return (
-    <div className="industry-stats__grid">
-      {stats.map((s) => (
-        <div key={s.label} className="industry-stats__item">
-          <div className="industry-stats__value">{s.value}</div>
-          <div className="industry-stats__label">{s.label}</div>
-        </div>
-      ))}
+    <div className="industry-stats__panel">
+      <div className="industry-stats__grid">
+        {stats.map((s) => (
+          <div key={s.label} className="industry-stats__item">
+            <div className="industry-stats__value">{s.value}</div>
+            <div className="industry-stats__label">{s.label}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
