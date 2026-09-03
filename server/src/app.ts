@@ -15,7 +15,6 @@ import { redemptionsRoutes } from "./modules/redemptions/redemptions.routes.js";
 import { reportsRoutes } from "./modules/reports/reports.routes.js";
 import { rewardsRoutes } from "./modules/rewards/rewards.routes.js";
 import { meRoutes } from "./modules/participants/me.routes.js";
-import { setupRoutes } from "./modules/setup/setup.routes.js";
 
 export function createApp() {
   const app = express();
@@ -43,7 +42,6 @@ export function createApp() {
   app.use("/api/redemptions", redemptionsRoutes);
   app.use("/api/reports", reportsRoutes);
   app.use("/api/me", meRoutes);
-  app.use("/api/setup", setupRoutes);
 
   if (env.isProduction) {
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
