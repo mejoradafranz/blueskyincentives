@@ -1,4 +1,5 @@
 import { PortalShell } from "../components/ui/PortalShell";
+import { NeuronBackground } from "../components/ui/NeuronBackground";
 import {
   SparkleIcon,
   ChecklistIcon,
@@ -30,5 +31,7 @@ const NAV_ITEMS = [
 ];
 
 export function MemberPortalLayout() {
-  return <PortalShell title="Member Dashboard" navItems={NAV_ITEMS} />;
+  return (
+    <PortalShell title="Member Dashboard" navItems={NAV_ITEMS} background={<NeuronBackground />} />
+  );
 }

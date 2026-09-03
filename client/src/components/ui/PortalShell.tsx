@@ -15,10 +15,12 @@ export function PortalShell({
   title,
   homeTo,
   navItems,
+  background,
 }: {
   title: string;
   homeTo?: string;
   navItems: PortalNavItem[];
+  background?: ReactNode;
 }) {
   const { user, logout } = useAuth();
   const [navOpen, setNavOpen] = useState(false);
@@ -82,7 +84,10 @@ export function PortalShell({
           </div>
         </header>
         <main className="portal__content">
-          <Outlet />
+          {background}
+          <div className="portal__content-inner">
+            <Outlet />
+          </div>
         </main>
       </div>
     </div>
