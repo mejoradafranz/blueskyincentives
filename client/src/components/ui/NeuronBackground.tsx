@@ -11,10 +11,10 @@ interface Particle {
 const DOT_COLOR = "rgba(29, 78, 216, 0.55)";
 const DOT_CORE_COLOR = "rgba(255, 255, 255, 0.9)";
 const LINE_COLOR = "29, 78, 216";
-const LINK_DISTANCE = 150;
-const DENSITY = 1 / 26000;
-const MIN_PARTICLES = 18;
-const MAX_PARTICLES = 60;
+const LINK_DISTANCE = 170;
+const DENSITY = 1 / 8000;
+const MIN_PARTICLES = 40;
+const MAX_PARTICLES = 220;
 const SPEED = 0.18;
 
 export function NeuronBackground() {
