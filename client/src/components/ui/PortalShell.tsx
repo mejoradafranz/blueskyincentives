@@ -1,29 +1,37 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { useState } from "react";
+import type { ReactNode } from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../../auth/useAuth";
 import "./PortalShell.css";
 
 interface PortalNavItem {
   to: string;
   label: string;
+  icon?: ReactNode;
   end?: boolean;
 }
 
 export function PortalShell({
   title,
+  homeTo,
   navItems,
 }: {
   title: string;
+  homeTo?: string;
   navItems: PortalNavItem[];
 }) {
   const { user, logout } = useAuth();
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
     <div className="portal">
-      <aside className="portal__sidebar">
-        <div className="portal__brand">
-          <span className="navbar__brand-mark" aria-hidden="true" />
+      {navOpen && <div className="portal__backdrop" onClick={() => setNavOpen(false)} />}
+
+      <aside className={`portal__sidebar ${navOpen ? "portal__sidebar--open" : ""}`}>
+        <Link to={homeTo ?? "/dashboard"} className="portal__brand" onClick={() => setNavOpen(false)}>
+          <span className="portal__brand-mark" aria-hidden="true" />
           Blue Sky Incentives
-        </div>
+        </Link>
         <div className="portal__title">{title}</div>
         <nav className="portal__nav">
           {navItems.map((item) => (
@@ -31,10 +39,16 @@ export function PortalShell({
               key={item.to}
               to={item.to}
               end={item.end}
+              onClick={() => setNavOpen(false)}
               className={({ isActive }) =>
                 `portal__nav-link ${isActive ? "portal__nav-link--active" : ""}`
               }
             >
+              {item.icon && (
+                <span className="portal__nav-icon" aria-hidden="true">
+                  {item.icon}
+                </span>
+              )}
               {item.label}
             </NavLink>
           ))}
@@ -43,9 +57,23 @@ export function PortalShell({
 
       <div className="portal__body">
         <header className="portal__topbar">
-          <div />
+          <button
+            type="button"
+            className="portal__nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded={navOpen}
+            onClick={() => setNavOpen((open) => !open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
           <div className="portal__user">
-            <span>
+            <span className="portal__user-avatar" aria-hidden="true">
+              {(user?.firstName?.[0] ?? "?").toUpperCase()}
+            </span>
+            <span className="portal__user-name">
               {user?.firstName} {user?.lastName}
             </span>
             <button className="portal__logout" onClick={() => logout()}>

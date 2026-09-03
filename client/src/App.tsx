@@ -37,9 +37,18 @@ import { TransactionHistory } from "./pages/employee/TransactionHistory";
 import { RedemptionHistory } from "./pages/employee/RedemptionHistory";
 
 import { MemberOverview } from "./pages/member/Overview";
-import { MemberIncentives } from "./pages/member/Incentives";
-import { MemberRedemptions } from "./pages/member/Redemptions";
+import { DistributeCertificates } from "./pages/member/Certificates";
 import { MemberAiTools } from "./pages/member/AiTools";
+import { QuickLaunch } from "./pages/member/QuickLaunch";
+import { Resources } from "./pages/member/Resources";
+import { Briefcase } from "./pages/member/Briefcase";
+import { MarketingTools } from "./pages/member/MarketingTools";
+import { WhiteLabel } from "./pages/member/WhiteLabel";
+import { ContactManager } from "./pages/member/ContactManager";
+import { AffiliateProgram } from "./pages/member/AffiliateProgram";
+import { SubmitTestimonial } from "./pages/member/SubmitTestimonial";
+import { ReportBug } from "./pages/member/ReportBug";
+import { RequestFeature } from "./pages/member/RequestFeature";
 
 export default function App() {
   return (
@@ -94,9 +103,18 @@ export default function App() {
       >
         <Route element={<MemberPortalLayout />}>
           <Route index element={<MemberOverview />} />
-          <Route path="incentives" element={<MemberIncentives />} />
-          <Route path="redemptions" element={<MemberRedemptions />} />
           <Route path="ai-tools" element={<MemberAiTools />} />
+          <Route path="quick-launch" element={<QuickLaunch />} />
+          <Route path="resources" element={<Resources />} />
+          <Route path="briefcase" element={<Briefcase />} />
+          <Route path="marketing-tools" element={<MarketingTools />} />
+          <Route path="certificates" element={<DistributeCertificates />} />
+          <Route path="white-label" element={<WhiteLabel />} />
+          <Route path="contacts" element={<ContactManager />} />
+          <Route path="affiliate" element={<AffiliateProgram />} />
+          <Route path="testimonial" element={<SubmitTestimonial />} />
+          <Route path="report-bug" element={<ReportBug />} />
+          <Route path="request-feature" element={<RequestFeature />} />
         </Route>
       </Route>
     </Routes>

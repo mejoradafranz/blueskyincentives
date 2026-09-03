@@ -17,13 +17,13 @@ const CATEGORIES = [
 
 const DISTRIBUTION_OPTIONS = ["Email", "SMS", "Landing Page Link", "QR Code", "PDF Certificate"];
 
-export function MemberIncentives() {
+export function DistributeCertificates() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   return (
     <div>
       <PageHeader
-        title="Distribute Incentives"
+        title="Distribute Certificates"
         description="Choose a category to get distribution links, QR codes and PDF certificates."
       />
 
@@ -47,7 +47,7 @@ export function MemberIncentives() {
             {DISTRIBUTION_OPTIONS.map((option) => (
               <li key={option} className="member-modal__option">
                 <span>{option}</span>
-                <span className="member-badge member-badge--soon">Coming Soon</span>
+                <span className="member-badge member-badge--gold">Coming Soon</span>
               </li>
             ))}
           </ul>

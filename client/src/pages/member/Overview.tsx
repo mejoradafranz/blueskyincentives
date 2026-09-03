@@ -7,14 +7,14 @@ import "./member.css";
 
 const QUICK_LINKS = [
   {
-    to: "/dashboard/incentives",
-    title: "Distribute Incentives",
-    description: "Get links, QR codes and PDF certificates for your incentive categories.",
+    to: "/dashboard/quick-launch",
+    title: "Quick Launch Checklist",
+    description: "Get your account set up and your first certificate out the door.",
   },
   {
-    to: "/dashboard/redemptions",
-    title: "Redemptions",
-    description: "Track how your distributed incentives are being redeemed.",
+    to: "/dashboard/certificates",
+    title: "Distribute Certificates",
+    description: "Get links, QR codes and PDF certificates for your incentive categories.",
   },
   {
     to: "/dashboard/ai-tools",
