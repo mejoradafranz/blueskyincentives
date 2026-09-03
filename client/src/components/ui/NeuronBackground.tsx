@@ -8,9 +8,9 @@ interface Particle {
   vy: number;
 }
 
-const DOT_COLOR = "rgba(29, 78, 216, 0.55)";
-const DOT_CORE_COLOR = "rgba(255, 255, 255, 0.9)";
-const LINE_COLOR = "29, 78, 216";
+const DOT_COLOR = "rgba(23, 46, 130, 0.85)";
+const DOT_CORE_COLOR = "rgba(255, 255, 255, 0.85)";
+const LINE_COLOR = "23, 46, 130";
 const LINK_DISTANCE = 170;
 const DENSITY = 1 / 8000;
 const MIN_PARTICLES = 40;
@@ -75,7 +75,7 @@ export function NeuronBackground() {
           const dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < LINK_DISTANCE) {
-            ctx.strokeStyle = `rgba(${LINE_COLOR}, ${0.14 * (1 - dist / LINK_DISTANCE)})`;
+            ctx.strokeStyle = `rgba(${LINE_COLOR}, ${0.24 * (1 - dist / LINK_DISTANCE)})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -88,7 +88,7 @@ export function NeuronBackground() {
       for (const p of particles) {
         ctx.fillStyle = DOT_COLOR;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, 2.4, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, 2.8, 0, Math.PI * 2);
         ctx.fill();
 
         ctx.fillStyle = DOT_CORE_COLOR;
