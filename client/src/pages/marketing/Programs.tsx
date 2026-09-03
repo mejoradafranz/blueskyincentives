@@ -96,7 +96,7 @@ export function Programs() {
 
   return (
     <>
-      <Section title="The Incentives" />
+      <Section tone="dark" title="The Incentives" />
 
       {CATEGORIES.map((category, i) => (
         <Section

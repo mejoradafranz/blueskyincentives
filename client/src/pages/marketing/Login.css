@@ -1,22 +1,38 @@
 .login {
+  position: relative;
   min-height: calc(100vh - 72px - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 48px 24px;
-  background: var(--color-bg-subtle);
+  background: linear-gradient(155deg, var(--color-navy-deep) 0%, var(--color-navy) 55%, var(--color-navy-soft) 100%);
+  overflow: hidden;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(560px 260px at 8% 0%, rgba(212, 175, 55, 0.12), transparent 60%),
+    radial-gradient(560px 300px at 92% 100%, rgba(14, 165, 233, 0.16), transparent 60%);
+  pointer-events: none;
 }
 
 .login__card {
+  position: relative;
   width: 100%;
   max-width: 380px;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   padding: 36px 32px;
   display: flex;
   flex-direction: column;
+  background:
+    linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+    linear-gradient(135deg, var(--color-primary), var(--color-gold)) border-box;
+  border: 1px solid transparent;
 }
 
 .login__brand-mark {

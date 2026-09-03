@@ -7,11 +7,27 @@
 }
 
 .section--dark {
-  background: #0c1a3a;
+  position: relative;
+  background: linear-gradient(155deg, var(--color-navy-deep) 0%, var(--color-navy) 55%, var(--color-navy-soft) 100%);
+  overflow: hidden;
+}
+
+.section--dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(560px 260px at 6% 0%, rgba(212, 175, 55, 0.1), transparent 60%),
+    radial-gradient(560px 300px at 94% 100%, rgba(14, 165, 233, 0.14), transparent 60%);
+  pointer-events: none;
+}
+
+.section--dark > .container {
+  position: relative;
 }
 
 .section--dark .section__eyebrow {
-  color: #7db4ff;
+  color: var(--color-gold-soft);
 }
 
 .section--dark .section__title {
