@@ -4,7 +4,19 @@ import { Section } from "../../components/marketing/Section";
 import { CheckIcon } from "../../components/marketing/CheckIcon";
 import { Button } from "../../components/ui/Button";
 import { Modal } from "../../components/ui/Modal";
+import travelCert1 from "../../assets/travel-cert-1.jpg";
+import travelCert2 from "../../assets/travel-cert-2.jpg";
+import travelCert3 from "../../assets/travel-cert-3.jpg";
+import travelCert4 from "../../assets/travel-cert-4.jpg";
 import "./Programs.css";
+
+interface CertificateImage {
+  src: string;
+  alt: string;
+  title: string;
+  value: string;
+  note: string;
+}
 
 interface IncentiveCategory {
   key: string;
@@ -13,7 +25,39 @@ interface IncentiveCategory {
   features: string[];
   imageCount: number;
   landscape?: boolean;
+  certificates?: CertificateImage[];
 }
+
+const TRAVEL_CERTIFICATES: CertificateImage[] = [
+  {
+    src: travelCert1,
+    alt: "Oceanfront resort lit up at night with pools and cabanas along the beach",
+    title: "Airfare Plus Hotel for Two Certificate",
+    value: "Up to $999",
+    note: "23 Exciting Destinations To Choose From",
+  },
+  {
+    src: travelCert2,
+    alt: "View from an airplane window above the clouds with the wing in frame",
+    title: "7-Night Luxury Resort Getaway Certificate",
+    value: "Up to $1,249",
+    note: "Over 3,500 Locations Worldwide",
+  },
+  {
+    src: travelCert3,
+    alt: "Beachfront resort at sunset with palm trees and lounge chairs on the sand",
+    title: "2-Night All-Inclusive Resort Getaway Certificate",
+    value: "Up to $699",
+    note: "Mexico & Dominican Republic",
+  },
+  {
+    src: travelCert4,
+    alt: "Blue Sky Incentives branded resort entrance lit up at night",
+    title: "4-Night Mexico Getaway Certificate",
+    value: "Up to $699",
+    note: "Five Beach Resort City Destinations",
+  },
+];
 
 const CATEGORIES: IncentiveCategory[] = [
   {
@@ -27,6 +71,7 @@ const CATEGORIES: IncentiveCategory[] = [
       "Customers pay applicable taxes & fees",
     ],
     imageCount: 4,
+    certificates: TRAVEL_CERTIFICATES,
   },
   {
     key: "cruise",
@@ -116,7 +161,24 @@ export function Programs() {
             ))}
           </ul>
 
-          {category.landscape ? (
+          {category.certificates ? (
+            <div className="incentive-category__gallery incentive-category__gallery--certs">
+              {category.certificates.map((cert) => (
+                <div key={cert.title} className="cert-card">
+                  <img src={cert.src} alt={cert.alt} className="cert-card__image" />
+                  <div className="cert-card__caption">
+                    <h3 className="cert-card__title">{cert.title}</h3>
+                    <div className="cert-card__value-label">Certificate Value</div>
+                    <div className="cert-card__value">{cert.value}</div>
+                    <div className="cert-card__note">
+                      <span className="cert-card__bullet" aria-hidden="true" />
+                      {cert.note}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : category.landscape ? (
             <div className="incentive-category__gallery incentive-category__gallery--landscape">
               <div className="incentive-category__gallery-item">Image coming soon</div>
             </div>
