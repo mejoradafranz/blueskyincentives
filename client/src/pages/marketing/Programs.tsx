@@ -8,6 +8,7 @@ import travelCert1 from "../../assets/travel-cert-1.jpg";
 import travelCert2 from "../../assets/travel-cert-2.jpg";
 import travelCert3 from "../../assets/travel-cert-3.jpg";
 import travelCert4 from "../../assets/travel-cert-4.jpg";
+import cruiseCert from "../../assets/cruise-cert.jpg";
 import "./Programs.css";
 
 interface CertificateImage {
@@ -25,6 +26,7 @@ interface IncentiveCategory {
   features: string[];
   imageCount: number;
   landscape?: boolean;
+  landscapeImage?: { src: string; alt: string };
   certificates?: CertificateImage[];
 }
 
@@ -85,6 +87,10 @@ const CATEGORIES: IncentiveCategory[] = [
     ],
     imageCount: 1,
     landscape: true,
+    landscapeImage: {
+      src: cruiseCert,
+      alt: "Cruise ship sailing at sunset with the sky lit in orange and pink",
+    },
   },
   {
     key: "dining",
@@ -180,7 +186,15 @@ export function Programs() {
             </div>
           ) : category.landscape ? (
             <div className="incentive-category__gallery incentive-category__gallery--landscape">
-              <div className="incentive-category__gallery-item">Image coming soon</div>
+              {category.landscapeImage ? (
+                <img
+                  src={category.landscapeImage.src}
+                  alt={category.landscapeImage.alt}
+                  className="incentive-category__landscape-image"
+                />
+              ) : (
+                <div className="incentive-category__gallery-item">Image coming soon</div>
+              )}
             </div>
           ) : (
             <div className="incentive-category__gallery">

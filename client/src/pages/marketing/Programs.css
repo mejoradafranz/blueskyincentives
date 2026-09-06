@@ -61,6 +61,17 @@
   margin: 0 auto;
 }
 
+.incentive-category__landscape-image {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
 @media (max-width: 640px) {
   .incentive-category__gallery {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
