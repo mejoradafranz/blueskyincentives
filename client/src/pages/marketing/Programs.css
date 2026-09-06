@@ -170,3 +170,84 @@
   background: var(--color-gold-soft);
   flex-shrink: 0;
 }
+
+.cert-card--landscape {
+  aspect-ratio: 21 / 9;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cert-card--landscape .cert-card__caption {
+  padding: 28px 32px 26px;
+}
+
+.cert-card--landscape .cert-card__title {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.cert-card--landscape .cert-card__value {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.cert-card__badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cert-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--color-gold-soft);
+  color: var(--color-navy-deep);
+}
+
+.cert-card__badge:nth-child(2) {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.cert-card__meta {
+  font-size: 0.88rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cert-card__meta--muted {
+  color: #d7deef;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .cert-card--landscape {
+    aspect-ratio: 4 / 5;
+  }
+
+  .cert-card--landscape .cert-card__caption {
+    padding: 18px 18px 16px;
+  }
+
+  .cert-card--landscape .cert-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .cert-card--landscape .cert-card__value {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+  }
+
+  .cert-card--landscape::after {
+    background: linear-gradient(to top, rgba(5, 11, 31, 0.94) 0%, rgba(5, 11, 31, 0.8) 45%, rgba(5, 11, 31, 0.2) 75%, transparent 100%);
+  }
+}

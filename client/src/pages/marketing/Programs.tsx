@@ -19,6 +19,17 @@ interface CertificateImage {
   note: string;
 }
 
+interface LandscapeCertificate {
+  src: string;
+  alt: string;
+  badges: string[];
+  title: string;
+  value: string;
+  meta: string;
+  inventoryNote: string;
+  destinationsNote: string;
+}
+
 interface IncentiveCategory {
   key: string;
   title: string;
@@ -27,6 +38,7 @@ interface IncentiveCategory {
   imageCount: number;
   landscape?: boolean;
   landscapeImage?: { src: string; alt: string };
+  landscapeCertificate?: LandscapeCertificate;
   certificates?: CertificateImage[];
 }
 
@@ -87,9 +99,15 @@ const CATEGORIES: IncentiveCategory[] = [
     ],
     imageCount: 1,
     landscape: true,
-    landscapeImage: {
+    landscapeCertificate: {
       src: cruiseCert,
       alt: "Cruise ship sailing at sunset with the sky lit in orange and pink",
+      badges: ["Flagship Incentive", "Global"],
+      title: "4 Night Cruise Certificate",
+      value: "Up to $899",
+      meta: "4 Nights / 5 Days • Two Adults",
+      inventoryNote: "Selected Carnival, Royal Caribbean, Norwegian or Princess Inventory",
+      destinationsNote: "Cozumel • Nassau, Bahamas • Ensenada, Mexico",
     },
   },
   {
@@ -186,7 +204,35 @@ export function Programs() {
             </div>
           ) : category.landscape ? (
             <div className="incentive-category__gallery incentive-category__gallery--landscape">
-              {category.landscapeImage ? (
+              {category.landscapeCertificate ? (
+                <div className="cert-card cert-card--landscape">
+                  <img
+                    src={category.landscapeCertificate.src}
+                    alt={category.landscapeCertificate.alt}
+                    className="cert-card__image"
+                  />
+                  <div className="cert-card__caption">
+                    <div className="cert-card__badges">
+                      {category.landscapeCertificate.badges.map((badge) => (
+                        <span key={badge} className="cert-card__badge">
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="cert-card__title">{category.landscapeCertificate.title}</h3>
+                    <div className="cert-card__value-label">Certificate Value</div>
+                    <div className="cert-card__value">{category.landscapeCertificate.value}</div>
+                    <div className="cert-card__meta">{category.landscapeCertificate.meta}</div>
+                    <div className="cert-card__meta cert-card__meta--muted">
+                      {category.landscapeCertificate.inventoryNote}
+                    </div>
+                    <div className="cert-card__note">
+                      <span className="cert-card__bullet" aria-hidden="true" />
+                      {category.landscapeCertificate.destinationsNote}
+                    </div>
+                  </div>
+                </div>
+              ) : category.landscapeImage ? (
                 <img
                   src={category.landscapeImage.src}
                   alt={category.landscapeImage.alt}
