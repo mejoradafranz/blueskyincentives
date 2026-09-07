@@ -29,12 +29,13 @@
   color: var(--color-text);
 }
 
-.navbar__brand-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+.navbar__brand-logo {
+  display: block;
+  height: 48px;
+  width: auto;
   flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--color-border);
 }
 
 .navbar__toggle {

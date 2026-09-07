@@ -3,6 +3,7 @@ import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../auth/useAuth";
 import { ApiError } from "../../api/client";
 import { Button } from "../../components/ui/Button";
+import logo from "../../assets/logo.png";
 import "./Login.css";
 
 export function Login() {
@@ -36,7 +37,7 @@ export function Login() {
   return (
     <div className="login">
       <form className="login__card" onSubmit={handleSubmit}>
-        <div className="login__brand-mark" aria-hidden="true" />
+        <img src={logo} alt="Blue Sky Incentives" className="login__brand-mark" />
         <h1 className="login__title">Sign in</h1>
         <p className="login__subtitle">Sign in to your Blue Sky Incentives member dashboard.</p>
 

@@ -53,12 +53,12 @@
   text-decoration: none;
 }
 
-.portal__brand-mark {
-  width: 30px;
-  height: 30px;
+.portal__brand-logo {
+  display: block;
+  height: 42px;
+  width: auto;
   border-radius: 9px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--color-primary), var(--portal-gold-soft));
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 6px 16px rgba(212, 175, 55, 0.25);
 }
 

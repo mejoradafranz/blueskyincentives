@@ -36,11 +36,11 @@
 }
 
 .login__brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  margin-bottom: 20px;
+  display: block;
+  height: 72px;
+  width: auto;
+  margin: 0 auto 20px;
+  border-radius: 12px;
 }
 
 .login__title {
