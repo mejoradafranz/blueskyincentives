@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logoIcon from "../../assets/logo-icon.png";
 import "./Footer.css";
 
 export function Footer() {
@@ -7,8 +7,11 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <img src={logo} alt="Blue Sky Incentives" className="footer__logo" />
-          <div className="footer__tagline">Employee incentive programs, done right.</div>
+          <img src={logoIcon} alt="" className="footer__logo" />
+          <div>
+            <div className="footer__name">Blue Sky Incentives</div>
+            <div className="footer__tagline">Employee incentive programs, done right.</div>
+          </div>
         </div>
 
         <nav className="footer__links">

@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../../auth/useAuth";
-import logo from "../../assets/logo.png";
+import logoIcon from "../../assets/logo-icon.png";
 import "./PortalShell.css";
 
 interface PortalNavItem {
@@ -32,7 +32,8 @@ export function PortalShell({
 
       <aside className={`portal__sidebar ${navOpen ? "portal__sidebar--open" : ""}`}>
         <Link to={homeTo ?? "/dashboard"} className="portal__brand" onClick={() => setNavOpen(false)}>
-          <img src={logo} alt="Blue Sky Incentives" className="portal__brand-logo" />
+          <img src={logoIcon} alt="" className="portal__brand-mark" />
+          Blue Sky Incentives
         </Link>
         <div className="portal__title">{title}</div>
         <nav className="portal__nav">

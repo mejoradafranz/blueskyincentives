@@ -31,10 +31,15 @@
 
 .footer__logo {
   display: block;
-  height: 56px;
-  width: auto;
-  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
   flex-shrink: 0;
+}
+
+.footer__name {
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .footer__tagline {

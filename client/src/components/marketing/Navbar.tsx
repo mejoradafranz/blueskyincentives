@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { INDUSTRIES } from "../../data/industries";
 import { WatchDemoModal } from "./WatchDemoModal";
-import logo from "../../assets/logo.png";
+import logoIcon from "../../assets/logo-icon.png";
 import "./Navbar.css";
 
 const LINKS_BEFORE = [
@@ -48,7 +48,8 @@ export function Navbar() {
       <header className="navbar">
         <div className="container navbar__inner">
           <NavLink to="/" className="navbar__brand" onClick={closeAll}>
-            <img src={logo} alt="Blue Sky Incentives" className="navbar__brand-logo" />
+            <img src={logoIcon} alt="" className="navbar__brand-mark" />
+            Blue Sky Incentives
           </NavLink>
 
           <button
