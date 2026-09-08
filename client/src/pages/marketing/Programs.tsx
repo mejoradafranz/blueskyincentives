@@ -9,6 +9,10 @@ import travelCert2 from "../../assets/travel-cert-2.jpg";
 import travelCert3 from "../../assets/travel-cert-3.jpg";
 import travelCert4 from "../../assets/travel-cert-4.jpg";
 import cruiseCert from "../../assets/cruise-cert.jpg";
+import dining1 from "../../assets/dining-1.jpg";
+import dining2 from "../../assets/dining-2.jpg";
+import dining3 from "../../assets/dining-3.jpg";
+import dining4 from "../../assets/dining-4.jpg";
 import "./Programs.css";
 
 interface CertificateImage {
@@ -30,6 +34,11 @@ interface LandscapeCertificate {
   destinationsNote: string;
 }
 
+interface GalleryImage {
+  src: string;
+  alt: string;
+}
+
 interface IncentiveCategory {
   key: string;
   title: string;
@@ -40,7 +49,15 @@ interface IncentiveCategory {
   landscapeImage?: { src: string; alt: string };
   landscapeCertificate?: LandscapeCertificate;
   certificates?: CertificateImage[];
+  images?: GalleryImage[];
 }
+
+const DINING_IMAGES: GalleryImage[] = [
+  { src: dining1, alt: "Formal dining room with a crystal chandelier and a table set with wine and seafood" },
+  { src: dining2, alt: "Fine dining table set beside floor-to-ceiling windows overlooking a city skyline at dusk" },
+  { src: dining3, alt: "Wood-paneled dining room with a roast dinner spread beside a fireplace" },
+  { src: dining4, alt: "Outdoor terrace dining table with mezze, seafood paella and wine at sunset" },
+];
 
 const TRAVEL_CERTIFICATES: CertificateImage[] = [
   {
@@ -117,6 +134,7 @@ const CATEGORIES: IncentiveCategory[] = [
       "Flexible dining rewards with broad consumer appeal and thousands of participating dining opportunities.",
     features: ["True cash value savings", "Thousands of participating restaurants", "Easy online platform"],
     imageCount: 4,
+    images: DINING_IMAGES,
   },
   {
     key: "products",
@@ -243,12 +261,23 @@ export function Programs() {
               )}
             </div>
           ) : (
-            <div className="incentive-category__gallery">
-              {Array.from({ length: category.imageCount }).map((_, idx) => (
-                <div key={idx} className="incentive-category__gallery-item">
-                  Image coming soon
-                </div>
-              ))}
+            <div
+              className={`incentive-category__gallery ${category.images ? "incentive-category__gallery--photos" : ""}`}
+            >
+              {category.images
+                ? category.images.map((image) => (
+                    <img
+                      key={image.src}
+                      src={image.src}
+                      alt={image.alt}
+                      className="incentive-category__gallery-image"
+                    />
+                  ))
+                : Array.from({ length: category.imageCount }).map((_, idx) => (
+                    <div key={idx} className="incentive-category__gallery-item">
+                      Image coming soon
+                    </div>
+                  ))}
             </div>
           )}
         </Section>
