@@ -25,6 +25,11 @@ import product9 from "../../assets/product-9.jpg";
 import product10 from "../../assets/product-10.jpg";
 import product11 from "../../assets/product-11.jpg";
 import product12 from "../../assets/product-12.jpg";
+import hotel1 from "../../assets/hotel-1.jpg";
+import hotel2 from "../../assets/hotel-2.jpg";
+import hotel3 from "../../assets/hotel-3.jpg";
+import hotel4 from "../../assets/hotel-4.jpg";
+import hotel5 from "../../assets/hotel-5.jpg";
 import "./Programs.css";
 
 interface CertificateImage {
@@ -287,6 +292,53 @@ const TRAVEL_CERTIFICATES: CertificateImage[] = [
   },
 ];
 
+const HOTEL_SAVINGS_CERTIFICATES: CertificateImage[] = [
+  {
+    src: hotel1,
+    alt: "Overwater bungalows along a beach at sunset with loungers on the sand",
+    badges: ["Global"],
+    title: "$100 Hotel Savings Certificate",
+    valueLabel: "Savings Value",
+    value: "$100",
+    note: "Beachfront resort with palms and turquoise water",
+  },
+  {
+    src: hotel2,
+    alt: "Beachfront cabanas and lounge chairs with a waiter serving guests beside a sailboat",
+    badges: ["Global"],
+    title: "$200 Hotel Savings Certificate",
+    valueLabel: "Savings Value",
+    value: "$200",
+    note: "Luxury boutique hotel suite interior",
+  },
+  {
+    src: hotel3,
+    alt: "Cliffside infinity pool overlooking a bay with yachts anchored offshore",
+    badges: ["Global"],
+    title: "$300 Hotel Savings Certificate",
+    valueLabel: "Savings Value",
+    value: "$300",
+    note: "Mountain destination resort lodge at golden hour",
+  },
+  {
+    src: hotel4,
+    alt: "Thatched-roof overwater bungalows beneath a green mountain peak",
+    badges: ["Global"],
+    title: "$400 Hotel Savings Certificate",
+    valueLabel: "Savings Value",
+    value: "$400",
+    note: "Tropical luxury resort infinity pool at sunset",
+  },
+  {
+    src: hotel5,
+    alt: "Beachfront promenade with loungers, umbrellas and a city skyline in the distance",
+    badges: ["Global"],
+    title: "$500 Hotel Savings Certificate",
+    valueLabel: "Savings Value",
+    value: "$500",
+  },
+];
+
 const CATEGORIES: IncentiveCategory[] = [
   {
     key: "travel-vacation",
@@ -354,6 +406,7 @@ const CATEGORIES: IncentiveCategory[] = [
       "Savings up to 50% where available",
     ],
     imageCount: 5,
+    certificates: HOTEL_SAVINGS_CERTIFICATES,
   },
   {
     key: "travel-dining-passes",
