@@ -13,15 +13,30 @@ import dining1 from "../../assets/dining-1.jpg";
 import dining2 from "../../assets/dining-2.jpg";
 import dining3 from "../../assets/dining-3.jpg";
 import dining4 from "../../assets/dining-4.jpg";
+import product1 from "../../assets/product-1.jpg";
+import product2 from "../../assets/product-2.jpg";
+import product3 from "../../assets/product-3.jpg";
+import product4 from "../../assets/product-4.jpg";
+import product5 from "../../assets/product-5.jpg";
+import product6 from "../../assets/product-6.jpg";
+import product7 from "../../assets/product-7.jpg";
+import product8 from "../../assets/product-8.jpg";
+import product9 from "../../assets/product-9.jpg";
+import product10 from "../../assets/product-10.jpg";
+import product11 from "../../assets/product-11.jpg";
+import product12 from "../../assets/product-12.jpg";
 import "./Programs.css";
 
 interface CertificateImage {
   src: string;
   alt: string;
   title: string;
+  spec?: string;
+  valueLabel?: string;
   value: string;
-  note: string;
+  note?: string;
   badges?: string[];
+  tall?: boolean;
 }
 
 interface LandscapeCertificate {
@@ -81,6 +96,124 @@ const DINING_CERTIFICATES: CertificateImage[] = [
     note: "Private celebratory dining room with champagne toast",
   },
 ];
+
+const PRODUCT_BADGES = ["Blue Sky Product Voucher", "U.S. Residents Only"];
+
+const PRODUCT_CERTIFICATES_BASE: CertificateImage[] = [
+  {
+    src: product1,
+    alt: "Touch screen MP4 player on a wooden desk",
+    badges: PRODUCT_BADGES,
+    title: "Touch Screen MP4 Player Voucher",
+    spec: "Touch Screen • Expandable Memory",
+    valueLabel: "Retail Value",
+    value: "$129",
+  },
+  {
+    src: product2,
+    alt: "Wireless earbuds with charging case",
+    badges: PRODUCT_BADGES,
+    title: "Bluetooth Wireless Earbuds Voucher",
+    spec: "Bluetooth 5.0 • Charging Case",
+    valueLabel: "Retail Value",
+    value: "$129",
+  },
+  {
+    src: product3,
+    alt: "Smart fitness watch on a wrist",
+    badges: PRODUCT_BADGES,
+    title: "Smart Fitness Watch Voucher",
+    spec: "Sport Modes • Activity Tracking",
+    valueLabel: "Retail Value",
+    value: "$129",
+  },
+  {
+    src: product4,
+    alt: "Portable Bluetooth speaker beside a pool",
+    badges: PRODUCT_BADGES,
+    title: "Portable Bluetooth Speaker Voucher",
+    spec: "Bluetooth 5.0 • Waterproof Design",
+    valueLabel: "Retail Value",
+    value: "$129",
+  },
+  {
+    src: product5,
+    alt: "Smartphone UV sanitizer case",
+    badges: PRODUCT_BADGES,
+    title: "Smartphone UV Sanitizer Voucher",
+    spec: "Dual UV Lights • 8-Minute Cycle",
+    valueLabel: "Retail Value",
+    value: "$129",
+  },
+  {
+    src: product6,
+    alt: "Smart teeth whitening system kit",
+    badges: PRODUCT_BADGES,
+    title: "Smart Teeth Whitening System Voucher",
+    spec: "LED Mouthpiece • Multi-Treatment Kit",
+    valueLabel: "Retail Value",
+    value: "$129",
+  },
+  {
+    src: product7,
+    alt: "Mini wireless vehicle vacuum cleaning a car seat",
+    badges: PRODUCT_BADGES,
+    title: "Mini Wireless Vehicle Vacuum Voucher",
+    spec: "Wireless • Washable Filter",
+    valueLabel: "Retail Value",
+    value: "$149",
+  },
+  {
+    src: product8,
+    alt: "Over-ear Bluetooth headphones on a side table",
+    badges: PRODUCT_BADGES,
+    title: "Bluetooth Headphones Voucher",
+    spec: "Bluetooth 5.0 • Hands-Free Calling",
+    valueLabel: "Retail Value",
+    value: "$149",
+  },
+  {
+    src: product9,
+    alt: "Bluetooth vehicle audio transmitter plugged into a car dashboard",
+    badges: PRODUCT_BADGES,
+    title: "Bluetooth 5.0 Vehicle Transmitter Voucher",
+    spec: "Bluetooth 5.0 • Dual USB",
+    valueLabel: "Retail Value",
+    value: "$149",
+  },
+  {
+    src: product10,
+    alt: "Compact GPS tracking device attached to a set of keys",
+    badges: PRODUCT_BADGES,
+    title: "GPS Tracking Device Voucher",
+    spec: "Compact Tracker • Mobile App",
+    valueLabel: "Retail Value",
+    value: "$149",
+  },
+  {
+    src: product11,
+    alt: "Professional vintage hair trimmers held in a barbershop",
+    badges: PRODUCT_BADGES,
+    title: "Professional Vintage Hair Trimmers Voucher",
+    spec: "Titanium Blade • Metal Body",
+    valueLabel: "Retail Value",
+    value: "$149",
+  },
+  {
+    src: product12,
+    alt: "Wireless portable mini blender with fruit",
+    badges: PRODUCT_BADGES,
+    title: "Wireless Portable Mini Blender Voucher",
+    spec: "USB Rechargeable • Stainless-Steel Blade",
+    valueLabel: "Retail Value",
+    value: "$149",
+  },
+];
+
+const PRODUCT_CERTIFICATES: CertificateImage[] = PRODUCT_CERTIFICATES_BASE.map((cert) => ({
+  ...cert,
+  tall: true,
+}));
 
 const TRAVEL_CERTIFICATES: CertificateImage[] = [
   {
@@ -166,6 +299,7 @@ const CATEGORIES: IncentiveCategory[] = [
       "A broad collection of smart devices, wellness products, grooming tools, automotive accessories and lifestyle products that give businesses tangible promotional options.",
     features: ["$129–$149 retail value", "Customers cover shipping & handling", "Delivered directly to their door"],
     imageCount: 12,
+    certificates: PRODUCT_CERTIFICATES,
   },
   {
     key: "hotel-savings-cards",
@@ -229,7 +363,7 @@ export function Programs() {
           {category.certificates ? (
             <div className="incentive-category__gallery incentive-category__gallery--certs">
               {category.certificates.map((cert) => (
-                <div key={cert.title} className="cert-card">
+                <div key={cert.title} className={`cert-card ${cert.tall ? "cert-card--tall" : ""}`}>
                   <img src={cert.src} alt={cert.alt} className="cert-card__image" />
                   <div className="cert-card__caption">
                     {cert.badges && (
@@ -242,12 +376,15 @@ export function Programs() {
                       </div>
                     )}
                     <h3 className="cert-card__title">{cert.title}</h3>
-                    <div className="cert-card__value-label">Certificate Value</div>
+                    {cert.spec && <div className="cert-card__meta">{cert.spec}</div>}
+                    <div className="cert-card__value-label">{cert.valueLabel ?? "Certificate Value"}</div>
                     <div className="cert-card__value">{cert.value}</div>
-                    <div className="cert-card__note">
-                      <span className="cert-card__bullet" aria-hidden="true" />
-                      {cert.note}
-                    </div>
+                    {cert.note && (
+                      <div className="cert-card__note">
+                        <span className="cert-card__bullet" aria-hidden="true" />
+                        {cert.note}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
