@@ -50,6 +50,13 @@ interface LandscapeCertificate {
   destinationsNote: string;
 }
 
+interface ValuePass {
+  value: string;
+  title: string;
+  badge: string;
+  gradient: string;
+}
+
 interface IncentiveCategory {
   key: string;
   title: string;
@@ -60,7 +67,41 @@ interface IncentiveCategory {
   landscapeImage?: { src: string; alt: string };
   landscapeCertificate?: LandscapeCertificate;
   certificates?: CertificateImage[];
+  valuePasses?: ValuePass[];
 }
+
+const TRAVEL_DINING_PASSES: ValuePass[] = [
+  {
+    value: "$200",
+    title: "$200 Travel & Dining Pass",
+    badge: "U.S. Residents Only",
+    gradient: "linear-gradient(155deg, #0e4f6e 0%, #1a7fa3 100%)",
+  },
+  {
+    value: "$400",
+    title: "$400 Travel & Dining Pass",
+    badge: "U.S. Residents Only",
+    gradient: "linear-gradient(155deg, #10214f 0%, #2b4fa8 100%)",
+  },
+  {
+    value: "$600",
+    title: "$600 Travel & Dining Pass",
+    badge: "U.S. Residents Only",
+    gradient: "linear-gradient(155deg, #7a5510 0%, #c99a34 100%)",
+  },
+  {
+    value: "$800",
+    title: "$800 Travel & Dining Pass",
+    badge: "U.S. Residents Only",
+    gradient: "linear-gradient(155deg, #0f5c46 0%, #1f9c74 100%)",
+  },
+  {
+    value: "$1,000",
+    title: "$1,000 Travel & Dining Pass",
+    badge: "U.S. Residents Only",
+    gradient: "linear-gradient(155deg, #591c37 0%, #1b1338 100%)",
+  },
+];
 
 const DINING_CERTIFICATES: CertificateImage[] = [
   {
@@ -324,7 +365,8 @@ const CATEGORIES: IncentiveCategory[] = [
       "Thousands of participating U.S. restaurants",
       "Online restaurant & travel booking",
     ],
-    imageCount: 6,
+    imageCount: 5,
+    valuePasses: TRAVEL_DINING_PASSES,
   },
   {
     key: "savings",
@@ -360,7 +402,23 @@ export function Programs() {
             ))}
           </ul>
 
-          {category.certificates ? (
+          {category.valuePasses ? (
+            <div className="incentive-category__gallery incentive-category__gallery--certs">
+              {category.valuePasses.map((pass) => (
+                <div key={pass.title} className="pass-card" style={{ background: pass.gradient }}>
+                  <div className="pass-card__watermark" aria-hidden="true">
+                    {pass.value}
+                  </div>
+                  <span className="pass-card__badge">{pass.badge}</span>
+                  <h3 className="pass-card__title">{pass.title}</h3>
+                  <div className="pass-card__footer">
+                    <div className="pass-card__value-label">Pass Value</div>
+                    <div className="pass-card__value">{pass.value}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : category.certificates ? (
             <div className="incentive-category__gallery incentive-category__gallery--certs">
               {category.certificates.map((cert) => (
                 <div key={cert.title} className={`cert-card ${cert.tall ? "cert-card--tall" : ""}`}>
