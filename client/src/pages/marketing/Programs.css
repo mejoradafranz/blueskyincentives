@@ -50,19 +50,6 @@
   padding: 6px;
 }
 
-.incentive-category__gallery--photos {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.incentive-category__gallery-image {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  box-shadow: var(--shadow-sm);
-}
-
 .incentive-category__gallery--landscape {
   display: block;
 }

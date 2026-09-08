@@ -21,6 +21,7 @@ interface CertificateImage {
   title: string;
   value: string;
   note: string;
+  badges?: string[];
 }
 
 interface LandscapeCertificate {
@@ -34,11 +35,6 @@ interface LandscapeCertificate {
   destinationsNote: string;
 }
 
-interface GalleryImage {
-  src: string;
-  alt: string;
-}
-
 interface IncentiveCategory {
   key: string;
   title: string;
@@ -49,14 +45,41 @@ interface IncentiveCategory {
   landscapeImage?: { src: string; alt: string };
   landscapeCertificate?: LandscapeCertificate;
   certificates?: CertificateImage[];
-  images?: GalleryImage[];
 }
 
-const DINING_IMAGES: GalleryImage[] = [
-  { src: dining1, alt: "Formal dining room with a crystal chandelier and a table set with wine and seafood" },
-  { src: dining2, alt: "Fine dining table set beside floor-to-ceiling windows overlooking a city skyline at dusk" },
-  { src: dining3, alt: "Wood-paneled dining room with a roast dinner spread beside a fireplace" },
-  { src: dining4, alt: "Outdoor terrace dining table with mezze, seafood paella and wine at sunset" },
+const DINING_CERTIFICATES: CertificateImage[] = [
+  {
+    src: dining1,
+    alt: "Formal dining room with a crystal chandelier and a table set with wine and seafood",
+    badges: ["U.S. Residents Only"],
+    title: "$100 Dining Certificate",
+    value: "$100",
+    note: "Premium steakhouse dining room",
+  },
+  {
+    src: dining2,
+    alt: "Fine dining table set beside floor-to-ceiling windows overlooking a city skyline at dusk",
+    badges: ["U.S. Residents Only"],
+    title: "$200 Dining Certificate",
+    value: "$200",
+    note: "Waterfront terrace dining at sunset",
+  },
+  {
+    src: dining3,
+    alt: "Wood-paneled dining room with a roast dinner spread beside a fireplace",
+    badges: ["U.S. Residents Only"],
+    title: "$300 Dining Certificate",
+    value: "$300",
+    note: "Chef-driven tasting plate on a dark counter",
+  },
+  {
+    src: dining4,
+    alt: "Outdoor terrace dining table with mezze, seafood paella and wine at sunset",
+    badges: ["U.S. Residents Only"],
+    title: "$400 Dining Certificate",
+    value: "$400",
+    note: "Private celebratory dining room with champagne toast",
+  },
 ];
 
 const TRAVEL_CERTIFICATES: CertificateImage[] = [
@@ -134,7 +157,7 @@ const CATEGORIES: IncentiveCategory[] = [
       "Flexible dining rewards with broad consumer appeal and thousands of participating dining opportunities.",
     features: ["True cash value savings", "Thousands of participating restaurants", "Easy online platform"],
     imageCount: 4,
-    images: DINING_IMAGES,
+    certificates: DINING_CERTIFICATES,
   },
   {
     key: "products",
@@ -209,6 +232,15 @@ export function Programs() {
                 <div key={cert.title} className="cert-card">
                   <img src={cert.src} alt={cert.alt} className="cert-card__image" />
                   <div className="cert-card__caption">
+                    {cert.badges && (
+                      <div className="cert-card__badges">
+                        {cert.badges.map((badge) => (
+                          <span key={badge} className="cert-card__badge">
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <h3 className="cert-card__title">{cert.title}</h3>
                     <div className="cert-card__value-label">Certificate Value</div>
                     <div className="cert-card__value">{cert.value}</div>
@@ -261,23 +293,12 @@ export function Programs() {
               )}
             </div>
           ) : (
-            <div
-              className={`incentive-category__gallery ${category.images ? "incentive-category__gallery--photos" : ""}`}
-            >
-              {category.images
-                ? category.images.map((image) => (
-                    <img
-                      key={image.src}
-                      src={image.src}
-                      alt={image.alt}
-                      className="incentive-category__gallery-image"
-                    />
-                  ))
-                : Array.from({ length: category.imageCount }).map((_, idx) => (
-                    <div key={idx} className="incentive-category__gallery-item">
-                      Image coming soon
-                    </div>
-                  ))}
+            <div className="incentive-category__gallery">
+              {Array.from({ length: category.imageCount }).map((_, idx) => (
+                <div key={idx} className="incentive-category__gallery-item">
+                  Image coming soon
+                </div>
+              ))}
             </div>
           )}
         </Section>
