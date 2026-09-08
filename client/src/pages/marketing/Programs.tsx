@@ -30,6 +30,8 @@ import hotel2 from "../../assets/hotel-2.jpg";
 import hotel3 from "../../assets/hotel-3.jpg";
 import hotel4 from "../../assets/hotel-4.jpg";
 import hotel5 from "../../assets/hotel-5.jpg";
+import savingsWine from "../../assets/savings-wine.jpg";
+import savingsPrescription from "../../assets/savings-prescription.jpg";
 import "./Programs.css";
 
 interface CertificateImage {
@@ -339,6 +341,25 @@ const HOTEL_SAVINGS_CERTIFICATES: CertificateImage[] = [
   },
 ];
 
+const SAVINGS_CERTIFICATES: CertificateImage[] = [
+  {
+    src: savingsWine,
+    alt: "Wine bottle and a poured glass on a restaurant table set for dinner",
+    badges: ["U.S. Residents Only"],
+    title: "$100 Wine Savings Card",
+    value: "$100",
+    note: "Pharmacist handing a prescription to a customer",
+  },
+  {
+    src: savingsPrescription,
+    alt: "Pharmacist handing a prescription discount card to a patient at the pharmacy counter",
+    badges: ["U.S. Pharmacies"],
+    title: "Prescription Discount Card",
+    valueLabel: "Savings Value",
+    value: "Up to 75%",
+  },
+];
+
 const CATEGORIES: IncentiveCategory[] = [
   {
     key: "travel-vacation",
@@ -427,6 +448,7 @@ const CATEGORIES: IncentiveCategory[] = [
     description: "Wine and prescription savings that add practical everyday value to any promotion.",
     features: ["True cash value savings", "Everyday wine and prescription savings"],
     imageCount: 2,
+    certificates: SAVINGS_CERTIFICATES,
   },
 ];
 
