@@ -267,16 +267,16 @@ const TRAVEL_CERTIFICATES: CertificateImage[] = [
   {
     src: travelCert1,
     alt: "Oceanfront resort lit up at night with pools and cabanas along the beach",
-    title: "Airfare Plus Hotel for Two Certificate",
-    value: "Up to $999",
-    note: "23 Exciting Destinations To Choose From",
+    title: "7-Night Luxury Resort Getaway Certificate",
+    value: "Up to $1,249",
+    note: "Over 3,500 Locations Worldwide",
   },
   {
     src: travelCert2,
     alt: "View from an airplane window above the clouds with the wing in frame",
-    title: "7-Night Luxury Resort Getaway Certificate",
-    value: "Up to $1,249",
-    note: "Over 3,500 Locations Worldwide",
+    title: "Airfare Plus Hotel for Two Certificate",
+    value: "Up to $999",
+    note: "23 Exciting Destinations To Choose From",
   },
   {
     src: travelCert3,
