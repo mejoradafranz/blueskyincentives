@@ -12,7 +12,22 @@ import heroInsuranceImage from "../../assets/hero-insurance.jpg";
 import sharedLeadImage from "../../assets/shared-lead-problem.jpg";
 import fourWaysImage from "../../assets/4-ways-to-use.jpg";
 import clientLifetimeValueImage from "../../assets/client-lifetime-value.jpg";
+import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
+import diningImage from "../../assets/incentives/dining-certificates.jpg";
+import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
+import resortImage from "../../assets/incentives/resort-stays.jpg";
+import hotelSavingsImage from "../../assets/incentives/hotel-savings.jpg";
+import cruiseImage from "../../assets/incentives/cruise-certificates.jpg";
 import "./InsuranceAgents.css";
+
+const INCENTIVE_GALLERY = [
+  { title: "Smart-Device Vouchers", image: smartDeviceImage },
+  { title: "Dining Certificates", image: diningImage },
+  { title: "Airfare + Hotel Stays", image: airfareHotelImage },
+  { title: "Resort Stays", image: resortImage },
+  { title: "Hotel Savings", image: hotelSavingsImage },
+  { title: "Cruise Certificates", image: cruiseImage },
+];
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -311,9 +326,9 @@ export function InsuranceAgents() {
         subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <div className="insurance-incentives__gallery">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="insurance-incentives__item">
-              Image coming soon
+          {INCENTIVE_GALLERY.map((item) => (
+            <div key={item.title} className="insurance-incentives__item">
+              <img src={item.image} alt={item.title} className="insurance-incentives__image" />
             </div>
           ))}
         </div>
