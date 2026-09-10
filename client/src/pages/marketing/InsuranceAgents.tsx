@@ -18,6 +18,7 @@ import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
 import resortImage from "../../assets/incentives/resort-stays.jpg";
 import hotelSavingsImage from "../../assets/incentives/hotel-savings.jpg";
 import cruiseImage from "../../assets/incentives/cruise-certificates.jpg";
+import quoteOfferComparisonImage from "../../assets/quote-offer-comparison.jpg";
 import "./InsuranceAgents.css";
 
 const INCENTIVE_GALLERY = [
@@ -294,9 +295,11 @@ export function InsuranceAgents() {
           </>
         }
       >
-        <div className="insurance-image-placeholder">
-          <span>Image coming soon</span>
-        </div>
+        <img
+          src={quoteOfferComparisonImage}
+          alt="Before and after comparison: a plain free-quote form versus one offering a $100 dining certificate, with benefits including more conversations, a stronger reason to engage, and the same coverage conversation"
+          className="insurance-quote-comparison"
+        />
 
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
