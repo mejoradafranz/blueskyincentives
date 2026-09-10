@@ -10,7 +10,6 @@ import {
   ClosingNote,
   GuaranteeNote,
   VideoPlaceholder,
-  ImagePlaceholder,
   MediaFrame,
   PriceComparison,
   ChecklistTwoColumn,
@@ -79,34 +78,6 @@ const HOW_IT_WORKS = [
     mark: "04",
     title: "Give travelers another reason to book with you",
     description: "Your expertise and destination knowledge remain the core value — the incentive just strengthens the offer.",
-  },
-];
-
-const RETENTION_WAYS = [
-  {
-    mark: "1",
-    title: "Post-Trip Thank-You Gifts",
-    description: "Use a high-value incentive as a memorable thank-you clients actually redeem.",
-  },
-  {
-    mark: "2",
-    title: "Referral Rewards",
-    description: "Turn client referrals into a rewarded, trackable behavior.",
-  },
-  {
-    mark: "3",
-    title: "Off-Season Follow-Up",
-    description: "Give past travelers a reason to start planning their next trip early.",
-  },
-  {
-    mark: "4",
-    title: "Client Anniversaries",
-    description: "Stay in front of past clients between trips.",
-  },
-  {
-    mark: "5",
-    title: "Reactivation",
-    description: "Reconnect with former or inactive clients when appropriate.",
   },
 ];
 
@@ -323,26 +294,6 @@ export function TravelAgencies() {
         <div className="feature-grid">
           {FOUR_WAYS.map((w) => (
             <FeatureCard key={w.title} {...w} />
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        tone="subtle"
-        eyebrow="Client Lifetime Value"
-        title="Don't Stop at One Trip. Grow the Relationship."
-        subtitle="The first booking can grow into a long-term relationship built on repeat travel and referrals."
-      >
-        <ImagePlaceholder />
-      </Section>
-
-      <Section
-        title="Winning the Booking Once Doesn't Mean They Call You for the Next Trip."
-        subtitle="It's easy to be forgotten once the vacation ends. Give clients reasons to stay connected before their next getaway."
-      >
-        <div className="feature-grid">
-          {RETENTION_WAYS.map((r) => (
-            <FeatureCard key={r.title} {...r} />
           ))}
         </div>
       </Section>
