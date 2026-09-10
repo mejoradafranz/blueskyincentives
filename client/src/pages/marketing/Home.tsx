@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ImageHero } from "../../components/marketing/ImageHero";
-import { StatsBar } from "../../components/marketing/StatsBar";
 import { Section } from "../../components/marketing/Section";
 import { IncentiveLibrary } from "../../components/marketing/IncentiveLibrary";
 import { GrowthWays } from "../../components/marketing/GrowthWays";
@@ -39,8 +38,6 @@ export function Home() {
         }
         subtitle="Add high-perceived-value incentives to your existing marketing and offers—without discounting your product or personally fulfilling the rewards yourself."
       />
-
-      <StatsBar />
 
       <Section
         eyebrow="On-Demand Demo"
