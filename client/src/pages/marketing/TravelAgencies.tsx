@@ -12,11 +12,13 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  MediaFrame,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroTravelImage from "../../assets/hero-travel-agencies.jpg";
+import bogoOfferImage from "../../assets/ta-bogo-offer.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -218,7 +220,10 @@ export function TravelAgencies() {
           </>
         }
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={bogoOfferImage}
+          alt="How the BOGO-style offer works: client books a paid trip, you deliver a bonus vacation certificate, they feel they got more value, and you win more bookings and referrals"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
