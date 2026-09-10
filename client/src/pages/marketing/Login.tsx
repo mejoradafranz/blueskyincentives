@@ -4,6 +4,7 @@ import { useAuth } from "../../auth/useAuth";
 import { ApiError } from "../../api/client";
 import { Button } from "../../components/ui/Button";
 import logo from "../../assets/logo.png";
+import loginBackground from "../../assets/incentives/hotel-ocean.jpg";
 import "./Login.css";
 
 export function Login() {
@@ -36,6 +37,12 @@ export function Login() {
 
   return (
     <div className="login">
+      <div className="login__background" style={{ backgroundImage: `url(${loginBackground})` }} />
+      <div className="login__scrim" />
+      <div className="login__orb login__orb--one" />
+      <div className="login__orb login__orb--two" />
+      <div className="login__orb login__orb--three" />
+
       <form className="login__card" onSubmit={handleSubmit}>
         <img src={logo} alt="Blue Sky Incentives" className="login__brand-mark" />
         <h1 className="login__title">Sign in</h1>
