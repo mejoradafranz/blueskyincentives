@@ -68,12 +68,12 @@ const HOW_IT_WORKS = [
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give patients another reason to respond",
-    description: "Your care, expertise and trust remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your care and expertise remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -109,7 +109,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free new-patient exam?",
     answer:
-      "Many practices attach a high-value incentive such as a $100 Dining Certificate to completing a new-patient exam, with no purchase necessary. Review your exact campaign with your compliance, legal and professional licensing requirements before launch.",
+      "Yes — many practices attach a $100 Dining Certificate to a completed new-patient exam, no purchase necessary. Confirm your campaign with compliance and licensing first.",
   },
   { question: "Can I use Blue Sky Incentives with purchased or shared leads?", answer: null },
   { question: "Can I use incentives for treatment plan acceptance?", answer: null },
@@ -122,7 +122,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Are incentive rules different by state or dental board?",
     answer:
-      "Incentive and marketing rules can vary by state and by professional licensing board requirements. Review your campaign with your compliance and legal requirements before launch.",
+      "Yes. Rules can vary by state and licensing board — review your campaign with compliance and legal before launch.",
   },
 ];
 
@@ -132,7 +132,7 @@ export function Dentistry() {
       <Section
         eyebrow="For Dental Practices"
         title="Give Patients Another Reason to Choose Your Practice."
-        subtitle="Use high-value incentives to strengthen your new-patient marketing, stand out from other practices, and create more opportunities for treatment acceptance and referrals."
+        subtitle="High-value incentives that make your new-patient marketing stand out and win more treatment acceptance and referrals."
       >
         <ImagePlaceholder landscape />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -153,15 +153,15 @@ export function Dentistry() {
       >
         <StatsGrid stats={STATS} />
         <ClosingNote>
-          An established incentive provider with more than two decades supplying and fulfilling
-          promotional incentives for businesses.
+          An established incentive provider with more than two decades fulfilling promotional
+          incentives for businesses.
         </ClosingNote>
       </Section>
 
       <Section
         eyebrow="The Real Problem"
         title="Patients Compare Practices Before They Ever Call."
-        subtitle="Online reviews, insurance networks and competing practices make it easy for patients to shop around before they book. Winning new patients — and keeping them — takes more than a good location."
+        subtitle="Online reviews, insurance networks and competing practices make it easy for patients to shop around. Winning new patients — and keeping them — takes more than a good location."
       >
         <div className="feature-grid">
           {PROBLEM_POINTS.map((p) => (
@@ -169,8 +169,8 @@ export function Dentistry() {
           ))}
         </div>
         <ClosingNote>
-          The problem isn't simply generating more new-patient leads. It's getting the patient to
-          choose your practice, accept treatment, and keep coming back.
+          The problem isn't generating more leads. It's getting the patient to choose your
+          practice — and keep coming back.
         </ClosingNote>
       </Section>
 
@@ -190,7 +190,7 @@ export function Dentistry() {
         id="dental-practice-video"
         eyebrow="Dental Practice Video"
         title="See How Dental Practices Can Use Blue Sky Incentives"
-        subtitle="See how practices can use incentives around new-patient exams, treatment acceptance, recall visits and referrals."
+        subtitle="See how practices use incentives for new-patient exams, treatment acceptance and referrals."
       >
         <VideoPlaceholder />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -209,9 +209,8 @@ export function Dentistry() {
         title="Same Exam. A Stronger Reason to Choose Your Practice."
         subtitle={
           <>
-            Every practice can say &ldquo;We&rsquo;ll take great care of you.&rdquo; Blue Sky
-            Incentives gives you another way to make that offer more noticeable and more
-            compelling.
+            Every practice can say &ldquo;We&rsquo;ll take great care of you.&rdquo; An incentive
+            makes that offer harder to ignore.
           </>
         }
       >
@@ -226,7 +225,7 @@ export function Dentistry() {
       <Section
         eyebrow="The Multiple-Practice Problem"
         title="When Every Practice Is Competing for the Same Patient, Your Offer Matters."
-        subtitle="One online search can put your practice in competition with several others in the same network or neighborhood. If every practice sounds the same, you need another way to stand out."
+        subtitle="One online search can put your practice in competition with several others nearby. If every practice sounds the same, you need another way to stand out."
       >
         <ImagePlaceholder />
       </Section>
@@ -235,7 +234,7 @@ export function Dentistry() {
         tone="subtle"
         eyebrow="Incentives"
         title="Use the Right Incentive for the Right Patient Conversation"
-        subtitle="Different new-patient, treatment, appreciation and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+        subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <GalleryPlaceholder count={6} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -251,7 +250,7 @@ export function Dentistry() {
       <Section
         eyebrow="4 Ways to Use Blue Sky Incentives"
         title="Use Incentives Across Every Stage of the Patient Relationship."
-        subtitle="Blue Sky Incentives isn't only a new-patient tool. Practices can use incentives to generate leads, increase treatment acceptance, improve recall rates and create more referral opportunities."
+        subtitle="Use incentives to generate leads, increase treatment acceptance, improve recall rates and create referrals — not just fill the chair."
       >
         <ImagePlaceholder />
       </Section>
@@ -260,14 +259,14 @@ export function Dentistry() {
         tone="subtle"
         eyebrow="Patient Lifetime Value"
         title="Don't Stop at One Visit. Grow the Relationship."
-        subtitle="The first appointment can be the beginning of a long-term relationship built around regular checkups, accepted treatment and referrals."
+        subtitle="The first appointment can grow into a long-term relationship built on regular checkups and referrals."
       >
         <ImagePlaceholder />
       </Section>
 
       <Section
         title="Winning the New Patient Once Doesn't Mean They Return for Their Next Cleaning."
-        subtitle="Every visit is a chance to be forgotten once the appointment ends. Give patients more reasons to stay connected with your practice before their next recall — or their next referral."
+        subtitle="It's easy to be forgotten once the appointment ends. Give patients reasons to stay connected before their next recall."
       >
         <div className="feature-grid">
           {RETENTION_WAYS.map((r) => (
@@ -280,7 +279,7 @@ export function Dentistry() {
         tone="subtle"
         eyebrow="Blue Sky Incentives Tools for Your Practice"
         title="Promote and Deliver Incentives Through the Marketing You Already Use"
-        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — new-patient outreach, recall reminders, appreciation and referral campaigns."
+        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
         <ChecklistTwoColumn
           columns={[
@@ -309,7 +308,7 @@ export function Dentistry() {
                 },
                 { label: "Ask AI", description: "built-in guidance and recommendations inside your dashboard" },
               ],
-              note: "You decide the messaging and the campaign. The tools simply make it faster to produce and distribute.",
+              note: "You control the messaging. The tools just make it faster to produce and distribute.",
             },
           ]}
         />
@@ -379,7 +378,7 @@ export function Dentistry() {
       <Section
         tone="subtle"
         title="Give Patients Another Reason to Choose Your Practice."
-        subtitle="Strengthen your new-patient and referral marketing with high-value incentives while keeping care, service and trust at the center of the relationship."
+        subtitle="Strengthen your new-patient marketing with high-value incentives — without losing the trust at the center of the relationship."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact">

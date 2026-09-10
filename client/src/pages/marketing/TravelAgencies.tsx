@@ -70,13 +70,12 @@ const HOW_IT_WORKS = [
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give travelers another reason to book with you",
-    description:
-      "Your expertise, service and destination knowledge remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your expertise and destination knowledge remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -112,7 +111,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free travel quote?",
     answer:
-      "Many agencies attach a high-value incentive such as a $100 Dining Certificate to completing a quote request, with no purchase necessary. Travel marketing rules can vary by state and supplier, so review your exact campaign with your compliance, legal and supplier requirements before launch.",
+      "Yes — many agencies attach a $100 Dining Certificate to a completed quote request, no purchase necessary. Rules vary by state and supplier, so confirm your campaign with compliance and legal first.",
   },
   { question: "Can I use Blue Sky Incentives with purchased or shared leads?", answer: null },
   { question: "Can I use incentives for group or destination trips?", answer: null },
@@ -125,7 +124,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Are travel incentive rules different by state or supplier?",
     answer:
-      "Travel incentive and marketing rules can vary by state and supplier. Review your campaign with your compliance, legal and supplier requirements before launch.",
+      "Yes. Rules vary by state and supplier — review your campaign with compliance and legal before launch.",
   },
 ];
 
@@ -137,7 +136,7 @@ export function TravelAgencies() {
         imageAlt="Blue Sky Incentives team helping travelers with hotel booking confirmations at the front desk"
         eyebrow="For Travel Agencies & Advisors"
         title="Give Travelers Another Reason to Book With You."
-        subtitle="Use high-value incentives to strengthen your booking campaigns, stand out from online travel sites, and create more opportunities for repeat bookings and referrals."
+        subtitle="High-value incentives that make your booking campaigns stand out from online travel sites and win more repeat bookings."
         actions={
           <>
             <Link to="/contact">
@@ -158,15 +157,15 @@ export function TravelAgencies() {
       >
         <StatsGrid stats={STATS} />
         <ClosingNote>
-          An established incentive provider with more than two decades supplying and fulfilling
-          promotional incentives for businesses.
+          An established incentive provider with more than two decades fulfilling promotional
+          incentives for businesses.
         </ClosingNote>
       </Section>
 
       <Section
         eyebrow="The Real Problem"
         title="Travelers Can Book Anywhere in Two Clicks."
-        subtitle="Online travel sites, direct airline and cruise bookings, and other agencies are all one search away. Winning the booking takes more than being available."
+        subtitle="Online travel sites, direct bookings and other agencies are all one search away. Winning the booking takes more than being available."
       >
         <div className="feature-grid">
           {PROBLEM_POINTS.map((p) => (
@@ -174,8 +173,8 @@ export function TravelAgencies() {
           ))}
         </div>
         <ClosingNote>
-          The problem isn't simply generating more leads. It's getting the traveler to choose you,
-          remember you, and book with you again.
+          The problem isn't generating more leads. It's getting the traveler to choose you — and
+          book with you again.
         </ClosingNote>
       </Section>
 
@@ -195,7 +194,7 @@ export function TravelAgencies() {
         id="travel-agent-video"
         eyebrow="Travel Agent Video"
         title="See How Travel Agencies Can Use Blue Sky Incentives"
-        subtitle="See how agencies can use incentives around quote requests, bookings, client appreciation and referrals."
+        subtitle="See how agencies use incentives for quote requests, bookings and referrals."
       >
         <VideoPlaceholder />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -214,9 +213,8 @@ export function TravelAgencies() {
         title="Same Trip. A Stronger Reason to Book With You."
         subtitle={
           <>
-            Every agency can say &ldquo;I&rsquo;ll find you the best trip.&rdquo; Blue Sky
-            Incentives gives you another way to make that booking offer more noticeable and more
-            compelling.
+            Every agency can say &ldquo;I&rsquo;ll find you the best trip.&rdquo; An incentive
+            makes that offer harder to ignore.
           </>
         }
       >
@@ -231,7 +229,7 @@ export function TravelAgencies() {
       <Section
         eyebrow="The Price-Shopping Problem"
         title="When Travelers Are Comparing Every Option, Your Offer Matters."
-        subtitle="One trip inquiry can put you in competition with online travel sites, other agencies and direct bookings. If price is the only differentiator, you need another way to stand out."
+        subtitle="One trip inquiry can put you in competition with online sites and other agencies. If price is the only differentiator, you need another way to stand out."
       >
         <ImagePlaceholder />
       </Section>
@@ -240,7 +238,7 @@ export function TravelAgencies() {
         tone="subtle"
         eyebrow="Incentives"
         title="Use the Right Incentive for the Right Travel Conversation"
-        subtitle="Different quote, booking, appreciation and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+        subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <GalleryPlaceholder count={6} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -256,7 +254,7 @@ export function TravelAgencies() {
       <Section
         eyebrow="4 Ways to Use Blue Sky Incentives"
         title="Use Incentives Across Every Stage of the Client Relationship."
-        subtitle="Blue Sky Incentives isn't only a booking-generation tool. Agencies can use incentives to generate leads, win bookings, increase repeat trips and create more referral opportunities."
+        subtitle="Use incentives to generate leads, win bookings, drive repeat trips and create referrals — not just close the first sale."
       >
         <ImagePlaceholder />
       </Section>
@@ -265,14 +263,14 @@ export function TravelAgencies() {
         tone="subtle"
         eyebrow="Client Lifetime Value"
         title="Don't Stop at One Trip. Grow the Relationship."
-        subtitle="The first booking can be the beginning of a long-term relationship built around repeat travel, referrals and staying top of mind."
+        subtitle="The first booking can grow into a long-term relationship built on repeat travel and referrals."
       >
         <ImagePlaceholder />
       </Section>
 
       <Section
         title="Winning the Booking Once Doesn't Mean They Call You for the Next Trip."
-        subtitle="Every trip is a chance to be forgotten once the vacation ends. Give clients more reasons to stay connected with you before their next getaway — or their next referral."
+        subtitle="It's easy to be forgotten once the vacation ends. Give clients reasons to stay connected before their next getaway."
       >
         <div className="feature-grid">
           {RETENTION_WAYS.map((r) => (
@@ -285,7 +283,7 @@ export function TravelAgencies() {
         tone="subtle"
         eyebrow="Blue Sky Incentives Tools for Your Agency"
         title="Promote and Deliver Incentives Through the Marketing You Already Use"
-        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — quote generation, booking follow-up, client appreciation and referral campaigns."
+        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
         <ChecklistTwoColumn
           columns={[
@@ -314,7 +312,7 @@ export function TravelAgencies() {
                 },
                 { label: "Ask AI", description: "built-in guidance and recommendations inside your dashboard" },
               ],
-              note: "You decide the messaging and the campaign. The tools simply make it faster to produce and distribute.",
+              note: "You control the messaging. The tools just make it faster to produce and distribute.",
             },
           ]}
         />
@@ -384,7 +382,7 @@ export function TravelAgencies() {
       <Section
         tone="subtle"
         title="Give Travelers Another Reason to Book With You."
-        subtitle="Strengthen your booking and quote marketing with high-value incentives while keeping destination expertise, service and trust at the center of the relationship."
+        subtitle="Strengthen your booking marketing with high-value incentives — without losing the trust at the center of the relationship."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact">

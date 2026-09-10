@@ -33,7 +33,7 @@ export function Integrations() {
       <Hero
         eyebrow="Integrations"
         title="Fits into the tools you already run your team on."
-        subtitle="We build out integrations based on what our customers actually need — here's what we're actively working on."
+        subtitle="Built around what our customers actually need — here's what we're working on."
       />
 
       <Section>

@@ -8,7 +8,7 @@ export function CustomerStories() {
     <Section
       eyebrow="Customer Stories"
       title="Real Businesses. Real Blue Sky Incentives Experiences."
-      subtitle="Watch Blue Sky Incentives customers share how they use high-value incentives to strengthen their offers, engage customers and grow their businesses."
+      subtitle="Real customers on how high-value incentives grow their business."
     >
       <div className="customer-stories__grid">
         {Array.from({ length: STORY_SLOTS }).map((_, i) => (

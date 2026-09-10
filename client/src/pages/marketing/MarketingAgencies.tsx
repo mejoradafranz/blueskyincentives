@@ -69,12 +69,12 @@ const HOW_IT_WORKS = [
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give prospects another reason to respond",
-    description: "Your strategy, results and team remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your strategy and results remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -110,7 +110,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free discovery call or audit?",
     answer:
-      "Many agencies attach a high-value incentive such as a $100 Dining Certificate to completing a discovery call or marketing audit, with no purchase necessary. Review your exact campaign with your compliance and legal requirements before launch.",
+      "Yes — many agencies attach a $100 Dining Certificate to a completed discovery call or audit, no purchase necessary. Confirm your campaign with compliance and legal first.",
   },
   { question: "Can I use Blue Sky Incentives with purchased or shared leads?", answer: null },
   { question: "Can I use incentives for RFP responses?", answer: null },
@@ -123,7 +123,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Are marketing incentive rules different by industry or client contract?",
     answer:
-      "Incentive and marketing rules can vary by industry and by individual client contracts. Review your campaign with your compliance and legal requirements before launch.",
+      "Yes. Rules can vary by industry and by individual client contracts — review your campaign with compliance and legal before launch.",
   },
 ];
 
@@ -133,7 +133,7 @@ export function MarketingAgencies() {
       <Section
         eyebrow="For Marketing Agencies & Consultants"
         title="Give Prospective Clients Another Reason to Choose Your Agency."
-        subtitle="Use high-value incentives to strengthen your new-business pitches, stand out from other agencies, and create more opportunities for client retention and referrals."
+        subtitle="High-value incentives that make your new-business pitches stand out and win more client retention and referrals."
       >
         <ImagePlaceholder landscape />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -154,15 +154,15 @@ export function MarketingAgencies() {
       >
         <StatsGrid stats={STATS} />
         <ClosingNote>
-          An established incentive provider with more than two decades supplying and fulfilling
-          promotional incentives for businesses.
+          An established incentive provider with more than two decades fulfilling promotional
+          incentives for businesses.
         </ClosingNote>
       </Section>
 
       <Section
         eyebrow="The Real Problem"
         title="Every Pitch Has Competition Before You Ever Present."
-        subtitle="Prospective clients compare agencies, freelancers and in-house teams before they ever choose who to hire. Winning the account takes more than a strong deck."
+        subtitle="Prospective clients compare agencies, freelancers and in-house teams before they choose who to hire. Winning the account takes more than a strong deck."
       >
         <div className="feature-grid">
           {PROBLEM_POINTS.map((p) => (
@@ -170,8 +170,8 @@ export function MarketingAgencies() {
           ))}
         </div>
         <ClosingNote>
-          The problem isn't simply generating more leads. It's getting the prospect to choose your
-          agency, trust your team, and stay with you.
+          The problem isn't generating more leads. It's getting the prospect to choose your
+          agency — and stay.
         </ClosingNote>
       </Section>
 
@@ -191,7 +191,7 @@ export function MarketingAgencies() {
         id="marketing-agency-video"
         eyebrow="Marketing Agency Video"
         title="See How Marketing Agencies Can Use Blue Sky Incentives"
-        subtitle="See how agencies can use incentives around discovery calls, new client wins, client appreciation and referrals."
+        subtitle="See how agencies use incentives for discovery calls, new client wins and referrals."
       >
         <VideoPlaceholder />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -210,8 +210,8 @@ export function MarketingAgencies() {
         title="Same Strategy. A Stronger Reason to Sign With You."
         subtitle={
           <>
-            Every agency can say &ldquo;We&rsquo;ll grow your business.&rdquo; Blue Sky Incentives
-            gives you another way to make that pitch more noticeable and more compelling.
+            Every agency can say &ldquo;We&rsquo;ll grow your business.&rdquo; An incentive makes
+            that pitch harder to ignore.
           </>
         }
       >
@@ -226,7 +226,7 @@ export function MarketingAgencies() {
       <Section
         eyebrow="The Multiple-Agency Problem"
         title="When Every Agency Is Pitching the Same Prospect, Your Offer Matters."
-        subtitle="One RFP or discovery call can put you in competition with several agencies at once. If every pitch sounds the same, you need another way to stand out."
+        subtitle="One RFP can put you in competition with several agencies at once. If every pitch sounds the same, you need another way to stand out."
       >
         <ImagePlaceholder />
       </Section>
@@ -235,7 +235,7 @@ export function MarketingAgencies() {
         tone="subtle"
         eyebrow="Incentives"
         title="Use the Right Incentive for the Right Agency Conversation"
-        subtitle="Different pitch, onboarding, appreciation and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+        subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <GalleryPlaceholder count={6} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -251,7 +251,7 @@ export function MarketingAgencies() {
       <Section
         eyebrow="4 Ways to Use Blue Sky Incentives"
         title="Use Incentives Across Every Stage of the Client Relationship."
-        subtitle="Blue Sky Incentives isn't only a new-business tool. Agencies can use incentives to win pitches, strengthen onboarding, improve retention and create more referral opportunities."
+        subtitle="Use incentives to win pitches, strengthen onboarding, improve retention and create referrals — not just close the deal."
       >
         <ImagePlaceholder />
       </Section>
@@ -260,14 +260,14 @@ export function MarketingAgencies() {
         tone="subtle"
         eyebrow="Client Lifetime Value"
         title="Don't Stop at One Campaign. Grow the Relationship."
-        subtitle="The first project can be the beginning of a long-term retainer relationship built around results, trust and staying top of mind."
+        subtitle="The first project can grow into a long-term retainer relationship built on results and trust."
       >
         <ImagePlaceholder />
       </Section>
 
       <Section
         title="Winning the Account Once Doesn't Mean They Renew."
-        subtitle="Every campaign is a chance to be forgotten once results are delivered. Give clients more reasons to stay connected with your agency before the next renewal — or the next referral."
+        subtitle="It's easy to be forgotten once results are delivered. Give clients reasons to stay connected before the next renewal."
       >
         <div className="feature-grid">
           {RETENTION_WAYS.map((r) => (
@@ -280,7 +280,7 @@ export function MarketingAgencies() {
         tone="subtle"
         eyebrow="Blue Sky Incentives Tools for Your Agency"
         title="Promote and Deliver Incentives Through the Marketing You Already Use"
-        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — new-business outreach, onboarding, appreciation and referral campaigns."
+        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
         <ChecklistTwoColumn
           columns={[
@@ -309,7 +309,7 @@ export function MarketingAgencies() {
                 },
                 { label: "Ask AI", description: "built-in guidance and recommendations inside your dashboard" },
               ],
-              note: "You decide the messaging and the campaign. The tools simply make it faster to produce and distribute.",
+              note: "You control the messaging. The tools just make it faster to produce and distribute.",
             },
           ]}
         />
@@ -379,7 +379,7 @@ export function MarketingAgencies() {
       <Section
         tone="subtle"
         title="Give Prospective Clients Another Reason to Choose Your Agency."
-        subtitle="Strengthen your new-business and retention marketing with high-value incentives while keeping strategy, results and trust at the center of the relationship."
+        subtitle="Strengthen your new-business and retention marketing with high-value incentives — without losing the trust at the center of the relationship."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact">

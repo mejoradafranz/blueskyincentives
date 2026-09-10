@@ -26,7 +26,7 @@ export function Demo() {
       <Hero
         eyebrow="Watch Demo"
         title="See Blue Sky Incentives in action."
-        subtitle="A quick walkthrough of setting up a program, awarding points, and redeeming a reward — from both sides of the platform."
+        subtitle="A quick walkthrough of setting up a program, awarding points, and redeeming a reward."
       />
 
       <Section>

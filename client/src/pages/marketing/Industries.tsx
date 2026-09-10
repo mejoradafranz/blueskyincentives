@@ -9,8 +9,7 @@ const HOW_IT_WORKS = [
   {
     mark: "01",
     title: "Run your existing marketing",
-    description:
-      "Website forms, ads, email and SMS campaigns, community events and referral programs — whatever you already do to reach your audience.",
+    description: "Website forms, ads, email, SMS, events and referral programs — whatever you already use.",
   },
   {
     mark: "02",
@@ -21,12 +20,12 @@ const HOW_IT_WORKS = [
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give your audience another reason to respond",
-    description: "Your expertise, service and trust remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your expertise and service remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -36,7 +35,7 @@ export function Industries() {
       <Hero
         eyebrow="Industries & Use Cases"
         title="Built to fit how your team actually works."
-        subtitle="The same points, budget, and redemption engine adapts to how different industries recognize and reward their people."
+        subtitle="The same points and redemption engine adapts to how each industry rewards its people."
       />
 
       <Section>
@@ -57,7 +56,7 @@ export function Industries() {
         tone="subtle"
         eyebrow="How It Works"
         title="One Campaign. One Added-Value Incentive. A Stronger Reason to Respond."
-        subtitle="However your team generates leads, wins new business or keeps customers coming back, Blue Sky Incentives adds one simple layer on top of it."
+        subtitle="One simple layer on top of however you already generate leads or keep customers coming back."
       >
         <div className="feature-grid">
           {HOW_IT_WORKS.map((s) => (

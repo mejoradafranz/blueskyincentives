@@ -21,8 +21,7 @@ export function TalkToStrategist() {
           <div className="talk-strategist__eyebrow">Need Help Choosing?</div>
           <h2 className="talk-strategist__title">Talk With an Incentive Strategist</h2>
           <p className="talk-strategist__subtitle">
-            Get personalized guidance on the right incentives, campaign structure,
-            implementation and membership option for your business.
+            Personalized guidance on incentives, strategy and pricing for your business.
           </p>
 
           <ul className="talk-strategist__checklist">

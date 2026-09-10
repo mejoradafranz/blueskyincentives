@@ -38,7 +38,7 @@ export function Home() {
             Bring Customers Back
           </>
         }
-        subtitle="Add high-perceived-value incentives to your existing marketing and offers—without discounting your product or personally fulfilling the rewards yourself."
+        subtitle="Add high-value incentives to your marketing—without discounting your product or fulfilling rewards yourself."
         actions={
           <Link to="/contact">
             <Button>
@@ -53,7 +53,7 @@ export function Home() {
       <Section
         eyebrow="On-Demand Demo"
         title="See Exactly How Blue Sky Incentives Works"
-        subtitle="Watch the complete on-demand demonstration and see how businesses use high-value incentives to generate more leads, close more sales, increase repeat business and attract referrals."
+        subtitle="See how businesses use high-value incentives to generate leads, close sales and drive repeat business."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/demo">

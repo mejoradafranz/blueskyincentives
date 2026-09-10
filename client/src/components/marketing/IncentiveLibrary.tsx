@@ -26,10 +26,10 @@ export function IncentiveLibrary() {
     <Section
       eyebrow="Your Incentive Library"
       title="Give Away Unlimited Incentives Across 6 High-Value Categories"
-      subtitle="Choose from smart-device vouchers, dining certificates, airfare-plus-hotel stays, resort stays, hotel savings and cruise certificates—valued from $100 to $2,000."
+      subtitle="Valued from $100 to $2,000."
     >
       <p className="incentive-library__note">
-        Without purchasing, stocking or personally fulfilling any of the rewards yourself.
+        No purchasing, stocking or fulfillment required.
       </p>
 
       <div className="incentive-library__grid">

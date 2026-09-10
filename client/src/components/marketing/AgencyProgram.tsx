@@ -16,13 +16,13 @@ const BENEFITS = [
     mark: <ShieldIcon />,
     title: "Strengthen Client Retention",
     description:
-      "Deliver an additional branded benefit that increases the value of your service and can make your agency harder to replace.",
+      "A branded benefit that adds value and makes your agency harder to replace.",
   },
   {
     mark: <CoinsIcon />,
     title: "Create a New Revenue Opportunity",
     description:
-      "Include accounts in existing packages, offer them as a paid add-on or resell the platform under your own brand.",
+      "Include it in existing packages, sell it as an add-on, or resell it under your own brand.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function AgencyProgram() {
     <Section
       eyebrow="For Agencies, Consultants & Resellers"
       title="Add More Value to Every Client Account"
-      subtitle="Give clients access to your branded incentive-marketing platform as part of your existing service. Use incentive-powered campaigns to help improve response, conversions, retention and referrals—or resell client accounts as an additional recurring-revenue offer."
+      subtitle="Give clients access to your branded incentive-marketing platform—or resell it as new recurring revenue."
     >
       <div className="feature-grid">
         {BENEFITS.map((benefit) => (

@@ -364,8 +364,7 @@ const CATEGORIES: IncentiveCategory[] = [
   {
     key: "travel-vacation",
     title: "Travel & Vacation",
-    description:
-      "High-perceived-value travel incentives with thousands of destinations and travel opportunities across the Blue Sky Incentives portfolio.",
+    description: "High-value travel incentives — thousands of destinations across the Blue Sky Incentives portfolio.",
     features: [
       "Thousands of destinations worldwide",
       "Bookings completed by phone with a licensed travel agent",
@@ -377,7 +376,7 @@ const CATEGORIES: IncentiveCategory[] = [
   {
     key: "cruise",
     title: "Cruise",
-    description: "A flagship Blue Sky Incentives incentive with genuine stopping power in any promotion.",
+    description: "Our flagship incentive — genuine stopping power in any promotion.",
     features: [
       "Top cruise lines",
       "Multiple destinations & departure ports",
@@ -400,8 +399,7 @@ const CATEGORIES: IncentiveCategory[] = [
   {
     key: "dining",
     title: "Dining",
-    description:
-      "Flexible dining rewards with broad consumer appeal and thousands of participating dining opportunities.",
+    description: "Flexible dining rewards with broad appeal and thousands of participating restaurants.",
     features: ["True cash value savings", "Thousands of participating restaurants", "Easy online platform"],
     imageCount: 4,
     certificates: DINING_CERTIFICATES,
@@ -410,7 +408,7 @@ const CATEGORIES: IncentiveCategory[] = [
     key: "products",
     title: "Products",
     description:
-      "A broad collection of smart devices, wellness products, grooming tools, automotive accessories and lifestyle products that give businesses tangible promotional options.",
+      "Smart devices, wellness products, grooming tools, and lifestyle products businesses can offer as tangible rewards.",
     features: ["$129–$149 retail value", "Customers cover shipping & handling", "Delivered directly to their door"],
     imageCount: 12,
     certificates: PRODUCT_CERTIFICATES,
@@ -418,8 +416,7 @@ const CATEGORIES: IncentiveCategory[] = [
   {
     key: "hotel-savings-cards",
     title: "Hotel Savings Cards",
-    description:
-      "Hotel savings across a wide range of destinations, from city stays to beach and mountain resorts.",
+    description: "Hotel savings across city, beach, and mountain destinations.",
     features: [
       "True cash value savings",
       "More than 1,000,000 properties worldwide",

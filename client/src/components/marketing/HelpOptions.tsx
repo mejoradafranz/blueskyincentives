@@ -17,8 +17,7 @@ export function HelpOptions() {
         <div className="help-options__card">
           <h3 className="help-options__title">Speak With an Incentive Strategist</h3>
           <p className="help-options__text">
-            Not yet a Blue Sky Incentives customer? Get answers about incentives, pricing,
-            implementation and how Blue Sky Incentives could work for your business.
+            Not a customer yet? Get answers about incentives, pricing and implementation.
           </p>
           <a href={`tel:${STRATEGIST_PHONE}`} className="help-options__phone">
             {STRATEGIST_PHONE_DISPLAY}
@@ -40,8 +39,7 @@ export function HelpOptions() {
         <div className="help-options__card">
           <h3 className="help-options__title">Client Support</h3>
           <p className="help-options__text">
-            Already a Blue Sky Incentives member or previous customer? Get help with your
-            account, certificates, platform access or membership.
+            Already a member? Get help with your account, certificates or platform access.
           </p>
           <a href={`tel:${SUPPORT_PHONE}`} className="help-options__phone">
             {SUPPORT_PHONE_DISPLAY}

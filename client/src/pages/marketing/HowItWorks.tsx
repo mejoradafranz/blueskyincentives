@@ -36,7 +36,7 @@ const EMPLOYEE_STEPS = [
   },
   {
     title: "Redeem",
-    description: "Redeem instantly. Your balance updates immediately and the redemption shows up in your history.",
+    description: "Redeem instantly — your balance and history update right away.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function HowItWorks() {
       <Hero
         eyebrow="How It Works"
         title="Two portals, one program."
-        subtitle="Client admins configure and manage the program. Employees redeem from it. Here's what each side actually looks like."
+        subtitle="Admins configure and manage the program. Employees redeem from it."
       />
 
       <Section eyebrow="For client admins" title="Setting up and running a program">

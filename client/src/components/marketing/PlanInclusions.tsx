@@ -4,7 +4,7 @@ import "./PlanInclusions.css";
 
 const INCLUSIONS = [
   "Unlimited incentive distribution",
-  "Access to all six incentive categories",
+  "All six incentive categories",
   "AI Marketing Consultant",
   "Competitor Analysis",
   "Social campaign assets and promotional tools",
@@ -17,7 +17,7 @@ const INCLUSIONS = [
   "Website banners, pop-ups and sticky bars",
   "Zapier and API integration",
   "Blue Sky Incentives mobile-app access",
-  "Member support and onboarding resources",
+  "Support and onboarding resources",
 ];
 
 export function PlanInclusions() {

@@ -9,13 +9,13 @@ export function TrustedRelationships() {
     <Section
       eyebrow="Trusted Relationships"
       title="Trusted by Businesses. Supported by an Established Travel Network."
-      subtitle="Blue Sky Incentives serves businesses across multiple industries and provides access to travel incentives through an established hospitality, resort and travel-service ecosystem."
+      subtitle="Trusted by businesses across industries, backed by an established travel network."
     >
       <div className="trusted__block">
         <h3 className="trusted__block-title">Selected Blue Sky Incentives Clients</h3>
         <p className="trusted__block-text">
-          Businesses across multiple industries use Blue Sky Incentives to support lead
-          generation, sales, retention and referrals.
+          Businesses across industries use Blue Sky Incentives to grow leads, sales and
+          retention.
         </p>
         <div className="trusted__logo-row">
           {Array.from({ length: CLIENT_LOGO_SLOTS }).map((_, i) => (
@@ -29,8 +29,7 @@ export function TrustedRelationships() {
       <div className="trusted__block">
         <h3 className="trusted__block-title">The Network Behind Our Travel Incentives</h3>
         <p className="trusted__block-text">
-          Our travel-incentive ecosystem includes established hospitality, resort and
-          travel-service providers.
+          Backed by established hospitality, resort and travel-service providers.
         </p>
         <div className="trusted__logo-row">
           {Array.from({ length: PARTNER_LOGO_SLOTS }).map((_, i) => (

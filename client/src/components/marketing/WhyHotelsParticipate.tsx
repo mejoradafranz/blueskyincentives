@@ -9,19 +9,19 @@ const BENEFITS = [
     mark: "S",
     title: "Selected Unsold Inventory",
     description:
-      "Hotels have fixed operating costs whether every room is occupied or not. Selected unused inventory can be made available for promotional stays.",
+      "Unsold rooms cost the same either way, so hotels offer them for promotional stays.",
   },
   {
     mark: "A",
     title: "Additional Guest Revenue",
     description:
-      "Promotional guests may spend money on dining, room service, entertainment, spas, upgrades and additional nights.",
+      "Promotional guests spend on dining, spas, upgrades and additional nights.",
   },
   {
     mark: "F",
     title: "Future Bookings and Referrals",
     description:
-      "A positive guest experience can introduce the property to new travelers who may return as paying customers or recommend the property to others.",
+      "A great stay can turn guests into future bookings and referrals.",
   },
 ];
 
@@ -41,8 +41,7 @@ export function WhyHotelsParticipate() {
             How Blue Sky Incentives Makes High-Value Travel Incentives Possible
           </h3>
           <p className="why-hotels__paragraph">
-            Hotels and resorts can use selected unsold inventory to attract new guests,
-            generate additional on-property revenue and build future booking relationships.
+            Hotels use unsold inventory to attract new guests and generate on-property revenue.
           </p>
         </div>
 

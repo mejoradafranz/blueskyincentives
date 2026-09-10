@@ -20,24 +20,24 @@ const DIRECT_DELIVERY = [
     mark: <MailIcon />,
     title: "Send by Email",
     description:
-      "Send branded digital certificates through your own business email and integrate them into existing campaigns.",
+      "Send branded certificates through your own email and existing campaigns.",
   },
   {
     mark: <DocumentIcon />,
     title: "Printable PDF Certificates",
-    description: "Create branded certificates for printing, direct mail and offline promotions.",
+    description: "Branded certificates for printing, direct mail and offline promotions.",
   },
   {
     mark: <ChatIcon />,
     title: "Send by SMS",
     description:
-      "Send personalized incentives by text message for immediate, time-sensitive delivery.",
+      "Send personalized incentives by text for instant delivery.",
   },
   {
     mark: <QrCodeIcon />,
     title: "QR Code Certificates",
     description:
-      "Create QR codes customers can scan from flyers, posters, displays, mail pieces or digital promotions.",
+      "QR codes customers can scan from print or digital promotions.",
   },
 ];
 
@@ -46,18 +46,18 @@ const WEBSITE_LEAD_CAPTURE = [
     mark: <LinkIcon />,
     title: "Landing Page Links",
     description:
-      "Capture the lead and automatically deliver the selected incentive through one branded link.",
+      "Capture the lead and automatically deliver the incentive through one branded link.",
   },
   {
     mark: <PopUpIcon />,
     title: "Website Pop-Ups",
-    description: "Capture attention and deliver incentives through targeted website pop-ups.",
+    description: "Capture attention and deliver incentives through targeted pop-ups.",
   },
   {
     mark: <BannerIcon />,
     title: "Web Banners",
     description:
-      "Add incentive-driven banners to websites, thank-you pages and campaign landing pages.",
+      "Add incentive-driven banners to websites and landing pages.",
   },
   {
     mark: <StickyBarIcon />,
@@ -71,19 +71,19 @@ const AUTOMATION = [
     mark: <AppGridIcon />,
     title: "Native GoHighLevel App",
     description:
-      "Automatically generate personalized Blue Sky Incentives claim links directly from GoHighLevel workflows. The public Marketplace app includes nine ready-to-use workflows for agencies and individual sub-accounts.",
-    note: "Standard Blue Sky Incentives only. Premium Certificates are not included in Native GoHighLevel workflow automation.",
+      "Generate personalized claim links directly from GoHighLevel workflows. Includes nine ready-to-use workflows for agencies and sub-accounts.",
+    note: "Standard Blue Sky Incentives only. Premium Certificates are not included.",
   },
   {
     mark: <ZapIcon />,
     title: "Zapier Integration",
     description:
-      "Connect Blue Sky Incentives distribution actions to supported applications and automated workflows through Zapier.",
+      "Connect distribution actions to your workflows through Zapier.",
   },
   {
     mark: <CodeIcon />,
     title: "API Integration",
-    description: "Connect Blue Sky Incentives certificate delivery to your own systems and applications.",
+    description: "Connect certificate delivery to your own systems.",
   },
 ];
 
@@ -140,13 +140,11 @@ export function DistributionTools() {
           <span className="distribution__badge">Coming Soon!</span>
           <h3 className="distribution__super-agent-title">Blue Sky Incentives AI Super Agent</h3>
           <p className="distribution__super-agent-text">
-            Tell Blue Sky Incentives what you want to create or distribute in plain English. The
-            Blue Sky Incentives AI Super Agent can help produce PDFs, QR codes, emails, SMS
-            messages, shareable links, web banners, sticky bars and pop-ups.
+            Describe what you want to create in plain English—PDFs, QR codes, emails, SMS,
+            links, banners and pop-ups.
           </p>
           <p className="distribution__super-agent-text">
-            Simply describe what you need and the Super Agent guides the setup and completes the
-            supported distribution task for you.
+            The Super Agent handles the setup for you.
           </p>
           <div className="distribution__tags">
             {SUPER_AGENT_TAGS.map((tag) => (

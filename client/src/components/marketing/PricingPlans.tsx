@@ -78,7 +78,7 @@ export function PricingPlans() {
   return (
     <Section
       title="Choose Your Plan"
-      subtitle="Choose flexible monthly billing or save with one annual payment and no setup fee."
+      subtitle="Monthly billing or one annual payment—no setup fee either way."
     >
       <div className="pricing-plans__grid">
         {PLANS.map((plan) => (

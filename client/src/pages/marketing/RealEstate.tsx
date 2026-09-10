@@ -65,20 +65,18 @@ const HOW_IT_WORKS = [
   {
     mark: "02",
     title: "Add a high-value incentive",
-    description:
-      "Attach it to a meaningful action such as attending an open house, requesting a home valuation, signing a listing agreement, or closing.",
+    description: "Attach it to a meaningful action — an open house, a home valuation, a signed listing, or a closing.",
   },
   {
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give buyers and sellers another reason to respond",
-    description:
-      "Your expertise, service and local market knowledge remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your expertise and local knowledge remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -114,7 +112,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free home valuation or listing appointment?",
     answer:
-      "Many agents attach a high-value incentive such as a $100 Dining Certificate to completing a home valuation request or listing appointment, with no purchase necessary. Real estate marketing and inducement rules can vary by state and brokerage, so review your exact campaign with your broker, compliance and legal requirements before launch.",
+      "Yes — many agents attach a $100 Dining Certificate to a home valuation or listing appointment, no purchase necessary. Rules vary by state and brokerage, so confirm your campaign with your broker and compliance first.",
   },
   { question: "Can I use Blue Sky Incentives with purchased or shared leads?", answer: null },
   { question: "Can I use incentives for open houses?", answer: null },
@@ -127,7 +125,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Are real estate incentive rules different by state or brokerage?",
     answer:
-      "Real estate incentive, inducement and referral rules can vary by state and brokerage. Review your campaign with your broker, compliance and legal requirements before launch.",
+      "Yes. Rules vary by state and brokerage — review your campaign with your broker and compliance before launch.",
   },
 ];
 
@@ -139,7 +137,7 @@ export function RealEstate() {
         imageAlt="Blue Sky Incentives team welcoming clients at the front desk"
         eyebrow="For Real Estate Agents & Teams"
         title="Give Home Buyers and Sellers Another Reason to Choose You."
-        subtitle="Use high-value incentives to strengthen your listing and buyer campaigns, stand out at the open house, and create more opportunities for referrals and repeat business."
+        subtitle="High-value incentives that make your listing and buyer campaigns stand out — and win more referrals and repeat business."
         actions={
           <>
             <Link to="/contact">
@@ -160,15 +158,15 @@ export function RealEstate() {
       >
         <StatsGrid stats={STATS} />
         <ClosingNote>
-          An established incentive provider with more than two decades supplying and fulfilling
-          promotional incentives for businesses.
+          An established incentive provider with more than two decades fulfilling promotional
+          incentives for businesses.
         </ClosingNote>
       </Section>
 
       <Section
         eyebrow="The Real Problem"
         title="Every Listing Has Competition Before You Even Walk In."
-        subtitle="Home buyers and sellers compare agents, teams, discount brokerages and online estimators before they ever pick up the phone. Winning the listing — or the buyer — takes more than being available."
+        subtitle="Buyers and sellers compare agents, brokerages and online estimators before they ever call. Winning the listing takes more than being available."
       >
         <div className="feature-grid">
           {PROBLEM_POINTS.map((p) => (
@@ -176,8 +174,8 @@ export function RealEstate() {
           ))}
         </div>
         <ClosingNote>
-          The problem isn't simply generating more leads. It's getting the buyer or seller to
-          choose you, remember you, and come back to you.
+          The problem isn't generating more leads. It's getting the buyer or seller to choose
+          you — and come back.
         </ClosingNote>
       </Section>
 
@@ -197,7 +195,7 @@ export function RealEstate() {
         id="real-estate-agent-video"
         eyebrow="Real Estate Agent Video"
         title="See How Real Estate Agents Can Use Blue Sky Incentives"
-        subtitle="See how agents and teams can use incentives around open houses, listing appointments, closings, client appreciation and referrals."
+        subtitle="See how agents and teams use incentives for open houses, listings, closings and referrals."
       >
         <VideoPlaceholder />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -216,8 +214,8 @@ export function RealEstate() {
         title="Same Home. A Stronger Reason to List With You."
         subtitle={
           <>
-            Every agent can say &ldquo;I&rsquo;ll sell your home.&rdquo; Blue Sky Incentives gives
-            you another way to make that listing pitch more noticeable and more compelling.
+            Every agent can say &ldquo;I&rsquo;ll sell your home.&rdquo; An incentive makes that
+            pitch harder to ignore.
           </>
         }
       >
@@ -232,7 +230,7 @@ export function RealEstate() {
       <Section
         eyebrow="The Multiple-Agent Problem"
         title="When Every Agent Is Chasing the Same Listing, Your Offer Matters."
-        subtitle="One listing inquiry can put the same seller in front of several agents and teams. If everyone is pitching with the same script, you need another reason to stand out."
+        subtitle="One listing inquiry can reach several agents. If everyone pitches the same script, you need a reason to stand out."
       >
         <ImagePlaceholder />
       </Section>
@@ -241,7 +239,7 @@ export function RealEstate() {
         tone="subtle"
         eyebrow="Incentives"
         title="Use the Right Incentive for the Right Real Estate Conversation"
-        subtitle="Different listing, buyer, closing, appreciation and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+        subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <GalleryPlaceholder count={6} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -257,7 +255,7 @@ export function RealEstate() {
       <Section
         eyebrow="4 Ways to Use Blue Sky Incentives"
         title="Use Incentives Across Every Stage of the Client Relationship."
-        subtitle="Blue Sky Incentives isn't only a listing-generation tool. Agents can use incentives to generate leads, win listings, close more deals and create more referral opportunities."
+        subtitle="Use incentives to generate leads, win listings, close deals and create referrals — not just find buyers."
       >
         <ImagePlaceholder />
       </Section>
@@ -266,14 +264,14 @@ export function RealEstate() {
         tone="subtle"
         eyebrow="Client Lifetime Value"
         title="Don't Stop at One Closing. Grow the Relationship."
-        subtitle="The first transaction can be the beginning of a long-term relationship built around repeat business, referrals and staying top of mind."
+        subtitle="The first transaction can grow into a long-term relationship built on repeat business and referrals."
       >
         <ImagePlaceholder />
       </Section>
 
       <Section
         title="Winning the Client Once Doesn't Mean They Call You Next Time."
-        subtitle="Every closing is a chance to be forgotten once the keys change hands. Give clients more reasons to stay connected with you before their next move — or their next referral."
+        subtitle="It's easy to be forgotten once the keys change hands. Give clients reasons to stay connected before their next move."
       >
         <div className="feature-grid">
           {RETENTION_WAYS.map((r) => (
@@ -286,7 +284,7 @@ export function RealEstate() {
         tone="subtle"
         eyebrow="Blue Sky Incentives Tools for Your Business"
         title="Promote and Deliver Incentives Through the Marketing You Already Use"
-        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — listing generation, buyer follow-up, open houses, closings, client appreciation and referral campaigns."
+        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
         <ChecklistTwoColumn
           columns={[
@@ -315,7 +313,7 @@ export function RealEstate() {
                 },
                 { label: "Ask AI", description: "built-in guidance and recommendations inside your dashboard" },
               ],
-              note: "You decide the messaging and the campaign. The tools simply make it faster to produce and distribute.",
+              note: "You control the messaging. The tools just make it faster to produce and distribute.",
             },
           ]}
         />
@@ -385,7 +383,7 @@ export function RealEstate() {
       <Section
         tone="subtle"
         title="Give Buyers and Sellers Another Reason to Choose You."
-        subtitle="Strengthen your listing and buyer marketing with high-value incentives while keeping local expertise, service and trust at the center of the relationship."
+        subtitle="Strengthen your listing and buyer marketing with high-value incentives — without losing the trust at the center of the relationship."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact">

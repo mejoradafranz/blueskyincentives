@@ -32,8 +32,7 @@ const PROBLEM_POINTS = [
   {
     mark: "02",
     title: "They want the price before the conversation",
-    description:
-      "Quote shoppers often compare premiums before they understand coverage, service or the value of the agency relationship.",
+    description: "Shoppers compare premiums before they understand your coverage or service.",
   },
   {
     mark: "03",
@@ -43,7 +42,7 @@ const PROBLEM_POINTS = [
   {
     mark: "04",
     title: "You can't control the carrier's rate",
-    description: "When several quotes look similar, your agency needs another way to create differentiation.",
+    description: "When quotes look similar, you need another way to stand out.",
   },
   {
     mark: "05",
@@ -62,20 +61,18 @@ const HOW_IT_WORKS = [
   {
     mark: "02",
     title: "Add a high-value incentive",
-    description:
-      "Attach it to an appropriate meaningful action such as completing a quote request, attending a coverage review, participating in an approved agency campaign, or client appreciation.",
+    description: "Attach it to a meaningful action — a quote request, coverage review, or client appreciation.",
   },
   {
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give the shopper another reason to respond",
-    description:
-      "Coverage expertise, service and trust remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your expertise and service remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -136,7 +133,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free insurance quote?",
     answer:
-      "Many agencies attach a high-value incentive such as a $100 Dining Certificate to completing a quote request, with no purchase necessary. Insurance marketing, inducement and rebating rules vary by state and carrier, so review your exact campaign with your compliance, legal and carrier requirements before launch.",
+      "Yes — many agencies attach a $100 Dining Certificate to a completed quote request, no purchase necessary. Rules vary by state and carrier, so confirm your campaign with compliance and legal first.",
   },
   {
     question: "Can I use Blue Sky Incentives with purchased or shared insurance leads?",
@@ -173,7 +170,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Are insurance incentive rules different by state?",
     answer:
-      "Insurance incentive, inducement, rebating and referral rules can vary by state and carrier. Review your campaign with your compliance, legal and carrier requirements before launch.",
+      "Yes. Rules vary by state and carrier — review your campaign with compliance, legal and your carrier before launch.",
   },
 ];
 
@@ -187,7 +184,7 @@ export function InsuranceAgents() {
         imageAlt="Insurance agents meeting with a client in an office"
         eyebrow="For Insurance Agents & Agencies"
         title="Give More Insurance Shoppers a Reason to Request Your Quote."
-        subtitle="Use high-value incentives to strengthen your quote campaigns, give prospects another reason to respond, and create more opportunities for new clients, renewals, cross-sell and referrals."
+        subtitle="High-value incentives that strengthen your quote campaigns and win more new clients, renewals and referrals."
         actions={
           <>
             <Link to="/contact">
@@ -216,8 +213,8 @@ export function InsuranceAgents() {
         </div>
         </div>
         <p className="insurance-stats__note">
-          An established incentive provider with more than two decades supplying and fulfilling
-          promotional incentives for businesses.
+          An established incentive provider with more than two decades fulfilling promotional
+          incentives for businesses.
         </p>
       </Section>
 
@@ -225,7 +222,7 @@ export function InsuranceAgents() {
         tone="subtle"
         eyebrow="The Real Problem"
         title="You're Not the Only Agent Calling That Lead."
-        subtitle="Insurance shoppers are comparing multiple quotes, direct carriers, online options and often several agents at the same time. A lead only matters if you can turn it into a real conversation."
+        subtitle="Shoppers compare quotes, carriers and agents all at once. A lead only matters if you turn it into a real conversation."
       >
         <div className="feature-grid">
           {PROBLEM_POINTS.map((p) => (
@@ -233,8 +230,8 @@ export function InsuranceAgents() {
           ))}
         </div>
         <p className="insurance-problem__closing">
-          The problem isn't simply generating more insurance leads. It's getting the shopper to
-          choose your conversation, your agency and eventually stay with you.
+          The problem isn't generating more leads. It's getting the shopper to choose you — and
+          stay.
         </p>
       </Section>
 
@@ -254,7 +251,7 @@ export function InsuranceAgents() {
         tone="subtle"
         eyebrow="Insurance Agent Video"
         title="See How Insurance Agents Can Use Blue Sky Incentives"
-        subtitle="See how insurance agencies can use incentives around quote generation, coverage reviews, client appreciation, retention, cross-sell and referrals."
+        subtitle="See how agencies use incentives for quote generation, coverage reviews, retention and referrals."
       >
         <div className="insurance-video">
           <div className="insurance-video__play" aria-hidden="true" />
@@ -277,8 +274,8 @@ export function InsuranceAgents() {
         title="Same Insurance Quote. A Stronger Reason to Request It."
         subtitle={
           <>
-            Every agency can say &ldquo;Get a Free Quote.&rdquo; Blue Sky Incentives gives you
-            another way to make that quote offer more noticeable and more compelling.
+            Every agency can say &ldquo;Get a Free Quote.&rdquo; An incentive makes that offer
+            harder to ignore.
           </>
         }
       >
@@ -296,7 +293,7 @@ export function InsuranceAgents() {
       <Section
         eyebrow="The Shared-Lead Problem"
         title="When Multiple Agents Are Calling the Same Prospect, Your Offer Matters."
-        subtitle="One quote request can put the same insurance shopper in front of multiple agencies. If everybody is calling with the same message, the agency needs another reason to stand out."
+        subtitle="One quote request can reach multiple agencies. If everyone sounds the same, you need a reason to stand out."
       >
         <div className="insurance-media">
           <img
@@ -311,7 +308,7 @@ export function InsuranceAgents() {
         tone="subtle"
         eyebrow="Incentives"
         title="Use the Right Incentive for the Right Insurance Conversation"
-        subtitle="Different quote, review, appreciation, renewal and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+        subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <div className="insurance-incentives__gallery">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -334,7 +331,7 @@ export function InsuranceAgents() {
       <Section
         eyebrow="4 Ways to Use Blue Sky Incentives"
         title="Use Incentives Across Every Stage of the Client Relationship."
-        subtitle="Blue Sky Incentives isn't only a quote-generation tool. Insurance agencies can use incentives to generate quote leads, create stronger new-client experiences, improve retention and create more referral opportunities."
+        subtitle="Use incentives for quote leads, new-client experiences, retention and referrals — not just lead generation."
       >
         <div className="insurance-media">
           <img
@@ -349,7 +346,7 @@ export function InsuranceAgents() {
         tone="subtle"
         eyebrow="Client Lifetime Value"
         title="Don't Stop at One Policy. Grow the Relationship."
-        subtitle="The first policy can be the beginning of a broader household relationship built around appropriate coverage, proactive reviews and long-term service."
+        subtitle="The first policy can grow into a full household relationship through proactive reviews and long-term service."
       >
         <div className="insurance-media">
           <img
@@ -362,7 +359,7 @@ export function InsuranceAgents() {
 
       <Section
         title="Winning the Client Once Doesn't Mean You Keep Them."
-        subtitle="Rate increases, changing needs and competing quotes can put every renewal back in play. Give clients more reasons to stay connected with your agency before renewal becomes the only conversation."
+        subtitle="Every renewal is back in play. Give clients reasons to stay connected before it becomes the only conversation."
       >
         <div className="feature-grid">
           {RETENTION_WAYS.map((r) => (
@@ -375,7 +372,7 @@ export function InsuranceAgents() {
         tone="subtle"
         eyebrow="Blue Sky Incentives Tools for Your Agency"
         title="Promote and Deliver Incentives Through the Marketing Your Agency Already Uses"
-        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — quote generation, lead follow-up, annual reviews, renewal, client appreciation, reactivation and referral campaigns."
+        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
         <div className="insurance-tools__grid">
           <div className="insurance-tools__column">
@@ -407,8 +404,7 @@ export function InsuranceAgents() {
               ))}
             </ul>
             <p className="insurance-tools__note">
-              You decide the messaging and the campaign. The tools simply make it faster to
-              produce and distribute.
+              You control the messaging. The tools just make it faster to produce and distribute.
             </p>
           </div>
         </div>
@@ -509,7 +505,7 @@ export function InsuranceAgents() {
       <Section
         tone="subtle"
         title="Give Insurance Shoppers Another Reason to Request Your Quote."
-        subtitle="Strengthen your quote marketing with high-value incentives while keeping coverage expertise, service and trust at the center of the relationship."
+        subtitle="Strengthen your quote marketing with high-value incentives — without losing the trust at the center of the relationship."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact">

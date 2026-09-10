@@ -18,7 +18,7 @@ const TOOLS = [
     mark: <SparkleIcon />,
     title: "AI Marketing Consultant",
     description:
-      "Get personalized incentive and campaign recommendations based on your business, industry and goals.",
+      "Personalized incentive and campaign recommendations for your business.",
   },
   {
     mark: <SearchIcon />,
@@ -46,7 +46,7 @@ const TOOLS = [
     mark: <PlayIcon />,
     title: "Promotional & Redemption Tools",
     description:
-      "Support campaigns with promotional videos, secure redemption experiences and related marketing tools.",
+      "Promotional videos and secure redemption tools for your campaigns.",
   },
 ];
 
@@ -60,9 +60,7 @@ export function AICampaignTools() {
             Plan, Create and Promote Your Incentive Campaigns in One Place
           </h2>
           <p className="ai-tools__subtitle">
-            Use Blue Sky Incentives&rsquo; AI tools to develop the strategy, choose the right
-            incentive and create ready-to-launch campaign assets for social media, landing
-            pages, email, websites, print and paid advertising.
+            AI tools to build your strategy and create ready-to-launch campaign assets.
           </p>
         </div>
 

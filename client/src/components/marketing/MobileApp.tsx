@@ -3,9 +3,8 @@ import { CheckIcon } from "./CheckIcon";
 import "./MobileApp.css";
 
 const CHECKLIST = [
-  "Access Blue Sky Incentives from anywhere",
   "Manage your incentives on mobile",
-  "Stay connected to your Blue Sky Incentives account",
+  "Stay connected to your account, anywhere",
 ];
 
 export function MobileApp() {
@@ -16,8 +15,7 @@ export function MobileApp() {
           <div className="mobile-app__eyebrow">Blue Sky Incentives Mobile App</div>
           <h2 className="mobile-app__title">Manage Your Incentive Marketing From Anywhere</h2>
           <p className="mobile-app__subtitle">
-            Access Blue Sky Incentives from your phone and stay connected to your incentives,
-            certificates and account wherever business takes you.
+            Manage your incentives, certificates and account from your phone.
           </p>
 
           <ul className="mobile-app__checklist">

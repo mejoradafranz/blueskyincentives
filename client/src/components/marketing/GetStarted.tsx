@@ -20,13 +20,13 @@ const OPTIONS: GetStartedOption[] = [
   {
     title: "Watch the Instant Demo",
     description:
-      "See how Blue Sky Incentives works, explore the available incentives and learn how businesses use them to generate leads, sales, repeat business and referrals.",
+      "See how Blue Sky Incentives works and what it can do for your business.",
     actions: [{ label: "Watch the Instant Demo", to: "/demo" }],
   },
   {
     title: "Speak With an Incentive Strategist",
     description:
-      "Get personalized answers about incentive selection, campaign strategy, setup, implementation and pricing.",
+      "Get personalized answers about incentives, strategy and pricing.",
     actions: [
       { label: "Call an Incentive Strategist", href: "tel:+15551234567" },
       { label: "Book a One-on-One Call", to: "/contact", variant: "secondary" },
@@ -35,7 +35,7 @@ const OPTIONS: GetStartedOption[] = [
   {
     title: "Start Risk-Free",
     description:
-      "Activate your Blue Sky Incentives membership online and begin using the platform immediately.",
+      "Activate your membership online and start using the platform immediately.",
     actions: [{ label: "Start Risk-Free", to: "/contact" }],
   },
 ];

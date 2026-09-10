@@ -8,19 +8,19 @@ const STEPS = [
   {
     mark: "1",
     title: "Activate Your Membership",
-    description: "Choose your plan, complete enrollment and begin using the Blue Sky Incentives platform.",
+    description: "Choose your plan and start using the platform.",
   },
   {
     mark: "2",
     title: "Explore Blue Sky Incentives for 14 Days",
     description:
-      "Review the incentives, distribution tools and campaign resources included with your membership.",
+      "Review the incentives and tools included with your membership.",
   },
   {
     mark: "3",
     title: "Cancel and Request a Refund",
     description:
-      "If Blue Sky Incentives is not right for your business, cancel and submit your refund request within the 14-day guarantee period.",
+      "Not the right fit? Cancel and request your refund within the 14-day guarantee period.",
   },
 ];
 
@@ -31,13 +31,11 @@ export function MoneyBackGuarantee() {
     <Section title="Risk-Free 14-Day Money-Back Guarantee">
       <div className="money-back__intro">
         <p>
-          Blue Sky Incentives is a paid membership, not a free trial. Your 14-day money-back
-          guarantee gives you time to explore the platform, review the available incentives and
-          determine whether Blue Sky Incentives is right for your business.
+          Blue Sky Incentives is a paid membership, not a free trial. The 14-day guarantee
+          gives you time to try the platform risk-free.
         </p>
         <p>
-          If you decide not to continue, cancel and request your refund within the 14-day
-          guarantee period in accordance with the official terms.
+          Not right for you? Cancel and request a refund within the 14-day guarantee period.
         </p>
       </div>
 
@@ -56,13 +54,11 @@ export function MoneyBackGuarantee() {
       {showTerms && (
         <Modal title="14-Day Money-Back Guarantee" onClose={() => setShowTerms(false)}>
           <p>
-            Blue Sky Incentives is a paid membership, not a free trial. Your 14-day money-back
-            guarantee gives you time to explore the platform, review the available incentives and
-            determine whether Blue Sky Incentives is right for your business.
+            Blue Sky Incentives is a paid membership, not a free trial. The 14-day guarantee
+            gives you time to try the platform risk-free.
           </p>
           <p>
-            If you decide not to continue, cancel and request your refund within the 14-day
-            guarantee period in accordance with the official terms.
+            Not right for you? Cancel and request a refund within the 14-day guarantee period.
           </p>
           <p style={{ color: "var(--color-text-faint)", fontSize: "0.85rem" }}>
             For the complete terms and conditions of this guarantee, contact our team.

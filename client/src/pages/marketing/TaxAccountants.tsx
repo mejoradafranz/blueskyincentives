@@ -68,12 +68,12 @@ const HOW_IT_WORKS = [
     mark: "03",
     title: "Blue Sky Incentives supplies and fulfills the incentive",
     description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+      "We supply the incentives, manage redemption, and give you tools to distribute them by email, SMS, QR code, landing page and more.",
   },
   {
     mark: "04",
     title: "Give clients another reason to respond",
-    description: "Your expertise, accuracy and trust remain the core value. The incentive strengthens the offer around the next action.",
+    description: "Your expertise and accuracy remain the core value — the incentive just strengthens the offer.",
   },
 ];
 
@@ -109,7 +109,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free consultation?",
     answer:
-      "Many firms attach a high-value incentive such as a $100 Dining Certificate to completing a consultation or document drop-off, with no purchase necessary. Review your exact campaign with your compliance and licensing requirements before launch.",
+      "Yes — many firms attach a $100 Dining Certificate to a completed consultation or document drop-off, no purchase necessary. Confirm your campaign with compliance and licensing first.",
   },
   { question: "Can I use Blue Sky Incentives with purchased or shared leads?", answer: null },
   { question: "Can I use incentives during busy season?", answer: null },
@@ -122,7 +122,7 @@ const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Are incentive rules different by state or licensing board?",
     answer:
-      "Incentive and marketing rules can vary by state and by professional licensing requirements. Review your campaign with your compliance and legal requirements before launch.",
+      "Yes. Rules can vary by state and licensing board — review your campaign with compliance and legal before launch.",
   },
 ];
 
@@ -132,7 +132,7 @@ export function TaxAccountants() {
       <Section
         eyebrow="For Tax & Accounting Firms"
         title="Give Clients Another Reason to File With You."
-        subtitle="Use high-value incentives to strengthen your tax season marketing, stand out from other firms, and create more opportunities for referrals and year-round client retention."
+        subtitle="High-value incentives that make your tax season marketing stand out and win more referrals and year-round retention."
       >
         <ImagePlaceholder landscape />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -153,15 +153,15 @@ export function TaxAccountants() {
       >
         <StatsGrid stats={STATS} />
         <ClosingNote>
-          An established incentive provider with more than two decades supplying and fulfilling
-          promotional incentives for businesses.
+          An established incentive provider with more than two decades fulfilling promotional
+          incentives for businesses.
         </ClosingNote>
       </Section>
 
       <Section
         eyebrow="The Real Problem"
         title="Clients Compare Firms Before Tax Season Even Starts."
-        subtitle="DIY software, online tax services and competing firms all make it easy for clients to shop around before they ever call you. Winning new clients — and keeping them — takes more than being available during busy season."
+        subtitle="DIY software, online tax services and competing firms make it easy for clients to shop around. Winning new clients — and keeping them — takes more than being available during busy season."
       >
         <div className="feature-grid">
           {PROBLEM_POINTS.map((p) => (
@@ -169,8 +169,8 @@ export function TaxAccountants() {
           ))}
         </div>
         <ClosingNote>
-          The problem isn't simply generating more leads. It's getting the client to choose your
-          firm, trust your team, and come back next season.
+          The problem isn't generating more leads. It's getting the client to choose your firm —
+          and come back next season.
         </ClosingNote>
       </Section>
 
@@ -190,7 +190,7 @@ export function TaxAccountants() {
         id="tax-accounting-video"
         eyebrow="Tax & Accounting Video"
         title="See How Tax & Accounting Firms Can Use Blue Sky Incentives"
-        subtitle="See how firms can use incentives around consultations, busy season, client appreciation and referrals."
+        subtitle="See how firms use incentives for consultations, busy season and referrals."
       >
         <VideoPlaceholder />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -209,8 +209,8 @@ export function TaxAccountants() {
         title="Same Return. A Stronger Reason to File With You."
         subtitle={
           <>
-            Every firm can say &ldquo;We&rsquo;ll maximize your refund.&rdquo; Blue Sky Incentives
-            gives you another way to make that offer more noticeable and more compelling.
+            Every firm can say &ldquo;We&rsquo;ll maximize your refund.&rdquo; An incentive makes
+            that offer harder to ignore.
           </>
         }
       >
@@ -225,7 +225,7 @@ export function TaxAccountants() {
       <Section
         eyebrow="The Multiple-Firm Problem"
         title="When Every Firm Is Competing for the Same Client, Your Offer Matters."
-        subtitle="One inquiry can put you in competition with other firms, national chains and DIY software. If price is the only differentiator, you need another way to stand out."
+        subtitle="One inquiry can put you in competition with other firms and DIY software. If price is the only differentiator, you need another way to stand out."
       >
         <ImagePlaceholder />
       </Section>
@@ -234,7 +234,7 @@ export function TaxAccountants() {
         tone="subtle"
         eyebrow="Incentives"
         title="Use the Right Incentive for the Right Client Conversation"
-        subtitle="Different consultation, filing, appreciation and referral campaigns can use different incentive types and values. Blue Sky Incentives supplies and fulfills the incentives."
+        subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
         <GalleryPlaceholder count={6} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
@@ -250,7 +250,7 @@ export function TaxAccountants() {
       <Section
         eyebrow="4 Ways to Use Blue Sky Incentives"
         title="Use Incentives Across Every Stage of the Client Relationship."
-        subtitle="Blue Sky Incentives isn't only a busy-season tool. Firms can use incentives to generate leads, win new clients, improve retention and create more referral opportunities."
+        subtitle="Use incentives to generate leads, win new clients, improve retention and create referrals — not just get through busy season."
       >
         <ImagePlaceholder />
       </Section>
@@ -259,14 +259,14 @@ export function TaxAccountants() {
         tone="subtle"
         eyebrow="Client Lifetime Value"
         title="Don't Stop at One Return. Grow the Relationship."
-        subtitle="The first filing can be the beginning of a long-term relationship built around year-round advisory work, referrals and staying top of mind."
+        subtitle="The first filing can grow into a long-term relationship built on year-round advisory work and referrals."
       >
         <ImagePlaceholder />
       </Section>
 
       <Section
         title="Winning the Client Once Doesn't Mean They Return Next Season."
-        subtitle="Every filing is a chance to be forgotten once the deadline passes. Give clients more reasons to stay connected with your firm before next tax season — or their next referral."
+        subtitle="It's easy to be forgotten once the deadline passes. Give clients reasons to stay connected before next tax season."
       >
         <div className="feature-grid">
           {RETENTION_WAYS.map((r) => (
@@ -279,7 +279,7 @@ export function TaxAccountants() {
         tone="subtle"
         eyebrow="Blue Sky Incentives Tools for Your Firm"
         title="Promote and Deliver Incentives Through the Marketing You Already Use"
-        subtitle="Your membership includes the delivery methods and campaign support to put an incentive in front of the right person at the right moment — consultation requests, busy season follow-up, appreciation and referral campaigns."
+        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
         <ChecklistTwoColumn
           columns={[
@@ -308,7 +308,7 @@ export function TaxAccountants() {
                 },
                 { label: "Ask AI", description: "built-in guidance and recommendations inside your dashboard" },
               ],
-              note: "You decide the messaging and the campaign. The tools simply make it faster to produce and distribute.",
+              note: "You control the messaging. The tools just make it faster to produce and distribute.",
             },
           ]}
         />
@@ -378,7 +378,7 @@ export function TaxAccountants() {
       <Section
         tone="subtle"
         title="Give Clients Another Reason to File With You."
-        subtitle="Strengthen your busy season and referral marketing with high-value incentives while keeping accuracy, service and trust at the center of the relationship."
+        subtitle="Strengthen your busy season marketing with high-value incentives — without losing the trust at the center of the relationship."
       >
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact">

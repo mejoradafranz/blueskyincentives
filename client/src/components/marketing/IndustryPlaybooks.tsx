@@ -15,7 +15,7 @@ export function IndustryPlaybooks() {
       tone="dark"
       eyebrow="Industry Playbooks"
       title="See How Blue Sky Incentives Can Work in Your Industry"
-      subtitle="Watch short, industry-specific examples showing how businesses use high-value incentives to generate leads, close more sales, bring customers back and earn referrals."
+      subtitle="Short, industry-specific examples of high-value incentives in action."
     >
       <div className="industry-playbooks__tabs">
         {INDUSTRIES.map((industry) => (
@@ -51,9 +51,8 @@ export function IndustryPlaybooks() {
       <div className="industry-playbooks__fallback">
         <h3 className="industry-playbooks__fallback-title">Don't See Your Exact Industry?</h3>
         <p className="industry-playbooks__fallback-text">
-          Blue Sky Incentives can be adapted to almost any business that wants more leads,
-          sales, repeat customers or referrals. Speak with an Incentive Strategist about how
-          incentives could fit your current marketing.
+          Blue Sky Incentives adapts to almost any business. Speak with an Incentive
+          Strategist about how it could fit your marketing.
         </p>
         <div className="industry-playbooks__fallback-actions">
           <a href="tel:+15551234567">

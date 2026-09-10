@@ -43,7 +43,7 @@ export function Pricing() {
       <Hero
         eyebrow="Pricing"
         title="Pricing that scales with your program."
-        subtitle="Every plan includes the full platform — admin portal, employee portal, and rewards catalog. Reach out and we'll put together a quote based on your team size and program."
+        subtitle="Every plan includes the full platform — admin portal, employee portal, and rewards catalog. Reach out for a quote."
       />
 
       <Section>
