@@ -110,6 +110,34 @@ const RETENTION_WAYS = [
   },
 ];
 
+const FOUR_WAYS = [
+  {
+    mark: "1",
+    title: "Close More Travel Bookings",
+    description: "Give undecided prospects another reason to complete their booking with you.",
+  },
+  {
+    mark: "2",
+    title: "Recover Unsold Quotes",
+    description: "Follow up with prospects using an additional incentive rather than simply reducing your price.",
+  },
+  {
+    mark: "3",
+    title: "Generate Referrals",
+    description: "Reward customers who introduce friends, family or colleagues.",
+  },
+  {
+    mark: "4",
+    title: "Drive Repeat Bookings",
+    description: "Give existing travelers a reason to come back to you for their next vacation.",
+  },
+  {
+    mark: "5",
+    title: "Promote Groups & Cruises",
+    description: "Build compelling promotional offers around cruises, groups and packaged travel.",
+  },
+];
+
 const FAQS: { question: string; answer: string | null }[] = [
   {
     question: "Can I use an incentive with a free travel quote?",
@@ -292,7 +320,11 @@ export function TravelAgencies() {
         title="Use Incentives Across Every Stage of the Client Relationship."
         subtitle="Use incentives to generate leads, win bookings, drive repeat trips and create referrals — not just close the first sale."
       >
-        <ImagePlaceholder />
+        <div className="feature-grid">
+          {FOUR_WAYS.map((w) => (
+            <FeatureCard key={w.title} {...w} />
+          ))}
+        </div>
       </Section>
 
       <Section
