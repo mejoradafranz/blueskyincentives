@@ -19,6 +19,7 @@ import { Button } from "../../components/ui/Button";
 import heroTravelImage from "../../assets/hero-travel-agencies.jpg";
 import bogoOfferImage from "../../assets/ta-bogo-offer.jpg";
 import incentivesBannerImage from "../../assets/ta-incentives-banner.jpg";
+import dashboardPreviewImage from "../../assets/ta-dashboard-preview.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -304,6 +305,8 @@ export function TravelAgencies() {
         title="Promote and Deliver Incentives Through the Marketing You Already Use"
         subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
       >
+        <MediaFrame src={dashboardPreviewImage} alt="The Blue Sky Incentives member dashboard AI Tools page" />
+        <div style={{ height: 40 }} />
         <ChecklistTwoColumn
           columns={[
             {
