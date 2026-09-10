@@ -21,7 +21,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+  background: var(--gradient-brand);
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -53,10 +53,10 @@
 }
 
 .feature-card__mark {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
   margin-bottom: 18px;
   display: flex;
   align-items: center;

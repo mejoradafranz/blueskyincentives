@@ -22,15 +22,15 @@
 }
 
 .pricing-plans__card--highlighted {
-  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.18);
+  box-shadow: 0 8px 28px rgba(29, 78, 216, 0.18);
   background:
     linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
-    linear-gradient(135deg, var(--color-primary), var(--color-gold)) border-box;
+    var(--gradient-brand) border-box;
   border: 2px solid transparent;
 }
 
 .pricing-plans__card--highlighted:hover {
-  box-shadow: 0 12px 34px rgba(212, 175, 55, 0.26);
+  box-shadow: 0 12px 34px rgba(29, 78, 216, 0.26);
 }
 
 .pricing-plans__badges {

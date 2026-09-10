@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
+import { TrustHighlights } from "../../components/marketing/TrustHighlights";
+import { ArrowRightIcon } from "../../components/marketing/ArrowRightIcon";
 import { IncentiveLibrary } from "../../components/marketing/IncentiveLibrary";
 import { GrowthWays } from "../../components/marketing/GrowthWays";
 import { GetStarted } from "../../components/marketing/GetStarted";
@@ -37,7 +39,16 @@ export function Home() {
           </>
         }
         subtitle="Add high-perceived-value incentives to your existing marketing and offers—without discounting your product or personally fulfilling the rewards yourself."
+        actions={
+          <Link to="/contact">
+            <Button>
+              Get Started <ArrowRightIcon />
+            </Button>
+          </Link>
+        }
       />
+
+      <TrustHighlights />
 
       <Section
         eyebrow="On-Demand Demo"
