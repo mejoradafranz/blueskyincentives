@@ -69,6 +69,18 @@ export function GalleryPlaceholder({ count, caption = "Image coming soon" }: { c
   );
 }
 
+export function Gallery({ items }: { items: { src: string; alt: string }[] }) {
+  return (
+    <div className="industry-gallery">
+      {items.map((item) => (
+        <div key={item.src} className="industry-gallery__item industry-gallery__item--photo">
+          <img src={item.src} alt={item.alt} className="industry-gallery__image" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 interface ChecklistColumn {
   heading: string;
   items: (string | { label: string; description: string })[];
