@@ -39,10 +39,12 @@ export function IncentiveLibrary() {
               {c.image ? (
                 <img src={c.image} alt={c.title} className="incentive-library__image" />
               ) : (
-                <span className="incentive-library__placeholder-text">Image coming soon</span>
+                <>
+                  <span className="incentive-library__placeholder-text">Image coming soon</span>
+                  <div className="incentive-library__title">{c.title}</div>
+                </>
               )}
             </div>
-            <div className="incentive-library__title">{c.title}</div>
           </div>
         ))}
       </div>

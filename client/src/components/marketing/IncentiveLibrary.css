@@ -33,7 +33,7 @@
 }
 
 .incentive-library__media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 404 / 525;
   background: linear-gradient(135deg, var(--color-bg-subtle), var(--color-primary-subtle));
   display: flex;
   align-items: center;
