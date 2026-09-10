@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { CheckIcon } from "./CheckIcon";
+import { ArrowRightIcon } from "./ArrowRightIcon";
 import "./IndustryPageKit.css";
 
 export function StatsGrid({ stats }: { stats: { value: string; label: string }[] }) {
@@ -77,6 +78,46 @@ export function Gallery({ items }: { items: { src: string; alt: string }[] }) {
           <img src={item.src} alt={item.alt} className="industry-gallery__image" />
         </div>
       ))}
+    </div>
+  );
+}
+
+interface ComparisonSide {
+  badge: string;
+  value: string;
+  bonus?: string;
+  points?: string[];
+  description?: string;
+  closing: string;
+}
+
+export function PriceComparison({ before, after }: { before: ComparisonSide; after: ComparisonSide }) {
+  return (
+    <div className="industry-comparison">
+      <div className="industry-comparison__card">
+        <div className="industry-comparison__badge">{before.badge}</div>
+        <div className="industry-comparison__value">{before.value}</div>
+        {before.points && (
+          <ul className="industry-comparison__list">
+            {before.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        )}
+        <p className="industry-comparison__closing">{before.closing}</p>
+      </div>
+
+      <div className="industry-comparison__arrow" aria-hidden="true">
+        <ArrowRightIcon />
+      </div>
+
+      <div className="industry-comparison__card industry-comparison__card--accent">
+        <div className="industry-comparison__badge industry-comparison__badge--accent">{after.badge}</div>
+        <div className="industry-comparison__value">{after.value}</div>
+        {after.bonus && <div className="industry-comparison__bonus">+ {after.bonus}</div>}
+        {after.description && <p className="industry-comparison__description">{after.description}</p>}
+        <p className="industry-comparison__closing industry-comparison__closing--accent">{after.closing}</p>
+      </div>
     </div>
   );
 }

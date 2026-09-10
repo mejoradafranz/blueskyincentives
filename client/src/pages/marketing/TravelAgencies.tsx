@@ -11,14 +11,15 @@ import {
   GuaranteeNote,
   VideoPlaceholder,
   ImagePlaceholder,
-  GalleryPlaceholder,
   MediaFrame,
+  PriceComparison,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroTravelImage from "../../assets/hero-travel-agencies.jpg";
 import bogoOfferImage from "../../assets/ta-bogo-offer.jpg";
+import incentivesBannerImage from "../../assets/ta-incentives-banner.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -236,7 +237,34 @@ export function TravelAgencies() {
         title="When Travelers Are Comparing Every Option, Your Offer Matters."
         subtitle="One trip inquiry can put you in competition with online sites and other agencies. If price is the only differentiator, you need another way to stand out."
       >
-        <ImagePlaceholder />
+        <PriceComparison
+          before={{
+            badge: "Traditional Approach",
+            value: "$5,000 Vacation",
+            points: [
+              "Customer asks for a better deal",
+              "Agent discounts the package",
+              "Margin and value are reduced",
+            ],
+            closing: "The trip is worth less to you — and looks the same to them.",
+          }}
+          after={{
+            badge: "Blue Sky Incentives Approach",
+            value: "$5,000 Vacation",
+            bonus: "Complimentary Vacation Certificate",
+            description:
+              "The customer receives additional perceived value while you protect the original travel sale — and Blue Sky Incentives fulfills the complimentary vacation.",
+            closing: "Full price preserved. A better reason to book with you.",
+          }}
+        />
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free</Button>
+          </Link>
+          <Link to="/demo">
+            <Button variant="secondary">Watch the Instant Demo</Button>
+          </Link>
+        </div>
       </Section>
 
       <Section
@@ -245,7 +273,10 @@ export function TravelAgencies() {
         title="Use the Right Incentive for the Right Travel Conversation"
         subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
-        <GalleryPlaceholder count={6} />
+        <MediaFrame
+          src={incentivesBannerImage}
+          alt="Five travel incentive categories: airfare plus hotel getaway, resort getaway, cruise getaway, hotel savings, and travel and dining experiences"
+        />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
