@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { ScrollToTop } from "./components/ui/ScrollToTop";
 import { MarketingLayout } from "./layouts/MarketingLayout";
 import { AdminPortalLayout } from "./layouts/AdminPortalLayout";
 import { EmployeePortalLayout } from "./layouts/EmployeePortalLayout";
@@ -52,71 +53,74 @@ import { RequestFeature } from "./pages/member/RequestFeature";
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<MarketingLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/industries/insurance-agents" element={<InsuranceAgents />} />
-        <Route path="/industries/real-estate" element={<RealEstate />} />
-        <Route path="/industries/travel-agencies" element={<TravelAgencies />} />
-        <Route path="/industries/automotive" element={<Automotive />} />
-        <Route path="/industries/marketing-agencies" element={<MarketingAgencies />} />
-        <Route path="/industries/tax-accountants" element={<TaxAccountants />} />
-        <Route path="/industries/dentistry" element={<Dentistry />} />
-        <Route path="/industries/fitness" element={<Fitness />} />
-        <Route path="/industries/:slug" element={<IndustryDetail />} />
-        <Route path="/integrations" element={<Integrations />} />
-        <Route path="/demo" element={<Demo />} />
-        <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-
-      <Route
-        path="/admin"
-        element={<ProtectedRoute allowedRoles={["client_admin", "superadmin"]} />}
-      >
-        <Route element={<AdminPortalLayout />}>
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="participants" element={<Participants />} />
-          <Route path="programs" element={<ProgramConfig />} />
-          <Route path="reports" element={<Reports />} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<MarketingLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/insurance-agents" element={<InsuranceAgents />} />
+          <Route path="/industries/real-estate" element={<RealEstate />} />
+          <Route path="/industries/travel-agencies" element={<TravelAgencies />} />
+          <Route path="/industries/automotive" element={<Automotive />} />
+          <Route path="/industries/marketing-agencies" element={<MarketingAgencies />} />
+          <Route path="/industries/tax-accountants" element={<TaxAccountants />} />
+          <Route path="/industries/dentistry" element={<Dentistry />} />
+          <Route path="/industries/fitness" element={<Fitness />} />
+          <Route path="/industries/:slug" element={<IndustryDetail />} />
+          <Route path="/integrations" element={<Integrations />} />
+          <Route path="/demo" element={<Demo />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-      </Route>
 
-      <Route path="/portal" element={<ProtectedRoute allowedRoles={["employee"]} />}>
-        <Route element={<EmployeePortalLayout />}>
-          <Route path="dashboard" element={<EmployeeDashboard />} />
-          <Route path="rewards" element={<RewardsCatalog />} />
-          <Route path="history" element={<TransactionHistory />} />
-          <Route path="redemptions" element={<RedemptionHistory />} />
+        <Route
+          path="/admin"
+          element={<ProtectedRoute allowedRoles={["client_admin", "superadmin"]} />}
+        >
+          <Route element={<AdminPortalLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="participants" element={<Participants />} />
+            <Route path="programs" element={<ProgramConfig />} />
+            <Route path="reports" element={<Reports />} />
+          </Route>
         </Route>
-      </Route>
 
-      <Route
-        path="/dashboard"
-        element={<ProtectedRoute allowedRoles={["client_admin", "employee", "superadmin"]} />}
-      >
-        <Route element={<MemberPortalLayout />}>
-          <Route index element={<MemberOverview />} />
-          <Route path="ai-tools" element={<MemberAiTools />} />
-          <Route path="quick-launch" element={<QuickLaunch />} />
-          <Route path="resources" element={<Resources />} />
-          <Route path="briefcase" element={<Briefcase />} />
-          <Route path="marketing-tools" element={<MarketingTools />} />
-          <Route path="certificates" element={<DistributeCertificates />} />
-          <Route path="white-label" element={<WhiteLabel />} />
-          <Route path="contacts" element={<ContactManager />} />
-          <Route path="affiliate" element={<AffiliateProgram />} />
-          <Route path="testimonial" element={<SubmitTestimonial />} />
-          <Route path="report-bug" element={<ReportBug />} />
-          <Route path="request-feature" element={<RequestFeature />} />
+        <Route path="/portal" element={<ProtectedRoute allowedRoles={["employee"]} />}>
+          <Route element={<EmployeePortalLayout />}>
+            <Route path="dashboard" element={<EmployeeDashboard />} />
+            <Route path="rewards" element={<RewardsCatalog />} />
+            <Route path="history" element={<TransactionHistory />} />
+            <Route path="redemptions" element={<RedemptionHistory />} />
+          </Route>
         </Route>
-      </Route>
-    </Routes>
+
+        <Route
+          path="/dashboard"
+          element={<ProtectedRoute allowedRoles={["client_admin", "employee", "superadmin"]} />}
+        >
+          <Route element={<MemberPortalLayout />}>
+            <Route index element={<MemberOverview />} />
+            <Route path="ai-tools" element={<MemberAiTools />} />
+            <Route path="quick-launch" element={<QuickLaunch />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="briefcase" element={<Briefcase />} />
+            <Route path="marketing-tools" element={<MarketingTools />} />
+            <Route path="certificates" element={<DistributeCertificates />} />
+            <Route path="white-label" element={<WhiteLabel />} />
+            <Route path="contacts" element={<ContactManager />} />
+            <Route path="affiliate" element={<AffiliateProgram />} />
+            <Route path="testimonial" element={<SubmitTestimonial />} />
+            <Route path="report-bug" element={<ReportBug />} />
+            <Route path="request-feature" element={<RequestFeature />} />
+          </Route>
+        </Route>
+      </Routes>
+    </>
   );
 }
