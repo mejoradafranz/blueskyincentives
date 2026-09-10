@@ -10,13 +10,17 @@ import {
   ClosingNote,
   GuaranteeNote,
   VideoPlaceholder,
-  ImagePlaceholder,
   GalleryPlaceholder,
+  MediaFrame,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroRealEstateImage from "../../assets/hero-real-estate.jpg";
+import listingOfferImage from "../../assets/re-listing-offer.jpg";
+import buyerJourneyImage from "../../assets/re-buyer-journey.jpg";
+import fourWaysImage from "../../assets/re-4-ways.jpg";
+import clientLifetimeValueImage from "../../assets/re-client-lifetime-value.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -219,7 +223,10 @@ export function RealEstate() {
           </>
         }
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={listingOfferImage}
+          alt="Before and after comparison of a generic buyer offer versus a stronger open house offer with a $100 hotel savings card"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
@@ -232,7 +239,10 @@ export function RealEstate() {
         title="When Every Agent Is Chasing the Same Listing, Your Offer Matters."
         subtitle="One listing inquiry can reach several agents. If everyone pitches the same script, you need a reason to stand out."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={buyerJourneyImage}
+          alt="Five-step buyer journey from buyer promotion through offer accepted and closing, each strengthened by an incentive"
+        />
       </Section>
 
       <Section
@@ -257,7 +267,10 @@ export function RealEstate() {
         title="Use Incentives Across Every Stage of the Client Relationship."
         subtitle="Use incentives to generate leads, win listings, close deals and create referrals — not just find buyers."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={fourWaysImage}
+          alt="Four ways to use incentives: generate more buyer leads, win more buyer clients, increase repeat business, and generate more referrals"
+        />
       </Section>
 
       <Section
@@ -266,7 +279,10 @@ export function RealEstate() {
         title="Don't Stop at One Closing. Grow the Relationship."
         subtitle="The first transaction can grow into a long-term relationship built on repeat business and referrals."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={clientLifetimeValueImage}
+          alt="Before and after comparison of a standard open house versus one offering a $100 hotel savings card, turning more open-house traffic into buyer opportunities"
+        />
       </Section>
 
       <Section
