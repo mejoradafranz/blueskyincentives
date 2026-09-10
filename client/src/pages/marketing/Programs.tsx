@@ -454,8 +454,6 @@ export function Programs() {
 
   return (
     <>
-      <Section tone="dark" title="The Incentives" />
-
       {CATEGORIES.map((category, i) => (
         <Section
           key={category.key}
