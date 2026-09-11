@@ -10,13 +10,32 @@ import {
   ClosingNote,
   GuaranteeNote,
   VideoPlaceholder,
-  ImagePlaceholder,
-  GalleryPlaceholder,
+  MediaFrame,
+  Gallery,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroAutomotiveImage from "../../assets/hero-automotive.jpg";
+import salesOfferImage from "../../assets/auto-sales-offer.jpg";
+import multipleDealerImage from "../../assets/auto-multiple-dealer.jpg";
+import fourWaysImage from "../../assets/auto-4-ways.jpg";
+import lifetimeValueImage from "../../assets/auto-lifetime-value.jpg";
+import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
+import diningImage from "../../assets/incentives/dining-certificates.jpg";
+import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
+import resortImage from "../../assets/incentives/resort-stays.jpg";
+import hotelSavingsImage from "../../assets/incentives/hotel-savings.jpg";
+import cruiseImage from "../../assets/incentives/cruise-certificates.jpg";
+
+const INCENTIVE_GALLERY = [
+  { src: smartDeviceImage, alt: "Smart-Device Vouchers" },
+  { src: diningImage, alt: "Dining Certificates" },
+  { src: airfareHotelImage, alt: "Airfare + Hotel Stays" },
+  { src: resortImage, alt: "Resort Stays" },
+  { src: hotelSavingsImage, alt: "Hotel Savings" },
+  { src: cruiseImage, alt: "Cruise Certificates" },
+];
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -220,7 +239,10 @@ export function Automotive() {
           </>
         }
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={salesOfferImage}
+          alt="Before and after: a plain schedule-a-test-drive offer versus one that includes a $200 premium certificate for completing the test drive"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
@@ -233,7 +255,10 @@ export function Automotive() {
         title="When Every Dealer Is Chasing the Same Buyer, Your Offer Matters."
         subtitle="One online inquiry can reach several dealerships. If price is the only differentiator, you need another way to stand out."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={multipleDealerImage}
+          alt="Two-stage conversion strategy: complete a test drive to receive a premium dining certificate, then purchase your vehicle to receive a vacation certificate for two"
+        />
       </Section>
 
       <Section
@@ -242,7 +267,7 @@ export function Automotive() {
         title="Use the Right Incentive for the Right Automotive Conversation"
         subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
-        <GalleryPlaceholder count={6} />
+        <Gallery items={INCENTIVE_GALLERY} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
@@ -258,7 +283,10 @@ export function Automotive() {
         title="Use Incentives Across Every Stage of the Customer Relationship."
         subtitle="Use incentives to generate leads, close sales, drive service revenue and create referrals — not just move units."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={fourWaysImage}
+          alt="Four ways to use Blue Sky Incentives: generate more showroom and test-drive opportunities, close more vehicle sales, increase repeat business, and generate more referrals"
+        />
       </Section>
 
       <Section
@@ -267,7 +295,10 @@ export function Automotive() {
         title="Don't Stop at One Sale. Grow the Relationship."
         subtitle="The first purchase can grow into a long-term relationship built on service visits, upgrades and referrals."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={lifetimeValueImage}
+          alt="Six-step customer lifecycle after the vehicle sale: delivery, first service visit, ongoing maintenance, trade-in opportunity, next vehicle purchase, and referral opportunity"
+        />
       </Section>
 
       <Section
