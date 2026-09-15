@@ -8,8 +8,8 @@
 .integration-card {
   display: flex;
   flex-direction: column;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(160deg, #0a1230 0%, #16306e 100%);
+  border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: 28px 24px;
   box-shadow: var(--shadow-sm);
@@ -21,18 +21,19 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin-bottom: 10px;
 }
 
 .integration-card__title {
   margin: 0 0 10px;
   font-size: 1.1rem;
+  color: #ffffff;
 }
 
 .integration-card__description {
   margin: 0 0 20px;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.92rem;
   line-height: 1.55;
 }
@@ -51,7 +52,7 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 0.88rem;
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.4;
 }
 
@@ -63,8 +64,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--color-primary-subtle);
-  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-accent);
   margin-top: 1px;
 }
 
