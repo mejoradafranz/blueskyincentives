@@ -11,8 +11,8 @@ import {
   GuaranteeNote,
   VideoPlaceholder,
   ImagePlaceholder,
-  GalleryPlaceholder,
   MediaFrame,
+  Gallery,
   StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
@@ -23,6 +23,21 @@ import heroMarketingAgenciesImage from "../../assets/hero-marketing-agencies.jpg
 import pitchOfferImage from "../../assets/ma-pitch-offer.jpg";
 import secondStageImage from "../../assets/ma-second-stage.jpg";
 import integrationsDiagramImage from "../../assets/ma-integrations-diagram.jpg";
+import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
+import diningImage from "../../assets/incentives/dining-certificates.jpg";
+import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
+import resortImage from "../../assets/incentives/resort-stays.jpg";
+import hotelSavingsImage from "../../assets/incentives/hotel-savings.jpg";
+import cruiseImage from "../../assets/incentives/cruise-certificates.jpg";
+
+const INCENTIVE_GALLERY = [
+  { src: smartDeviceImage, alt: "Smart-Device Vouchers" },
+  { src: diningImage, alt: "Dining Certificates" },
+  { src: airfareHotelImage, alt: "Airfare + Hotel Stays" },
+  { src: resortImage, alt: "Resort Stays" },
+  { src: hotelSavingsImage, alt: "Hotel Savings" },
+  { src: cruiseImage, alt: "Cruise Certificates" },
+];
 import "./MarketingAgencies.css";
 
 const INTEGRATION_OPTIONS = [
@@ -307,7 +322,7 @@ export function MarketingAgencies() {
         title="Use the Right Incentive for the Right Agency Conversation"
         subtitle="Different campaigns call for different incentive types and values. We supply and fulfill them all."
       >
-        <GalleryPlaceholder count={6} />
+        <Gallery items={INCENTIVE_GALLERY} />
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
