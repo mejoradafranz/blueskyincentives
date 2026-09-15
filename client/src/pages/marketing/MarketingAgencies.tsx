@@ -78,6 +78,39 @@ const INTEGRATION_OPTIONS = [
   },
 ];
 
+const AGENCY_USE_CASES = [
+  {
+    mark: "1",
+    title: "Increase Lead Conversion",
+    description: "Add incentives to lead-generation campaigns to create a stronger reason to respond.",
+  },
+  {
+    mark: "2",
+    title: "Improve Appointment Show Rates",
+    description: "Use incentives strategically around booked consultations or appointments.",
+  },
+  {
+    mark: "3",
+    title: "Create Stronger Purchase Offers",
+    description: "Add a bonus incentive rather than relying only on discounts.",
+  },
+  {
+    mark: "4",
+    title: "Generate Referrals",
+    description: "Give clients another tool for referral campaigns.",
+  },
+  {
+    mark: "5",
+    title: "Drive Repeat Business",
+    description: "Build incentives into customer reactivation and retention campaigns.",
+  },
+  {
+    mark: "6",
+    title: "Differentiate Your Agency",
+    description: "Give clients a campaign capability many competing agencies do not provide.",
+  },
+];
+
 const STATS = [
   { value: "20+", label: "Years In Business" },
   { value: "18k", label: "Clients Enrolled" },
@@ -325,6 +358,11 @@ export function MarketingAgencies() {
           src={agencyUseCasesImage}
           alt="One incentive platform for every stage of the customer journey: traffic, lead, appointment, sale, repeat business and referral"
         />
+        <div className="feature-grid" style={{ marginTop: 40 }}>
+          {AGENCY_USE_CASES.map((u) => (
+            <FeatureCard key={u.title} {...u} />
+          ))}
+        </div>
       </Section>
 
       <Section
