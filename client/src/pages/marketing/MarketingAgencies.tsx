@@ -17,10 +17,50 @@ import {
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
+import { CheckIcon } from "../../components/marketing/CheckIcon";
 import { Button } from "../../components/ui/Button";
 import heroMarketingAgenciesImage from "../../assets/hero-marketing-agencies.jpg";
 import pitchOfferImage from "../../assets/ma-pitch-offer.jpg";
 import secondStageImage from "../../assets/ma-second-stage.jpg";
+import integrationsDiagramImage from "../../assets/ma-integrations-diagram.jpg";
+import "./MarketingAgencies.css";
+
+const INTEGRATION_OPTIONS = [
+  {
+    eyebrow: "Native App",
+    title: "GoHighLevel Native App",
+    description:
+      "Agencies using GoHighLevel can integrate Blue Sky Incentives into the client workflows and campaign infrastructure they already operate.",
+    items: [
+      "Trigger incentives from workflows",
+      "Automate distribution",
+      "Integrate incentives into funnels and campaigns",
+      "Use within client sub-account marketing processes",
+      "Reduce manual fulfillment steps",
+    ],
+  },
+  {
+    eyebrow: "No-Code Automation",
+    title: "Zapier App",
+    description:
+      "Connect Blue Sky Incentives distribution with the rest of your agency and client software stack — no development work required.",
+    items: [
+      "Lead captured",
+      "Form submitted",
+      "Appointment booked",
+      "Purchase completed",
+      "Referral received",
+      "Other workflow triggers",
+    ],
+  },
+  {
+    eyebrow: "For Developers",
+    title: "Blue Sky Open API",
+    description:
+      "For agencies with developers or proprietary systems, build custom incentive-distribution workflows directly into your own software.",
+    items: ["CRMs", "Client portals", "Internal software", "Proprietary applications", "Marketing automation systems"],
+  },
+];
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -234,7 +274,32 @@ export function MarketingAgencies() {
         eyebrow="Integrations & Automation"
         title="Built for Agencies. Built to Automate. Built to Scale."
         subtitle="Blue Sky Incentives can plug into the systems your agency and clients already use, so incentive distribution can become part of existing workflows instead of another manual task."
-      />
+      >
+        <div className="integration-cards">
+          {INTEGRATION_OPTIONS.map((option) => (
+            <div key={option.title} className="integration-card">
+              <div className="integration-card__eyebrow">{option.eyebrow}</div>
+              <h3 className="integration-card__title">{option.title}</h3>
+              <p className="integration-card__description">{option.description}</p>
+              <ul className="integration-card__list">
+                {option.items.map((item) => (
+                  <li key={item}>
+                    <span className="integration-card__check" aria-hidden="true">
+                      <CheckIcon />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <MediaFrame
+          src={integrationsDiagramImage}
+          alt="Diagram showing how triggers like form submissions and purchases flow through GoHighLevel, Zapier or the Blue Sky Incentives Open API to automatically deliver certificates"
+        />
+      </Section>
 
       <Section
         tone="subtle"
