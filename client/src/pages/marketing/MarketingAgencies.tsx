@@ -10,11 +10,9 @@ import {
   ClosingNote,
   GuaranteeNote,
   VideoPlaceholder,
-  ImagePlaceholder,
   MediaFrame,
   Gallery,
   StackedPoints,
-  ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { CheckIcon } from "../../components/marketing/CheckIcon";
@@ -162,34 +160,6 @@ const HOW_IT_WORKS = [
     mark: "04",
     title: "Give prospects another reason to respond",
     description: "Your strategy and results remain the core value — the incentive just strengthens the offer.",
-  },
-];
-
-const RETENTION_WAYS = [
-  {
-    mark: "1",
-    title: "Onboarding Gifts",
-    description: "Use a high-value incentive as a memorable welcome gift new clients actually redeem.",
-  },
-  {
-    mark: "2",
-    title: "Referral Rewards",
-    description: "Turn client referrals into a rewarded, trackable behavior.",
-  },
-  {
-    mark: "3",
-    title: "Campaign Milestone Follow-Up",
-    description: "Give clients a reason to celebrate wins with you and stay engaged.",
-  },
-  {
-    mark: "4",
-    title: "Contract Anniversaries",
-    description: "Stay in front of clients between renewal conversations.",
-  },
-  {
-    mark: "5",
-    title: "Reactivation",
-    description: "Reconnect with former or inactive clients when appropriate.",
   },
 ];
 
@@ -377,81 +347,6 @@ export function MarketingAgencies() {
           <a href="#marketing-agency-video">
             <Button variant="secondary">Watch the Marketing Agency Video</Button>
           </a>
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="4 Ways to Use Blue Sky Incentives"
-        title="Use Incentives Across Every Stage of the Client Relationship."
-        subtitle="Use incentives to win pitches, strengthen onboarding, improve retention and create referrals — not just close the deal."
-      >
-        <ImagePlaceholder />
-      </Section>
-
-      <Section
-        tone="subtle"
-        eyebrow="Client Lifetime Value"
-        title="Don't Stop at One Campaign. Grow the Relationship."
-        subtitle="The first project can grow into a long-term retainer relationship built on results and trust."
-      >
-        <ImagePlaceholder />
-      </Section>
-
-      <Section
-        title="Winning the Account Once Doesn't Mean They Renew."
-        subtitle="It's easy to be forgotten once results are delivered. Give clients reasons to stay connected before the next renewal."
-      >
-        <div className="feature-grid">
-          {RETENTION_WAYS.map((r) => (
-            <FeatureCard key={r.title} {...r} />
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        tone="subtle"
-        eyebrow="Blue Sky Incentives Tools for Your Agency"
-        title="Promote and Deliver Incentives Through the Marketing You Already Use"
-        subtitle="Your membership includes everything you need to put an incentive in front of the right person at the right moment."
-      >
-        <ChecklistTwoColumn
-          columns={[
-            {
-              heading: "Distribution Built In",
-              items: [
-                "Email incentives to prospect and client lists from your own business address",
-                "SMS/text delivery for fast follow-up after a discovery call",
-                "Branded landing page links for audit requests and consultation sign-ups",
-                "QR codes for pitch decks, conference booths and printed proposals",
-                "Printable PDF certificates to include with proposals or onboarding packets",
-                "Website banners, sticky bars and pop-ups on your contact pages",
-                "Zapier and API connections to your agency CRM and lead sources",
-              ],
-            },
-            {
-              heading: "Campaign Support",
-              items: [
-                {
-                  label: "AI Marketing Consultant",
-                  description: "pitch campaigns, onboarding outreach, and reactivation ideas",
-                },
-                {
-                  label: "AI Social Content Creator",
-                  description: "agency content with your incentive offers already integrated",
-                },
-                { label: "Ask AI", description: "built-in guidance and recommendations inside your dashboard" },
-              ],
-              note: "You control the messaging. The tools just make it faster to produce and distribute.",
-            },
-          ]}
-        />
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 40 }}>
-          <Link to="/contact">
-            <Button>Start Risk-Free</Button>
-          </Link>
-          <Link to="/contact">
-            <Button variant="secondary">Speak With an Incentive Strategist</Button>
-          </Link>
         </div>
       </Section>
 
