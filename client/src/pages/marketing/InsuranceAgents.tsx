@@ -4,6 +4,7 @@ import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { CheckIcon } from "../../components/marketing/CheckIcon";
+import { StackedPoints } from "../../components/marketing/IndustryPageKit";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
@@ -240,11 +241,7 @@ export function InsuranceAgents() {
         title="You're Not the Only Agent Calling That Lead."
         subtitle="Shoppers compare quotes, carriers and agents all at once. A lead only matters if you turn it into a real conversation."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <p className="insurance-problem__closing">
           The problem isn't generating more leads. It's getting the shopper to choose you — and
           stay.

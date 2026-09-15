@@ -12,6 +12,7 @@ import {
   VideoPlaceholder,
   MediaFrame,
   PriceComparison,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -170,11 +171,7 @@ export function TravelAgencies() {
         title="Travelers Can Book Anywhere in Two Clicks."
         subtitle="Online travel sites, direct bookings and other agencies are all one search away. Winning the booking takes more than being available."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the traveler to choose you — and
           book with you again.

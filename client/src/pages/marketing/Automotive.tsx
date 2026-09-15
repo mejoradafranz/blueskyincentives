@@ -12,6 +12,7 @@ import {
   VideoPlaceholder,
   MediaFrame,
   Gallery,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -188,11 +189,7 @@ export function Automotive() {
         title="Car Shoppers Compare Every Dealer Before They Ever Walk In."
         subtitle="Online listings and competing dealers make it easy for buyers to shop around. Winning the sale — and the service business — takes more than a good price."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the shopper to buy from you — and
           keep coming back for service.

@@ -12,6 +12,7 @@ import {
   VideoPlaceholder,
   Gallery,
   MediaFrame,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -187,11 +188,7 @@ export function RealEstate() {
         title="Every Listing Has Competition Before You Even Walk In."
         subtitle="Buyers and sellers compare agents, brokerages and online estimators before they ever call. Winning the listing takes more than being available."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the buyer or seller to choose
           you — and come back.

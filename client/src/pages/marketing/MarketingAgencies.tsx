@@ -12,12 +12,12 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroMarketingAgenciesImage from "../../assets/hero-marketing-agencies.jpg";
-import "./MarketingAgencies.css";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -45,7 +45,6 @@ const PROBLEM_POINTS = [
   {
     title: "Better traffic helps. Better creative helps.",
     description: "But sometimes the fastest way to strengthen a campaign is to make the offer more valuable.",
-    highlight: true,
   },
 ];
 
@@ -158,17 +157,7 @@ export function MarketingAgencies() {
       </Section>
 
       <Section eyebrow="The Real Problem">
-        <div className="stacked-points">
-          {PROBLEM_POINTS.map((p) => (
-            <div
-              key={p.title}
-              className={`stacked-points__item ${p.highlight ? "stacked-points__item--highlight" : ""}`}
-            >
-              <h3 className="stacked-points__title">{p.title}</h3>
-              <p className="stacked-points__description">{p.description}</p>
-            </div>
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the prospect to choose your
           agency — and stay.

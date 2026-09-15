@@ -82,6 +82,22 @@ export function Gallery({ items }: { items: { src: string; alt: string }[] }) {
   );
 }
 
+export function StackedPoints({ items }: { items: { title: string; description: string }[] }) {
+  return (
+    <div className="stacked-points">
+      {items.map((item, i) => (
+        <div
+          key={item.title}
+          className={`stacked-points__item ${i === items.length - 1 ? "stacked-points__item--highlight" : ""}`}
+        >
+          <h3 className="stacked-points__title">{item.title}</h3>
+          <p className="stacked-points__description">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 interface ComparisonSide {
   badge: string;
   value: string;
