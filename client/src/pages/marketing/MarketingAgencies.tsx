@@ -12,12 +12,15 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  MediaFrame,
   StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroMarketingAgenciesImage from "../../assets/hero-marketing-agencies.jpg";
+import pitchOfferImage from "../../assets/ma-pitch-offer.jpg";
+import secondStageImage from "../../assets/ma-second-stage.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -204,7 +207,10 @@ export function MarketingAgencies() {
           </>
         }
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={pitchOfferImage}
+          alt="Before and after: a generic free-quote form versus one offering a $100 dining certificate, for more leads without more ad spend"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
@@ -213,12 +219,22 @@ export function MarketingAgencies() {
       </Section>
 
       <Section
-        eyebrow="The Multiple-Agency Problem"
-        title="When Every Agency Is Pitching the Same Prospect, Your Offer Matters."
-        subtitle="One RFP can put you in competition with several agencies at once. If every pitch sounds the same, you need another way to stand out."
+        eyebrow="The Second Conversion Stage"
+        title="Generate the Lead. Then Help Close the Sale."
+        subtitle="Incentives are not only a lead-generation tool. A higher-value incentive can also be used at the proposal stage to give a prospect a stronger reason to move forward."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={secondStageImage}
+          alt="Before and after: a client's basic quote-request ad versus one offering a vacation certificate, for a stronger offer that improves campaign results"
+        />
       </Section>
+
+      <Section
+        tone="subtle"
+        eyebrow="Integrations & Automation"
+        title="Built for Agencies. Built to Automate. Built to Scale."
+        subtitle="Blue Sky Incentives can plug into the systems your agency and clients already use, so incentive distribution can become part of existing workflows instead of another manual task."
+      />
 
       <Section
         tone="subtle"
