@@ -17,6 +17,7 @@ import {
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroMarketingAgenciesImage from "../../assets/hero-marketing-agencies.jpg";
+import "./MarketingAgencies.css";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -29,29 +30,21 @@ const STATS = [
 
 const PROBLEM_POINTS = [
   {
-    mark: "01",
-    title: "You pitched the account — then they went with another agency",
-    description: "RFPs and pitch competitions often put you up against several agencies at once.",
+    title: "Your clients expect more",
+    description:
+      "Can we generate more leads? Can we improve conversion? Can we get more appointments? Can we get better results? The questions never stop.",
   },
   {
-    mark: "02",
-    title: "They want proof of ROI before the relationship",
-    description: "Prospects often compare case studies and pricing before they understand your process or team.",
+    title: "More ad spend isn't always the answer",
+    description: "Increasing budget does not automatically make the underlying offer more compelling to the person seeing the ad.",
   },
   {
-    mark: "03",
-    title: "You presented the strategy — then they went quiet",
-    description: "A great pitch doesn't guarantee a signed contract.",
+    title: "Sometimes the offer is the lever",
+    description: "Instead of only changing media spend, creative, audiences and targeting, give prospects an additional reason to take action.",
   },
   {
-    mark: "04",
-    title: "You can't control the client's budget or timeline",
-    description: "When every agency proposes something similar, you need another way to stand out.",
-  },
-  {
-    mark: "05",
-    title: "You won the account — then they left for another agency at renewal",
-    description: "Winning the first campaign doesn't guarantee the next contract renewal.",
+    title: "Better traffic helps. Better creative helps.",
+    description: "But sometimes the fastest way to strengthen a campaign is to make the offer more valuable.",
   },
 ];
 
@@ -163,14 +156,13 @@ export function MarketingAgencies() {
         </ClosingNote>
       </Section>
 
-      <Section
-        eyebrow="The Real Problem"
-        title="Every Pitch Has Competition Before You Ever Present."
-        subtitle="Prospective clients compare agencies, freelancers and in-house teams before they choose who to hire. Winning the account takes more than a strong deck."
-      >
-        <div className="feature-grid">
+      <Section eyebrow="The Real Problem">
+        <div className="stacked-points">
           {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
+            <div key={p.title} className="stacked-points__item">
+              <h3 className="stacked-points__title">{p.title}</h3>
+              <p className="stacked-points__description">{p.description}</p>
+            </div>
           ))}
         </div>
         <ClosingNote>
