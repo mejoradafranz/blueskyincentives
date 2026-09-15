@@ -358,10 +358,8 @@ export function MarketingAgencies() {
           src={agencyUseCasesImage}
           alt="One incentive platform for every stage of the customer journey: traffic, lead, appointment, sale, repeat business and referral"
         />
-        <div className="feature-grid" style={{ marginTop: 40 }}>
-          {AGENCY_USE_CASES.map((u) => (
-            <FeatureCard key={u.title} {...u} />
-          ))}
+        <div style={{ marginTop: 40 }}>
+          <StackedPoints items={AGENCY_USE_CASES} />
         </div>
       </Section>
 
