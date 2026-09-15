@@ -23,6 +23,7 @@ import heroMarketingAgenciesImage from "../../assets/hero-marketing-agencies.jpg
 import pitchOfferImage from "../../assets/ma-pitch-offer.jpg";
 import secondStageImage from "../../assets/ma-second-stage.jpg";
 import integrationsDiagramImage from "../../assets/ma-integrations-diagram.jpg";
+import agencyUseCasesImage from "../../assets/ma-agency-use-cases.jpg";
 import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
 import diningImage from "../../assets/incentives/dining-certificates.jpg";
 import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
@@ -313,6 +314,16 @@ export function MarketingAgencies() {
         <MediaFrame
           src={integrationsDiagramImage}
           alt="Diagram showing how triggers like form submissions and purchases flow through GoHighLevel, Zapier or the Blue Sky Incentives Open API to automatically deliver certificates"
+        />
+      </Section>
+
+      <Section
+        eyebrow="Agency Use Cases"
+        title="One Platform. Multiple Ways to Improve Client Campaigns."
+      >
+        <MediaFrame
+          src={agencyUseCasesImage}
+          alt="One incentive platform for every stage of the customer journey: traffic, lead, appointment, sale, repeat business and referral"
         />
       </Section>
 
