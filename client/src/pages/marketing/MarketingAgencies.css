@@ -33,3 +33,16 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.stacked-points__item--highlight {
+  background: linear-gradient(135deg, #0a1230 0%, #16306e 100%);
+  border-color: transparent;
+}
+
+.stacked-points__item--highlight .stacked-points__title {
+  color: #ffffff;
+}
+
+.stacked-points__item--highlight .stacked-points__description {
+  color: rgba(255, 255, 255, 0.85);
+}

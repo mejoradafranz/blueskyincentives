@@ -45,6 +45,7 @@ const PROBLEM_POINTS = [
   {
     title: "Better traffic helps. Better creative helps.",
     description: "But sometimes the fastest way to strengthen a campaign is to make the offer more valuable.",
+    highlight: true,
   },
 ];
 
@@ -159,7 +160,10 @@ export function MarketingAgencies() {
       <Section eyebrow="The Real Problem">
         <div className="stacked-points">
           {PROBLEM_POINTS.map((p) => (
-            <div key={p.title} className="stacked-points__item">
+            <div
+              key={p.title}
+              className={`stacked-points__item ${p.highlight ? "stacked-points__item--highlight" : ""}`}
+            >
               <h3 className="stacked-points__title">{p.title}</h3>
               <p className="stacked-points__description">{p.description}</p>
             </div>
