@@ -14,6 +14,8 @@ import {
   GalleryPlaceholder,
   MediaFrame,
   StackedPoints,
+  CardGroup,
+  DisclaimerNote,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -107,6 +109,36 @@ const RETENTION_WAYS = [
     mark: "5",
     title: "Reactivation",
     description: "Reconnect with former or inactive patients when appropriate.",
+  },
+];
+
+const REVENUE_OPPORTUNITIES = [
+  {
+    eyebrow: "Treatment opportunity",
+    title: "The Exam Is Done. The Treatment Isn't Scheduled.",
+    items: [
+      "Diagnosed dentistry is sitting unscheduled right now",
+      "Follow up on eligible, appropriate treatment opportunities",
+      "Strengthen the offer with added value instead of automatically cutting the fee",
+    ],
+  },
+  {
+    eyebrow: "Recare & reactivation",
+    title: "Overdue Patients Are Still Your Patients.",
+    items: [
+      "Overdue hygiene and recare that quietly passed",
+      "Inactive patients who haven't returned in 12–24 months",
+      "Win-back outreach to patients you already paid to acquire",
+    ],
+  },
+  {
+    eyebrow: "Referral & patient value",
+    title: "Happy Patients Already Know Your Next Patients.",
+    items: [
+      "Patient appreciation that strengthens the relationship",
+      "Friends-and-family introductions made intentional",
+      "More lifetime value from the patients you already have",
+    ],
   },
 ];
 
@@ -236,11 +268,17 @@ export function Dentistry() {
       </Section>
 
       <Section
-        eyebrow="The Multiple-Practice Problem"
-        title="When Every Practice Is Competing for the Same Patient, Your Offer Matters."
-        subtitle="One online search can put your practice in competition with several others nearby. If every practice sounds the same, you need another way to stand out."
+        eyebrow="Revenue Already Inside the Practice"
+        title="The Next Opportunity Isn't Always Another New Patient."
+        subtitle="Getting the patient into the chair is only the beginning. Sometimes the next appointment is already sitting inside the practice."
       >
-        <ImagePlaceholder />
+        <CardGroup cards={REVENUE_OPPORTUNITIES} />
+        <DisclaimerNote>
+          Treatment recommendations always remain based on clinical need. Added value is not a
+          substitute for transparent treatment pricing, financing or appropriate clinical
+          communication. Incentives are structured appropriately for the practice and subject to
+          applicable practice requirements. Results are not guaranteed.
+        </DisclaimerNote>
       </Section>
 
       <Section

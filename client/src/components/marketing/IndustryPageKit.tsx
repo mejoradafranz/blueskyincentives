@@ -27,6 +27,37 @@ export function GuaranteeNote({ children }: { children: ReactNode }) {
   return <p className="industry-guarantee-note">{children}</p>;
 }
 
+export function DisclaimerNote({ children }: { children: ReactNode }) {
+  return <p className="industry-disclaimer-note">{children}</p>;
+}
+
+export function CardGroup({
+  cards,
+}: {
+  cards: { eyebrow: string; title: string; items: string[] }[];
+}) {
+  return (
+    <div className="card-group">
+      {cards.map((card) => (
+        <div key={card.title} className="card-group__item">
+          <div className="card-group__eyebrow">{card.eyebrow}</div>
+          <h3 className="card-group__title">{card.title}</h3>
+          <ul className="card-group__list">
+            {card.items.map((item) => (
+              <li key={item}>
+                <span className="card-group__check" aria-hidden="true">
+                  <CheckIcon />
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function VideoPlaceholder({ caption = "Video coming soon" }: { caption?: string }) {
   return (
     <div className="industry-video">
