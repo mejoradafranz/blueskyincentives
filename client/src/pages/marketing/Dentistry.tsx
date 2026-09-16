@@ -216,6 +216,18 @@ export function Dentistry() {
           src={bookedToChairImage}
           alt="Before and after: a scheduled new-patient appointment that ends in a no-show versus the same appointment paired with a complimentary home teeth whitening kit certificate that gets the patient in the chair"
         />
+        <StackedPoints
+          items={[
+            {
+              title: "Same Appointment. A Stronger Reason to Show Up.",
+              description:
+                "The patient earns the Complimentary Home Teeth Whitening Kit Certificate by completing the scheduled new-patient appointment.",
+            },
+          ]}
+        />
+        <ClosingNote>
+          You Paid to Generate the Lead. You Got Them to Book. Now Get Them Into the Chair.
+        </ClosingNote>
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
