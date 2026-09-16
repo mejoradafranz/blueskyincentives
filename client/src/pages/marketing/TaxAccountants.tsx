@@ -10,7 +10,6 @@ import {
   ClosingNote,
   GuaranteeNote,
   VideoPlaceholder,
-  ImagePlaceholder,
   MediaFrame,
   Gallery,
   StackedPoints,
@@ -22,6 +21,7 @@ import heroTaxAccountantsImage from "../../assets/hero-tax-accountants.jpg";
 import engagementOfferImage from "../../assets/tax-engagement-offer.jpg";
 import fourWaysImage from "../../assets/tax-4-ways.jpg";
 import lifetimeValueImage from "../../assets/tax-lifetime-value.jpg";
+import toolsOverviewImage from "../../assets/tax-tools-overview.jpg";
 import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
 import diningImage from "../../assets/incentives/dining-certificates.jpg";
 import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
@@ -246,11 +246,14 @@ export function TaxAccountants() {
       </Section>
 
       <Section
-        eyebrow="The Multiple-Firm Problem"
-        title="When Every Firm Is Competing for the Same Client, Your Offer Matters."
-        subtitle="One inquiry can put you in competition with other firms and DIY software. If price is the only differentiator, you need another way to stand out."
+        eyebrow="Blue Sky Incentives Tools for Your Firm"
+        title="Create, Distribute and Manage Incentive Campaigns Without Adding Work to Your Practice"
+        subtitle="Your membership includes the delivery methods and campaign support your firm needs to put an incentive in front of the right prospect at the right moment."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={toolsOverviewImage}
+          alt="Blue Sky Incentives delivery tools: email, SMS/text, landing page links, QR codes, printable PDF certificates, and website banners, sticky bars and pop-ups, plus AI marketing consultant, AI social content creator and Ask AI campaign support"
+        />
       </Section>
 
       <Section
