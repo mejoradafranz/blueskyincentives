@@ -12,6 +12,7 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -167,11 +168,7 @@ export function Dentistry() {
         title="Patients Compare Practices Before They Ever Call."
         subtitle="Online reviews, insurance networks and competing practices make it easy for patients to shop around. Winning new patients — and keeping them — takes more than a good location."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the patient to choose your
           practice — and keep coming back.
