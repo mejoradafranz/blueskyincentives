@@ -12,12 +12,14 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  MediaFrame,
   StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroTaxAccountantsImage from "../../assets/hero-tax-accountants.jpg";
+import engagementOfferImage from "../../assets/tax-engagement-offer.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -215,7 +217,10 @@ export function TaxAccountants() {
           </>
         }
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={engagementOfferImage}
+          alt="Before and after: a generic schedule-a-consultation form versus one offering a $100 dining certificate and $100 hotel savings card"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
