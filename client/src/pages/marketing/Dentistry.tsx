@@ -127,6 +127,21 @@ const RETENTION_WAYS = [
   },
 ];
 
+const RETENTION_REFERRAL = [
+  {
+    title: "Recare",
+    description: "Keep patients on schedule instead of letting hygiene quietly slip.",
+  },
+  {
+    title: "Reactivation",
+    description: "Bring back patients you already paid to acquire before another practice does.",
+  },
+  {
+    title: "Referrals",
+    description: "Make word-of-mouth intentional instead of accidental.",
+  },
+];
+
 const FOUR_WAYS = [
   {
     mark: "1",
@@ -358,6 +373,34 @@ export function Dentistry() {
           src={patientLifecycleImage}
           alt="The full patient lifecycle from new-patient lead to appointment scheduled, patient in chair, treatment accepted and completed, recare and hygiene, reactivation when needed, and referral or family introduction"
         />
+        <p
+          style={{
+            textAlign: "center",
+            fontWeight: 700,
+            letterSpacing: "0.04em",
+            textTransform: "uppercase",
+            color: "var(--color-primary)",
+            fontSize: "0.95rem",
+            margin: "32px 0 0",
+          }}
+        >
+          Attract &rarr; Book &rarr; Show &rarr; Accept &rarr; Return &rarr; Refer
+        </p>
+        <div className="section__header" style={{ marginTop: 48 }}>
+          <div className="section__eyebrow">Retention &amp; Referral</div>
+          <h3 className="section__title" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)" }}>
+            Your Best Patients Already Know Your Next Patients.
+          </h3>
+          <p className="section__subtitle">
+            The most expensive patient to replace is the one you already paid to acquire — and
+            happy patients already know friends and family who need a dentist.
+          </p>
+        </div>
+        <div className="feature-grid">
+          {RETENTION_REFERRAL.map((r) => (
+            <FeatureCard key={r.title} {...r} />
+          ))}
+        </div>
       </Section>
 
       <Section
