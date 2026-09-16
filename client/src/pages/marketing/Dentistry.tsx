@@ -10,7 +10,6 @@ import {
   ClosingNote,
   GuaranteeNote,
   VideoPlaceholder,
-  ImagePlaceholder,
   MediaFrame,
   Gallery,
   StackedPoints,
@@ -28,6 +27,7 @@ import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
 import resortImage from "../../assets/incentives/resort-stays.jpg";
 import hotelSavingsImage from "../../assets/incentives/hotel-savings.jpg";
 import cruiseImage from "../../assets/incentives/cruise-certificates.jpg";
+import patientLifecycleImage from "../../assets/dentistry-patient-lifecycle.jpg";
 
 const INCENTIVE_GALLERY = [
   { src: smartDeviceImage, alt: "Smart-Device Vouchers" },
@@ -350,11 +350,14 @@ export function Dentistry() {
 
       <Section
         tone="subtle"
-        eyebrow="Patient Lifetime Value"
-        title="Don't Stop at One Visit. Grow the Relationship."
-        subtitle="The first appointment can grow into a long-term relationship built on regular checkups and referrals."
+        eyebrow="The Full Patient Lifecycle"
+        title="From New-Patient Lead to Long-Term Patient — Then to Referral"
+        subtitle="Blue Sky Incentives is not only a new-patient promotion tool. It can support important patient behaviors throughout the relationship."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={patientLifecycleImage}
+          alt="The full patient lifecycle from new-patient lead to appointment scheduled, patient in chair, treatment accepted and completed, recare and hygiene, reactivation when needed, and referral or family introduction"
+        />
       </Section>
 
       <Section
