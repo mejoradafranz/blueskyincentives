@@ -127,6 +127,29 @@ const RETENTION_WAYS = [
   },
 ];
 
+const FOUR_WAYS = [
+  {
+    mark: "1",
+    title: "Get More Patients to Show Up",
+    description: "Attach the incentive to attendance so more booked appointments become completed appointments.",
+  },
+  {
+    mark: "2",
+    title: "Move More Appropriate Treatment Forward",
+    description: "Add value around an eligible treatment opportunity instead of automatically reducing the fee.",
+  },
+  {
+    mark: "3",
+    title: "Reactivate Overdue Patients",
+    description: "Support recare, overdue hygiene, inactive patients and former-patient win-back campaigns.",
+  },
+  {
+    mark: "4",
+    title: "Generate More Referrals",
+    description: "Support referral appreciation and family introductions, structured appropriately for the practice.",
+  },
+];
+
 const REVENUE_OPPORTUNITIES = [
   {
     eyebrow: "Treatment opportunity",
@@ -318,7 +341,11 @@ export function Dentistry() {
         title="Use Incentives Across Every Stage of the Patient Relationship."
         subtitle="Use incentives to generate leads, increase treatment acceptance, improve recall rates and create referrals — not just fill the chair."
       >
-        <ImagePlaceholder />
+        <div className="feature-grid">
+          {FOUR_WAYS.map((w) => (
+            <FeatureCard key={w.title} {...w} />
+          ))}
+        </div>
       </Section>
 
       <Section
