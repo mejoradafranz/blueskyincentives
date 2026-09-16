@@ -12,12 +12,14 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  MediaFrame,
   StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroDentistryImage from "../../assets/hero-dentistry.jpg";
+import bookedToChairImage from "../../assets/dentistry-booked-to-chair.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -206,16 +208,14 @@ export function Dentistry() {
 
       <Section
         tone="subtle"
-        eyebrow="Why the New-Patient Offer Matters"
-        title="Same Exam. A Stronger Reason to Choose Your Practice."
-        subtitle={
-          <>
-            Every practice can say &ldquo;We&rsquo;ll take great care of you.&rdquo; An incentive
-            makes that offer harder to ignore.
-          </>
-        }
+        eyebrow="From Booked Appointment to Patient in the Chair"
+        title="Getting Them to Book Is Only Half the Battle."
+        subtitle="The practice successfully generated the lead and booked the appointment. If the patient does not arrive, the chair still produces nothing. Attaching the incentive to completing the scheduled appointment gives them another reason to walk through the door."
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={bookedToChairImage}
+          alt="Before and after: a scheduled new-patient appointment that ends in a no-show versus the same appointment paired with a complimentary home teeth whitening kit certificate that gets the patient in the chair"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
