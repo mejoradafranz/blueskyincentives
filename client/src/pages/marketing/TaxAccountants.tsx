@@ -20,6 +20,7 @@ import {
 import { Button } from "../../components/ui/Button";
 import heroTaxAccountantsImage from "../../assets/hero-tax-accountants.jpg";
 import engagementOfferImage from "../../assets/tax-engagement-offer.jpg";
+import fourWaysImage from "../../assets/tax-4-ways.jpg";
 import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
 import diningImage from "../../assets/incentives/dining-certificates.jpg";
 import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
@@ -273,7 +274,10 @@ export function TaxAccountants() {
         title="Use Incentives Across Every Stage of the Client Relationship."
         subtitle="Use incentives to generate leads, win new clients, improve retention and create referrals — not just get through busy season."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={fourWaysImage}
+          alt="Four ways to use Blue Sky Incentives across the client relationship: generate more leads, win more new clients, increase repeat business, and generate more referrals"
+        />
       </Section>
 
       <Section
