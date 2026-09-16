@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
@@ -15,6 +16,7 @@ import {
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
+import heroDentistryImage from "../../assets/hero-dentistry.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -129,21 +131,23 @@ const FAQS: { question: string; answer: string | null }[] = [
 export function Dentistry() {
   return (
     <>
-      <Section
+      <ImageHero
+        image={heroDentistryImage}
+        imageAlt="A dental hygienist and dentist treating a patient in a modern dental operatory"
         eyebrow="For Dental Practices"
         title="Give Patients Another Reason to Choose Your Practice."
         subtitle="High-value incentives that make your new-patient marketing stand out and win more treatment acceptance and referrals."
-      >
-        <ImagePlaceholder landscape />
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
-          <Link to="/contact">
-            <Button>Start Risk-Free</Button>
-          </Link>
-          <Link to="/demo">
-            <Button variant="secondary">Watch Instant Demo</Button>
-          </Link>
-        </div>
-      </Section>
+        actions={
+          <>
+            <Link to="/contact">
+              <Button>Start Risk-Free</Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="secondary">Watch Instant Demo</Button>
+            </Link>
+          </>
+        }
+      />
 
       <Section
         tone="subtle"
