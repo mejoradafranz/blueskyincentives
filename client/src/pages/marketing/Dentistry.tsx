@@ -99,34 +99,6 @@ const HOW_IT_WORKS = [
   },
 ];
 
-const RETENTION_WAYS = [
-  {
-    mark: "1",
-    title: "New-Patient Welcome Gifts",
-    description: "Use a high-value incentive as a memorable welcome gift new patients actually redeem.",
-  },
-  {
-    mark: "2",
-    title: "Referral Rewards",
-    description: "Turn patient referrals into a rewarded, trackable behavior.",
-  },
-  {
-    mark: "3",
-    title: "Recall Appointment Follow-Up",
-    description: "Give patients a reason to book their next cleaning or checkup.",
-  },
-  {
-    mark: "4",
-    title: "Treatment Plan Acceptance",
-    description: "Encourage patients to move forward with recommended care.",
-  },
-  {
-    mark: "5",
-    title: "Reactivation",
-    description: "Reconnect with former or inactive patients when appropriate.",
-  },
-];
-
 const RETENTION_REFERRAL = [
   {
     title: "Recare",
@@ -398,17 +370,6 @@ export function Dentistry() {
         </div>
         <div className="feature-grid">
           {RETENTION_REFERRAL.map((r) => (
-            <FeatureCard key={r.title} {...r} />
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        title="Winning the New Patient Once Doesn't Mean They Return for Their Next Cleaning."
-        subtitle="It's easy to be forgotten once the appointment ends. Give patients reasons to stay connected before their next recall."
-      >
-        <div className="feature-grid">
-          {RETENTION_WAYS.map((r) => (
             <FeatureCard key={r.title} {...r} />
           ))}
         </div>
