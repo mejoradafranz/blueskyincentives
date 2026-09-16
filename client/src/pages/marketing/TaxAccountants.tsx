@@ -21,6 +21,7 @@ import { Button } from "../../components/ui/Button";
 import heroTaxAccountantsImage from "../../assets/hero-tax-accountants.jpg";
 import engagementOfferImage from "../../assets/tax-engagement-offer.jpg";
 import fourWaysImage from "../../assets/tax-4-ways.jpg";
+import lifetimeValueImage from "../../assets/tax-lifetime-value.jpg";
 import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
 import diningImage from "../../assets/incentives/dining-certificates.jpg";
 import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
@@ -286,7 +287,10 @@ export function TaxAccountants() {
         title="Don't Stop at One Return. Grow the Relationship."
         subtitle="The first filing can grow into a long-term relationship built on year-round advisory work and referrals."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={lifetimeValueImage}
+          alt="Add value without discounting your professional fees: a standard tax consultation fee discounted from $500 to $399 versus the same $500 fee paired with a $100 dining certificate and $100 hotel savings card"
+        />
       </Section>
 
       <Section
