@@ -12,6 +12,7 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -167,11 +168,7 @@ export function TaxAccountants() {
         title="Clients Compare Firms Before Tax Season Even Starts."
         subtitle="DIY software, online tax services and competing firms make it easy for clients to shop around. Winning new clients — and keeping them — takes more than being available during busy season."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the client to choose your firm —
           and come back next season.
