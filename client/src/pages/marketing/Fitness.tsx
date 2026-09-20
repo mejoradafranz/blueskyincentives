@@ -12,6 +12,7 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
@@ -167,11 +168,7 @@ export function Fitness() {
         title="Prospective Members Compare Studios Before They Ever Walk In."
         subtitle="Big-box gyms, boutique studios and home workout apps make it easy for prospects to shop around. Winning new members — and keeping them — takes more than a free trial."
       >
-        <div className="feature-grid">
-          {PROBLEM_POINTS.map((p) => (
-            <FeatureCard key={p.title} {...p} />
-          ))}
-        </div>
+        <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
           The problem isn't generating more leads. It's getting the prospect to choose your
           studio — and stay a member.
