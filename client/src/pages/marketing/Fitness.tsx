@@ -20,6 +20,7 @@ import {
 import { Button } from "../../components/ui/Button";
 import heroFitnessImage from "../../assets/hero-fitness.jpg";
 import fitnessFreeTrialOfferImage from "../../assets/fitness-free-trial-offer.jpg";
+import fitnessMultipleStudioProblemImage from "../../assets/fitness-multiple-studio-problem.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -233,7 +234,10 @@ export function Fitness() {
         title="When Every Studio Is Competing for the Same Prospect, Your Offer Matters."
         subtitle="One online search can put your studio in competition with several others nearby. If every studio offers the same free trial, you need another way to stand out."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={fitnessMultipleStudioProblemImage}
+          alt="A prospect comparing several nearby fitness studios that all offer the same free trial"
+        />
       </Section>
 
       <Section
