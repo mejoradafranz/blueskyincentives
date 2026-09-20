@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { FeatureCard } from "../../components/marketing/FeatureCard";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
@@ -15,6 +16,7 @@ import {
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
+import heroFitnessImage from "../../assets/hero-fitness.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -129,21 +131,23 @@ const FAQS: { question: string; answer: string | null }[] = [
 export function Fitness() {
   return (
     <>
-      <Section
-        eyebrow="For Fitness Studios & Gyms"
-        title="Give Members Another Reason to Join Your Studio."
-        subtitle="High-value incentives that make your membership marketing stand out and win more class attendance and referrals."
-      >
-        <ImagePlaceholder landscape />
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
-          <Link to="/contact">
-            <Button>Start Risk-Free</Button>
-          </Link>
-          <Link to="/demo">
-            <Button variant="secondary">Watch Instant Demo</Button>
-          </Link>
-        </div>
-      </Section>
+      <ImageHero
+        image={heroFitnessImage}
+        imageAlt="A personal trainer coaching a client through a workout in a fitness studio"
+        eyebrow="For Gyms, Fitness Studios & Personal Trainers"
+        title="Get More Fitness Prospects Through the Door — Then Give Them a Reason to Stay."
+        subtitle="Use high-value incentives to give prospects a stronger reason to complete their first workout or consultation, commit to a membership or training program, stay engaged, and refer more people."
+        actions={
+          <>
+            <Link to="/contact">
+              <Button>Start Risk-Free</Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="secondary">Watch the Instant Demo</Button>
+            </Link>
+          </>
+        }
+      />
 
       <Section
         tone="subtle"
