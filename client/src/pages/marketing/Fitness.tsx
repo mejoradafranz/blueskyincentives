@@ -13,11 +13,13 @@ import {
   ImagePlaceholder,
   GalleryPlaceholder,
   StackedPoints,
+  MediaFrame,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroFitnessImage from "../../assets/hero-fitness.jpg";
+import fitnessFreeTrialOfferImage from "../../assets/fitness-free-trial-offer.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -215,7 +217,10 @@ export function Fitness() {
           </>
         }
       >
-        <ImagePlaceholder landscape />
+        <MediaFrame
+          src={fitnessFreeTrialOfferImage}
+          alt="A fitness studio's free-trial offer made more compelling with an added incentive"
+        />
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
           <Link to="/contact">
             <Button>Start Risk-Free</Button>
