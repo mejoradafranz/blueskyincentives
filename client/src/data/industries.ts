@@ -119,6 +119,58 @@ export const INDUSTRIES: Industry[] = [
       { mark: "F", title: "Referral rewards", description: "Reward staff and members alike for bringing in new sign-ups." },
     ],
   },
+  {
+    slug: "timeshare",
+    mark: "TS",
+    navLabel: "Timeshare",
+    eyebrow: "For Timeshare Teams",
+    title: "Keep your sales floor motivated tour after tour.",
+    subtitle: "Reward tour conversions, upgrades, and owner referrals with a points program built for timeshare sales teams.",
+    useCases: [
+      { mark: "T", title: "Tour conversions", description: "Award points for tours that convert into closed sales." },
+      { mark: "U", title: "Upgrade sales", description: "Recognize reps who move owners into higher-tier packages." },
+      { mark: "R", title: "Owner referrals", description: "Reward the referrals that keep the pipeline full." },
+    ],
+  },
+  {
+    slug: "travel-vacation-clubs",
+    mark: "VC",
+    navLabel: "Travel & Vacation Clubs",
+    eyebrow: "For Travel & Vacation Clubs",
+    title: "Recognition that keeps membership sales strong.",
+    subtitle: "Reward membership sales, renewals, and upsells across your vacation club team.",
+    useCases: [
+      { mark: "M", title: "Membership sales", description: "Award points for new memberships closed." },
+      { mark: "R", title: "Renewals", description: "Recognize reps who keep member renewal rates high." },
+      { mark: "U", title: "Package upsells", description: "Reward upgrades into premium club packages." },
+    ],
+  },
+  {
+    slug: "call-centers",
+    mark: "CC",
+    navLabel: "Call Centers",
+    eyebrow: "For Call Centers",
+    title: "Motivate agents on every shift, every call.",
+    subtitle: "Reward call quality, sales conversions, and attendance across your call center floor.",
+    useCases: [
+      { mark: "Q", title: "Call quality scores", description: "Tie points to QA scores and customer satisfaction ratings." },
+      { mark: "S", title: "Sales conversions", description: "Reward agents for hitting conversion and upsell targets." },
+      { mark: "A", title: "Attendance & tenure", description: "Recognize reliable attendance and long-term agents." },
+    ],
+  },
+  {
+    slug: "network-marketing-mlm",
+    mark: "NM",
+    navLabel: "Network Marketing / MLM",
+    eyebrow: "For Network Marketing & MLM Teams",
+    title: "Reward the activity that grows your downline.",
+    subtitle: "Recognize recruiting, sales volume, and team-building milestones across your distributor network.",
+    useCases: [
+      { mark: "R", title: "Recruiting milestones", description: "Award points for new distributor sign-ups and onboarding." },
+      { mark: "S", title: "Sales volume", description: "Recognize distributors who hit personal and team sales targets." },
+      { mark: "T", title: "Team-building rewards", description: "Reward the leaders growing and mentoring their downline." },
+    ],
+  },
 ];
 
 export function getIndustryBySlug(slug: string | undefined): Industry | undefined {
