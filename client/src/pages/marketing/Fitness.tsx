@@ -378,11 +378,7 @@ export function Fitness() {
         title="Signing the Member Once Doesn't Mean They Keep Showing Up."
         subtitle="It's easy to be forgotten once the excitement fades. Give members reasons to stay connected before they think about canceling."
       >
-        <div className="feature-grid">
-          {RETENTION_WAYS.map((r) => (
-            <FeatureCard key={r.title} {...r} />
-          ))}
-        </div>
+        <StackedPoints items={RETENTION_WAYS} />
       </Section>
 
       <Section
