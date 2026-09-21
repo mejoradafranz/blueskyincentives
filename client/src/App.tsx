@@ -19,6 +19,7 @@ import { MarketingAgencies } from "./pages/marketing/MarketingAgencies";
 import { TaxAccountants } from "./pages/marketing/TaxAccountants";
 import { Dentistry } from "./pages/marketing/Dentistry";
 import { Fitness } from "./pages/marketing/Fitness";
+import { Timeshare } from "./pages/marketing/Timeshare";
 import { Integrations } from "./pages/marketing/Integrations";
 import { Demo } from "./pages/marketing/Demo";
 import { HowItWorks } from "./pages/marketing/HowItWorks";
@@ -69,6 +70,7 @@ export default function App() {
           <Route path="/industries/tax-accountants" element={<TaxAccountants />} />
           <Route path="/industries/dentistry" element={<Dentistry />} />
           <Route path="/industries/fitness" element={<Fitness />} />
+          <Route path="/industries/timeshare" element={<Timeshare />} />
           <Route path="/industries/:slug" element={<IndustryDetail />} />
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/demo" element={<Demo />} />
