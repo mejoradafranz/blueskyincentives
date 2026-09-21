@@ -136,6 +136,7 @@ const FOUR_WAYS = [
     action: "Complete Your Free PT Session",
     incentive: "Receive a $100 Dining Certificate",
     outcome: "More Completed First Visits",
+    gradient: "linear-gradient(160deg, #0a1230 0%, #16306e 100%)",
   },
   {
     mark: "2",
@@ -145,6 +146,7 @@ const FOUR_WAYS = [
     action: "Purchase a 1-Year Membership",
     incentive: "Receive a 7-Night Resort Stay Certificate",
     outcome: "A Stronger Paid-Commitment Offer",
+    gradient: "linear-gradient(160deg, #062a1f 0%, #0f5c3c 100%)",
   },
   {
     mark: "3",
@@ -154,6 +156,7 @@ const FOUR_WAYS = [
     action: "Renew Your Membership or Package",
     incentive: "Member Appreciation Incentive",
     outcome: "More Active, Engaged Members",
+    gradient: "linear-gradient(160deg, #1f0a33 0%, #4c1d6e 100%)",
   },
   {
     mark: "4",
@@ -162,6 +165,7 @@ const FOUR_WAYS = [
     action: "Know Someone Ready to Get in Shape?",
     incentive: "Referral Thank-You",
     outcome: "More Member Introductions",
+    gradient: "linear-gradient(160deg, #05202b 0%, #0b5266 100%)",
   },
 ];
 
@@ -327,29 +331,27 @@ export function Fitness() {
               <div
                 style={{
                   marginTop: 20,
-                  padding: 16,
+                  padding: 18,
                   borderRadius: "var(--radius-md)",
-                  background: "var(--color-bg-subtle)",
-                  border: "1px solid var(--color-border)",
+                  background: w.gradient,
+                  border: "1px solid transparent",
                 }}
               >
                 <div
                   style={{
                     fontSize: "0.75rem",
                     fontWeight: 700,
-                    letterSpacing: "0.04em",
+                    letterSpacing: "0.06em",
                     textTransform: "uppercase",
-                    color: "var(--color-text-faint)",
+                    color: "#e8c874",
                     marginBottom: 8,
                   }}
                 >
                   Example
                 </div>
-                <p style={{ margin: 0, fontWeight: 600, color: "var(--color-text)" }}>{w.action}</p>
-                <p style={{ margin: "4px 0 0", fontWeight: 600, color: "var(--color-primary)" }}>
-                  + {w.incentive}
-                </p>
-                <p style={{ margin: "12px 0 0", fontWeight: 700, color: "var(--color-text)" }}>{w.outcome}</p>
+                <p style={{ margin: 0, fontWeight: 600, color: "#ffffff" }}>{w.action}</p>
+                <p style={{ margin: "4px 0 0", fontWeight: 600, color: "#e8c874" }}>+ {w.incentive}</p>
+                <p style={{ margin: "12px 0 0", fontWeight: 700, color: "#ffffff" }}>{w.outcome}</p>
               </div>
             </div>
           ))}
