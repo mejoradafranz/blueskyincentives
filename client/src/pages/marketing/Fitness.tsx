@@ -9,6 +9,7 @@ import {
   StatsGrid,
   ClosingNote,
   GuaranteeNote,
+  DisclaimerNote,
   VideoPlaceholder,
   ImagePlaceholder,
   Gallery,
@@ -123,6 +124,44 @@ const RETENTION_WAYS = [
     mark: "5",
     title: "Reactivation",
     description: "Reconnect with former or inactive members when appropriate.",
+  },
+];
+
+const FOUR_WAYS = [
+  {
+    mark: "1",
+    title: "Generate More First Visits",
+    description:
+      "Move more inquiries and claimed offers into actual completed visits by attaching the incentive to attendance.",
+    action: "Complete Your Free PT Session",
+    incentive: "Receive a $100 Dining Certificate",
+    outcome: "More Completed First Visits",
+  },
+  {
+    mark: "2",
+    title: "Win More Members & Training Clients",
+    description:
+      "Strengthen the perceived value around the larger paid commitment instead of cutting dues or package pricing.",
+    action: "Purchase a 1-Year Membership",
+    incentive: "Receive a 7-Night Resort Stay Certificate",
+    outcome: "A Stronger Paid-Commitment Offer",
+  },
+  {
+    mark: "3",
+    title: "Increase Repeat Business & Retention",
+    description:
+      "Attach incentives to meaningful moments — milestones, anniversaries, renewals, package renewals, reactivation, challenges and appreciation.",
+    action: "Renew Your Membership or Package",
+    incentive: "Member Appreciation Incentive",
+    outcome: "More Active, Engaged Members",
+  },
+  {
+    mark: "4",
+    title: "Generate More Referrals",
+    description: "Make it easy and memorable for members who are getting results to introduce the next client.",
+    action: "Know Someone Ready to Get in Shape?",
+    incentive: "Referral Thank-You",
+    outcome: "More Member Introductions",
   },
 ];
 
@@ -277,7 +316,48 @@ export function Fitness() {
         title="Use Incentives Across Every Stage of the Member Relationship."
         subtitle="Use incentives to generate leads, win new members, improve attendance and create referrals — not just sign people up."
       >
-        <ImagePlaceholder />
+        <div className="feature-grid">
+          {FOUR_WAYS.map((w) => (
+            <div key={w.title} className="feature-card">
+              <div className="feature-card__mark" aria-hidden="true">
+                {w.mark}
+              </div>
+              <h3 className="feature-card__title">{w.title}</h3>
+              <p className="feature-card__description">{w.description}</p>
+              <div
+                style={{
+                  marginTop: 20,
+                  padding: 16,
+                  borderRadius: "var(--radius-md)",
+                  background: "var(--color-bg-subtle)",
+                  border: "1px solid var(--color-border)",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.04em",
+                    textTransform: "uppercase",
+                    color: "var(--color-text-faint)",
+                    marginBottom: 8,
+                  }}
+                >
+                  Example
+                </div>
+                <p style={{ margin: 0, fontWeight: 600, color: "var(--color-text)" }}>{w.action}</p>
+                <p style={{ margin: "4px 0 0", fontWeight: 600, color: "var(--color-primary)" }}>
+                  + {w.incentive}
+                </p>
+                <p style={{ margin: "12px 0 0", fontWeight: 700, color: "var(--color-text)" }}>{w.outcome}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <DisclaimerNote>
+          Not selling annual memberships? Swap Stage 2 for your training or coaching package paired with an
+          appropriate higher-value incentive.
+        </DisclaimerNote>
       </Section>
 
       <Section
