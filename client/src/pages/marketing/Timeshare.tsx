@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
 import { CheckIcon } from "../../components/marketing/CheckIcon";
+import { UserIcon, CalendarIcon, PresentationIcon } from "../../components/marketing/JourneyIcons";
+import { DiamondIcon } from "../../components/marketing/DiamondIcon";
+import { TrendUpIcon } from "../../components/marketing/TrendUpIcon";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
@@ -60,23 +63,28 @@ const JOURNEY_STAGES = [
   {
     title: "Qualified Prospect",
     description: "Household responds to the promotion.",
+    icon: UserIcon,
   },
   {
     title: "Scheduled Tour",
     description: "A date and time is on the board.",
+    icon: CalendarIcon,
   },
   {
     title: "Attended Presentation",
     description: "The household is in the chair.",
     badge: "Revenue Moment",
+    icon: PresentationIcon,
   },
   {
     title: "New Owner",
     description: "The ownership decision is made.",
+    icon: DiamondIcon,
   },
   {
     title: "Upgrade / Referral",
     description: "The owner base produces again.",
+    icon: TrendUpIcon,
   },
 ];
 
@@ -217,6 +225,21 @@ export function Timeshare() {
                   transform: i % 2 === 1 ? "translateY(-12px)" : "none",
                 }}
               >
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 52,
+                    height: 52,
+                    borderRadius: "50%",
+                    background: "rgba(232, 200, 116, 0.14)",
+                    color: "#e8c874",
+                    marginBottom: 16,
+                  }}
+                >
+                  <stage.icon />
+                </div>
                 {stage.badge && (
                   <div
                     style={{
