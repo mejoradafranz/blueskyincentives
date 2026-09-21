@@ -15,12 +15,15 @@ import {
   VideoPlaceholder,
   ImagePlaceholder,
   GalleryPlaceholder,
+  MediaFrame,
   StackedPoints,
   ChecklistTwoColumn,
   FaqAccordion,
 } from "../../components/marketing/IndustryPageKit";
 import { Button } from "../../components/ui/Button";
 import heroTimeshareImage from "../../assets/hero-timeshare.jpg";
+import manifestNameImage from "../../assets/timeshare-manifest-name.jpg";
+import householdChairImage from "../../assets/timeshare-household-chair.jpg";
 
 const STATS = [
   { value: "20+", label: "Years In Business" },
@@ -319,6 +322,75 @@ export function Timeshare() {
               <Button variant="secondary">Speak With an Incentive Strategist</Button>
             </Link>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="The Show-Rate Problem"
+        title="Your Sales Team Can't Close an Empty Chair."
+        subtitle="A booked tour and an attended presentation are not the same asset. One is a line on a manifest. The other is the only version of the appointment your closers can actually work."
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: 32,
+          }}
+        >
+          <div>
+            <MediaFrame
+              src={manifestNameImage}
+              alt="An empty executive office chair at a desk — the appointment on the manifest with no one in it"
+            />
+            <h3 style={{ margin: "20px 0 8px", fontSize: "1.1rem", textAlign: "center" }}>
+              A Name on the Manifest
+            </h3>
+            <p
+              style={{
+                margin: 0,
+                color: "var(--color-text-muted)",
+                fontSize: "0.95rem",
+                lineHeight: 1.6,
+                textAlign: "center",
+              }}
+            >
+              The media spend is gone, the gift desk is staffed and a presenter is blocked out.
+              The household simply had nothing at stake in keeping the appointment.
+            </p>
+          </div>
+          <div>
+            <MediaFrame
+              src={householdChairImage}
+              alt="A presenter walking a household through the presentation at their table"
+            />
+            <h3 style={{ margin: "20px 0 8px", fontSize: "1.1rem", textAlign: "center" }}>
+              A Household in the Chair
+            </h3>
+            <p
+              style={{
+                margin: 0,
+                color: "var(--color-text-muted)",
+                fontSize: "0.95rem",
+                lineHeight: 1.6,
+                textAlign: "center",
+              }}
+            >
+              Now the presentation can do its job. Giving the scheduled household something
+              meaningful tied to completing the presentation gives them a concrete reason to arrive.
+            </p>
+          </div>
+        </div>
+        <ClosingNote>
+          You are not buying a better lead. You are protecting the tour you already paid for —
+          by giving the scheduled household a second reason to walk through the door.
+        </ClosingNote>
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+          <Link to="/contact">
+            <Button>Start Risk-Free</Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="secondary">Speak With an Incentive Strategist</Button>
+          </Link>
         </div>
       </Section>
 
