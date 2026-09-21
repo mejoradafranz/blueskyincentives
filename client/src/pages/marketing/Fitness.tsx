@@ -11,7 +11,6 @@ import {
   GuaranteeNote,
   DisclaimerNote,
   VideoPlaceholder,
-  ImagePlaceholder,
   Gallery,
   StackedPoints,
   MediaFrame,
@@ -22,6 +21,7 @@ import { Button } from "../../components/ui/Button";
 import heroFitnessImage from "../../assets/hero-fitness.jpg";
 import fitnessFreeTrialOfferImage from "../../assets/fitness-free-trial-offer.jpg";
 import fitnessMultipleStudioProblemImage from "../../assets/fitness-multiple-studio-problem.jpg";
+import fitnessMemberLifecycleImage from "../../assets/fitness-member-lifecycle.jpg";
 import smartDeviceImage from "../../assets/incentives/smart-device-vouchers.jpg";
 import diningImage from "../../assets/incentives/dining-certificates.jpg";
 import airfareHotelImage from "../../assets/incentives/airfare-hotel-stays.jpg";
@@ -368,7 +368,10 @@ export function Fitness() {
         title="Don't Stop at One Sign-Up. Grow the Relationship."
         subtitle="The first membership can grow into a long-term relationship built on consistent attendance and referrals."
       >
-        <ImagePlaceholder />
+        <MediaFrame
+          src={fitnessMemberLifecycleImage}
+          alt="From first visit to long-term member, then to referral: first visit or free session, membership or training package, active member or client engagement, milestones and retention, renewal and reactivation, and referral or bring-a-friend"
+        />
       </Section>
 
       <Section
