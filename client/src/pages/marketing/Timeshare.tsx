@@ -164,9 +164,9 @@ export function Timeshare() {
       </Section>
 
       <Section
-        eyebrow="The Real Problem"
-        title="Prospects Compare Resorts Before They Ever Sit Down."
-        subtitle="Competing resorts, vacation clubs and OTA deals all make it easy for prospects to shop around before they ever tour. Winning new owners — and keeping them — takes more than a free-gift tour."
+        eyebrow="Where the Revenue Leaks"
+        title="More Leads Don't Matter If the Tour Never Happens."
+        subtitle="Marketing is measured in names. The business is paid on completed presentations and closed ownership. Between those two numbers sit four separate places where money quietly disappears every single day."
       >
         <StackedPoints items={PROBLEM_POINTS} />
         <ClosingNote>
