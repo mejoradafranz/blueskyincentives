@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ImageHero } from "../../components/marketing/ImageHero";
 import { Section } from "../../components/marketing/Section";
-import { FeatureCard } from "../../components/marketing/FeatureCard";
+import { CheckIcon } from "../../components/marketing/CheckIcon";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
@@ -56,28 +56,35 @@ const PROBLEM_POINTS = [
   },
 ];
 
-const HOW_IT_WORKS = [
+const JOURNEY_STAGES = [
   {
-    mark: "01",
-    title: "Run your existing tour and sales marketing",
-    description: "Website leads, OTA and travel-partner promotions, call center outreach, on-site presentations and owner referral campaigns.",
+    title: "Qualified Prospect",
+    description: "Household responds to the promotion.",
   },
   {
-    mark: "02",
-    title: "Add a high-value incentive",
-    description: "Attach it to a meaningful action such as completing the tour, closing the sale, upgrading a package, or referring a new owner.",
+    title: "Scheduled Tour",
+    description: "A date and time is on the board.",
   },
   {
-    mark: "03",
-    title: "Blue Sky Incentives supplies and fulfills the incentive",
-    description:
-      "Blue Sky Incentives supplies the incentives and manages the redemption process, and gives you the tools to create and distribute them by email, SMS, landing page links, QR codes, PDFs, banners and pop-ups.",
+    title: "Attended Presentation",
+    description: "The household is in the chair.",
+    badge: "Revenue Moment",
   },
   {
-    mark: "04",
-    title: "Give prospects and owners another reason to respond",
-    description: "Your resort, packages and experience remain the core value — the incentive just strengthens the offer.",
+    title: "New Owner",
+    description: "The ownership decision is made.",
   },
+  {
+    title: "Upgrade / Referral",
+    description: "The owner base produces again.",
+  },
+];
+
+const INCENTIVE_TOUCHPOINTS = [
+  "Incentive on response — a reason to raise a hand and book a date.",
+  "Incentive on attendance — a reason to keep the appointment.",
+  "Incentive on the ownership offer — added value instead of an automatic price cut.",
+  "Incentive on the owner base — appreciation, upgrades and referrals.",
 ];
 
 const RETENTION_WAYS = [
@@ -176,14 +183,119 @@ export function Timeshare() {
       </Section>
 
       <Section
-        tone="subtle"
-        eyebrow="How Blue Sky Incentives Works"
-        title="One Sales Campaign. One Added-Value Incentive. A Stronger Reason to Respond."
+        eyebrow="The Vacation Ownership Journey"
+        title="Optimize the Journey From Lead → Show → Sale."
+        subtitle="The economics of this business are not one conversion. They are five. An incentive can be introduced at any point where a household needs one more reason to take the next step."
       >
-        <div className="feature-grid">
-          {HOW_IT_WORKS.map((s) => (
-            <FeatureCard key={s.title} {...s} />
-          ))}
+        <div
+          style={{
+            background: "linear-gradient(160deg, #0a1230 0%, #16306e 100%)",
+            borderRadius: "var(--radius-lg)",
+            padding: "48px 32px",
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {JOURNEY_STAGES.map((stage, i) => (
+              <div
+                key={stage.title}
+                style={{
+                  position: "relative",
+                  background: "rgba(255, 255, 255, 0.08)",
+                  backdropFilter: "blur(16px)",
+                  WebkitBackdropFilter: "blur(16px)",
+                  border: "1px solid rgba(255, 255, 255, 0.22)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "24px 20px",
+                  textAlign: "center",
+                  boxShadow: "0 24px 48px rgba(0, 0, 0, 0.35)",
+                  transform: i % 2 === 1 ? "translateY(-12px)" : "none",
+                }}
+              >
+                {stage.badge && (
+                  <div
+                    style={{
+                      display: "inline-block",
+                      fontSize: "0.65rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      color: "#0a1230",
+                      background: "#e8c874",
+                      borderRadius: 999,
+                      padding: "4px 10px",
+                      marginBottom: 12,
+                    }}
+                  >
+                    {stage.badge}
+                  </div>
+                )}
+                <h3 style={{ margin: "0 0 8px", fontSize: "1.05rem", color: "#ffffff" }}>{stage.title}</h3>
+                <p style={{ margin: 0, fontSize: "0.9rem", color: "rgba(255, 255, 255, 0.78)", lineHeight: 1.5 }}>
+                  {stage.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <ul
+            style={{
+              listStyle: "none",
+              margin: "48px 0 0",
+              padding: 0,
+              display: "grid",
+              gap: 14,
+              maxWidth: 720,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            {INCENTIVE_TOUCHPOINTS.map((point) => (
+              <li
+                key={point}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 10,
+                  color: "rgba(255, 255, 255, 0.9)",
+                  fontSize: "0.95rem",
+                  lineHeight: 1.5,
+                }}
+              >
+                <span
+                  style={{
+                    flexShrink: 0,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 22,
+                    height: 22,
+                    borderRadius: "50%",
+                    background: "rgba(255, 255, 255, 0.14)",
+                    color: "#e8c874",
+                    marginTop: 1,
+                  }}
+                >
+                  <CheckIcon />
+                </span>
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginTop: 40 }}>
+            <Link to="/contact">
+              <Button>Start Risk-Free</Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="secondary">Speak With an Incentive Strategist</Button>
+            </Link>
+          </div>
         </div>
       </Section>
 
