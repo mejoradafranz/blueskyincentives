@@ -5,6 +5,7 @@ import { CheckIcon } from "../../components/marketing/CheckIcon";
 import { UserIcon, CalendarIcon, PresentationIcon } from "../../components/marketing/JourneyIcons";
 import { DiamondIcon } from "../../components/marketing/DiamondIcon";
 import { TrendUpIcon } from "../../components/marketing/TrendUpIcon";
+import { MegaphoneIcon } from "../../components/marketing/CampaignToolIcons";
 import { PricingPlans } from "../../components/marketing/PricingPlans";
 import { PlanInclusions } from "../../components/marketing/PlanInclusions";
 import { MoneyBackGuarantee } from "../../components/marketing/MoneyBackGuarantee";
@@ -96,6 +97,40 @@ const INCENTIVE_TOUCHPOINTS = [
   "Incentive on attendance — a reason to keep the appointment.",
   "Incentive on the ownership offer — added value instead of an automatic price cut.",
   "Incentive on the owner base — appreciation, upgrades and referrals.",
+];
+
+const FOUR_WAYS_OPERATORS = [
+  {
+    mark: "1",
+    title: "Generate More Qualified Tour Prospects",
+    description: "Give interested households another reason to respond and schedule the tour.",
+    detail:
+      "Add an incentive line to the marketing already running — mini-vac offers, OPC desks, digital response campaigns and outbound scheduling calls.",
+    icon: MegaphoneIcon,
+  },
+  {
+    mark: "2",
+    title: "Increase Presentation Show Rates",
+    description: "Attach a meaningful incentive to completing the presentation.",
+    detail:
+      "Confirmation calls, reminder texts and pre-arrival emails carry something the household wants to collect at the end of the presentation.",
+    icon: CalendarIcon,
+  },
+  {
+    mark: "3",
+    title: "Convert More Attendees Into Owners",
+    description:
+      "Use higher-perceived-value added value to strengthen the ownership offer without automatically discounting the core product.",
+    detail: "The closer gains a value lever that is not a price concession, keeping the conversation on the ownership product itself.",
+    icon: DiamondIcon,
+  },
+  {
+    mark: "4",
+    title: "Drive Owner Upgrades & Referrals",
+    description: "Use owner appreciation, upgrade, reactivation and referral campaigns.",
+    detail: "Owner events, points promotions, additional-product offers and referral programs get a reward the owner actually values.",
+    icon: TrendUpIcon,
+  },
 ];
 
 const RETENTION_WAYS = [
@@ -391,6 +426,77 @@ export function Timeshare() {
           <Link to="/contact">
             <Button variant="secondary">Speak With an Incentive Strategist</Button>
           </Link>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Four Ways Operators Use CMI"
+        title="Four Places an Incentive Changes the Number."
+      >
+        <div
+          style={{
+            background: "linear-gradient(160deg, #0a1230 0%, #16306e 100%)",
+            borderRadius: "var(--radius-lg)",
+            padding: "48px 32px",
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {FOUR_WAYS_OPERATORS.map((w, i) => (
+              <div
+                key={w.title}
+                style={{
+                  position: "relative",
+                  background: "rgba(255, 255, 255, 0.08)",
+                  backdropFilter: "blur(16px)",
+                  WebkitBackdropFilter: "blur(16px)",
+                  border: "1px solid rgba(255, 255, 255, 0.22)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "28px 24px",
+                  boxShadow: "0 24px 48px rgba(0, 0, 0, 0.35)",
+                  transform: i % 2 === 1 ? "translateY(-12px)" : "none",
+                }}
+              >
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 52,
+                    height: 52,
+                    borderRadius: "50%",
+                    background: "rgba(232, 200, 116, 0.14)",
+                    color: "#e8c874",
+                    marginBottom: 16,
+                  }}
+                >
+                  <w.icon />
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.8rem",
+                    fontWeight: 700,
+                    color: "#e8c874",
+                    marginBottom: 8,
+                  }}
+                >
+                  {w.mark}
+                </div>
+                <h3 style={{ margin: "0 0 10px", fontSize: "1.1rem", color: "#ffffff" }}>{w.title}</h3>
+                <p style={{ margin: "0 0 14px", fontSize: "0.92rem", color: "rgba(255, 255, 255, 0.9)", lineHeight: 1.55 }}>
+                  {w.description}
+                </p>
+                <p style={{ margin: 0, fontSize: "0.88rem", color: "rgba(255, 255, 255, 0.65)", lineHeight: 1.55 }}>
+                  {w.detail}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
