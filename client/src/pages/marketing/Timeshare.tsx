@@ -430,7 +430,7 @@ export function Timeshare() {
       </Section>
 
       <Section
-        eyebrow="Four Ways Operators Use CMI"
+        eyebrow="Four Ways Operators Use Blue Sky Incentives"
         title="Four Places an Incentive Changes the Number."
       >
         <div
